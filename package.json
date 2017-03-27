@@ -1,0 +1,11 @@
+{
+  "name": "jsdoc-template",
+  "version": "0.1.0",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "ejs": "^2.5.6",
+    "fs-extra-promise": "^0.4.1",
+    "slugify": "^1.1.0",
+    "taffydb": "^2.7.3"
+  }
+}

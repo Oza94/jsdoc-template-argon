@@ -1,0 +1,45 @@
+<h3 id="<%= func.slug %>">
+  <%-
+    include('../components/function-signature', {
+      func: func,
+      helpers: helpers,
+    });
+  %>
+  <br>
+  <% if (func.filepath) { %>
+    <div class="doc-sourcepath">
+      <%- helpers.link.source(func) %>
+    </div>
+  <% } %>
+</h3>
+<p>
+  <%- func.description %>
+</p>
+<% if (func.params && func.params.length) { %>
+  <h4>Params:</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Attribute</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% func.params.forEach(param => { %>
+        <tr>
+          <td><%= param.name %></td>
+          <td></td>
+          <td></td>
+          <td><%- param.description %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+<% } %>
+
+<h4>Returns:</h4>
+<p>
+  <%- helpers.link.formatReturns(func.returns); %>
+</p>

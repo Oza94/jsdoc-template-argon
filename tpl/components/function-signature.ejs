@@ -1,0 +1,22 @@
+<%
+  var returns = 'void';
+
+  if (func.returns) {
+    returns = func.returns.map(typeData =>
+      helpers.link.type(typeData.type.names.join(', '))
+    ).join(', ');
+  }
+
+  var params = '';
+
+  if (func.params) {
+    params = func.params.map(param =>
+      `${param.name}: ${helpers.link.type(param.type.names.join(', '))}`
+    ).join(', ');
+  }
+%>
+<% if (typeof linkTo !== 'undefined') { %>
+  <a href="<%= linkTo %>"><%= func.name %></a>(<%- params %>): <%- returns %>
+<% } else { %>
+  <span><%= func.name %></span>(<%- params %>): <%- returns %>
+<% } %>
