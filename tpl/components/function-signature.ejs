@@ -10,7 +10,9 @@
   var params = '';
 
   if (func.params) {
-    params = func.params.map(param =>
+    params = func.params
+    .filter(param => param.name.indexOf('.') === -1)
+    .map(param =>
       `${param.name}: ${helpers.link.type(param.type.names.join(', '))}`
     ).join(', ');
   }

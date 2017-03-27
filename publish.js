@@ -75,20 +75,35 @@ exports.publish = function(data, opts) {
   const pages = [];
   //console.log(data, opts, !!data);
   fs.outputFileAsync('./taffydata.json', data().stringify()).then(() => console.log('output done'));
+
+  // find modules members
+  data({ kind: 'module' }).each((module) => {
+    module.$members = [];
+
+    data({ memberof: module.longname }).each(moduleMember => {
+      moduleMember.skip = true;
+      module.$members.push(moduleMember);
+    });
+  });
+
   data({ kind: 'class' }).each((record) => {
     record.$methods = [];
     record.$attributes = [];
     record.$staticmethods = [];
     record.$staticproperties = [];
+    record.$augments = [];
+    record.$augmentedBy = [];
     console.log('RECORD ' + record.name);
 
     if (record.description) {
       const copy = JSON.parse(JSON.stringify(record));
       copy.name = 'constructor';
       copy.classConstructor = true;
+      copy.slug = 'constructor';
       record.$methods.push(copy);
     }
 
+    // find members
     data({
       memberof: record.longname,
     }).each((memberRecord) => {
@@ -104,7 +119,20 @@ exports.publish = function(data, opts) {
       } else {
         record.$attributes.push(memberRecord);
       }
-    })
+    });
+
+    // find agmented
+    if (record.augments) {
+      record.augments.forEach(typeName => {
+        const superclassRecord = data({ longname: typeName }).first();
+        if (superclassRecord) {
+          record.$augments.push(superclassRecord);
+          superclassRecord.$augmentedBy.push({ name: record.name });
+        } else {
+          record.$augments.push({ name: typeName });
+        }
+      });
+    }
   });
 
   console.log('================');
@@ -210,7 +238,7 @@ exports.publish = function(data, opts) {
     }))
     .then(html => fs.outputFileAsync(path.resolve(outpath, 'index.html'), html))
     .then(() => bluebird.map(pages, page => createRecordPage(outpath, page, menuWrapper)))
-    .then(copyFile('tpl/style.css', path.resolve(outpath, 'style.css')))
+    .then(copyFile(path.resolve(__dirname, 'tpl/style.css'), path.resolve(outpath, 'style.css')))
     .then(() => bluebird.map(sourceFiles, filepath => {
       const relpath = filepath.replace(srcpath, '');
       return fs.readFileAsync(filepath, 'utf-8')

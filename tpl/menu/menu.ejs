@@ -1,12 +1,11 @@
-<fieldset>
-  <legend>Menu</legend>
+<div class="doc-gutter">
   <%
   Object.keys(menuData).forEach(function(modulePath) {
     const symbols = menuData[modulePath];
     if (!symbols.length) return;
   %>
-  <h3><%= modulePath %></h3>
-  <ul>
+  <div class="doc-menupath"><%= modulePath %></div>
+  <ul class="doc-menu">
     <%
       symbols.forEach(function (symbol) {
         if (symbol.record.skip) return;
@@ -22,4 +21,4 @@
   </ul>
   <% }); %>
 
-</fieldset>
+</div>

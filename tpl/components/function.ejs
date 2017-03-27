@@ -1,20 +1,32 @@
 <h3 id="<%= func.slug %>">
+  <% if (typeof permalink !== 'undefined') { %>
+    <a href="<%= permalink %>" title="permalink" class="doc-permalink">
+      <i class="fa fa-link"></i>
+    </a>
+  <% } %>
   <%-
     include('../components/function-signature', {
       func: func,
       helpers: helpers,
     });
   %>
-  <br>
-  <% if (func.filepath) { %>
-    <div class="doc-sourcepath">
-      <%- helpers.link.source(func) %>
-    </div>
-  <% } %>
 </h3>
+<% if (func.filepath) { %>
+  <div class="doc-sourcepath">
+    <%- helpers.link.source(func) %>
+  </div>
+<% } %>
 <p>
   <%- func.description %>
 </p>
+<!-- 
+  Class constructors share record with class declaration. Therefore ignore class constructors
+  examples to avoid duplication.
+-->
+<% if (!func.classConstructor && func.examples && func.examples.length) { %>
+  <h4>Example(s):</h4>
+  <%- func.examples.map(example => `<pre>${example}</pre>`) %>
+<% } %>
 <% if (func.params && func.params.length) { %>
   <h4>Params:</h4>
   <table>
@@ -40,6 +52,6 @@
 <% } %>
 
 <h4>Returns:</h4>
-<p>
+<p class="doc-no-margin-before">
   <%- helpers.link.formatReturns(func.returns); %>
 </p>
