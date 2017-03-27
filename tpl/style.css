@@ -3,6 +3,10 @@ html, body {
   margin: 0;
   max-height: 100%;
   max-width: 100%;
+  height: 100%;
+  width: 100%;
+  font-family: 'Source Sans Pro';
+  color: #333333;
 }
 
 .row {
@@ -18,6 +22,10 @@ html, body {
 .content {
   width: 100%;
   height: 100%;
+}
+
+.flex {
+  flex: 1;
 }
 
 .scroll-y {
@@ -67,12 +75,20 @@ h4 {
   font-weight: bold;
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
   height: 40px;
   line-height: 40px;
   padding: 0px 16px;
   border-bottom: solid 1px #ddd;
   background: #fafafa;
+}
+
+.monospace {
+  font-family: 'monospace';
 }
 
 .doc-sourcepath {
@@ -91,7 +107,7 @@ header {
 
 .doc-menu {
   list-style: none;
-  padding-left: 8;
+  padding-left: 8px;
   margin: 8px 0;
 }
 

@@ -1,73 +1,43 @@
-<head>
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600,700|Source+Sans+Pro:400,700" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link href="style.css" rel="stylesheet">
-  <style>
-
-    body {
-      font-family: 'Source Sans Pro';
-      color: #333333;
-    }
-
-    .monospace {
-      font-family: 'monospace';
-    }
-
-    .letter-icon {
-      border-radius: 2px;
-      font-weight: bold;
-      background: #efefef;
-      color: grey;
-      width: 1.2em;
-      display: inline-block;
-      height: 1.2em;
-      text-align: center;
-    }
-
-    .row {
-      display: flex;
-      flex-direction: row;
-    }
-
-    .flex {
-      flex: 1;
-    }
-
-    a {
-      text-decoration: none;
-    }
-  </style>
-</head>
-<body>
-  <div class="content column">
-    <header>
-      <a href="/">Hello world documentation</a>
-    </header>
-    <div class="row flex">
-      <div class="scroll-y">
-        <%- menu %>
-      </div>
-      <div class="flex scroll-y">
-        <%- content %>
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>JSDoc template Argon</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600,700|Source+Sans+Pro:400,700" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="content column">
+      <header>
+        <a href="/">Hello world documentation</a>
+      </header>
+      <div class="row flex">
+        <div class="scroll-y">
+          <%- menu %>
+        </div>
+        <div class="flex scroll-y">
+          <%- content %>
+        </div>
       </div>
     </div>
-  </div>
-  <script>
-    function toggle(element) {
-      if (element.style.display === 'block') {
-        element.style.display = 'none';
-      } else {
-        element.style.display = 'block';
+    <script>
+      function toggle(element) {
+        if (element.style.display === 'block') {
+          element.style.display = 'none';
+        } else {
+          element.style.display = 'block';
+        }
       }
-    }
 
-    document.querySelectorAll('[data-spoiler-button]').forEach(button => {
-      const spoilElementId = button.getAttribute('data-spoiler-button');
-      const spoilElement = document.querySelector(`[data-spoiler="${spoilElementId}"]`);
+      document.querySelectorAll('[data-spoiler-button]').forEach(button => {
+        const spoilElementId = button.getAttribute('data-spoiler-button');
+        const spoilElement = document.querySelector(`[data-spoiler="${spoilElementId}"]`);
 
-      if (spoilElement) {
-        button.addEventListener('click', () => toggle(spoilElement));
-      }
-    });
-  </script>
-</body>
+        if (spoilElement) {
+          button.addEventListener('click', () => toggle(spoilElement));
+        }
+      });
+    </script>
+  </body>
+</html>
