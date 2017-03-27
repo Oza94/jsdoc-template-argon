@@ -11,9 +11,19 @@ const helpers = {
   link: new LinkHelper(),
 };
 
-// templates
-const tplPageRecord = fs.readFileSync(path.resolve(__dirname, 'tpl/page/record.ejs'), 'utf-8');
-const tplIndex = fs.readFileSync(path.resolve(__dirname, 'tpl/index.ejs'), 'utf-8');
+/**
+ * A custom logger.
+ * @todo replace console calls with Function.prototype when options.debug === false
+ * @type {Object}
+ */
+const logger = {
+  /* eslint-disable no-console */
+  log: console.log.bind(console),
+  info: console.info.bind(console),
+  warn: console.warn.bind(console),
+  error: console.error.bind(console),
+  /* eslint-enable no-console */
+};
 
 function copyFile(src, dest) {
   return fs.readFileAsync(src)
@@ -21,39 +31,23 @@ function copyFile(src, dest) {
 }
 
 function renderTemplate(relpath, data, options) {
-  /*return fs.readFileAsync(path.resolve(__dirname, relpath))
-    .then(ejstpl => {
-      console.log(ejstpl);
-      return ejs.render(ejstpl.toString(), data, options);
-    });*/
   return new Promise((resolve, reject) => {
     data.helpers = helpers;
     ejs.renderFile(path.resolve(__dirname, relpath), data, options, (err, html) => {
       if (err) {
-        console.error(err);
+        logger.error(err);
         return reject(err);
       }
 
       resolve(html);
-    })
+    });
   });
-}
-
-function isBabelNoise(record) {
-  return record.scope === 'global' &&
-    record.name === 'value' &&
-    record.longname === 'value' &&
-    record.comment === '' &&
-    record.undocumented;
 }
 
 function createRecordPage(outpath, page, wrapper) {
   return renderTemplate('tpl/page/record.ejs', page)
     .then(html => wrapper(html))
     .then(html => fs.outputFileAsync(path.resolve(outpath, page.recordUrl), html));
-  /*const html = wrapper(ejs.render(tplPageRecord, page));
-
-  return fs.outputFileAsync(path.resolve(outpath, page.recordUrl), html);*/
 }
 
 /**
@@ -70,11 +64,11 @@ exports.publish = function(data, opts) {
   // @todo handle multiple entries
   const srcpath = path.resolve(process.cwd(), opts._[0]);
 
-  const db = data();
   const menuData = {};
   const pages = [];
-  //console.log(data, opts, !!data);
-  fs.outputFileAsync('./taffydata.json', data().stringify()).then(() => console.log('output done'));
+
+  // @todo move this thing in a "outputTaffy" debug template
+  fs.outputFileAsync('./taffydata.json', data().stringify()).then(() => logger.log('output done'));
 
   // find modules members
   data({ kind: 'module' }).each((module) => {
@@ -86,6 +80,7 @@ exports.publish = function(data, opts) {
     });
   });
 
+  // find class members (attributes / methods)
   data({ kind: 'class' }).each((record) => {
     record.$methods = [];
     record.$attributes = [];
@@ -93,7 +88,6 @@ exports.publish = function(data, opts) {
     record.$staticproperties = [];
     record.$augments = [];
     record.$augmentedBy = [];
-    console.log('RECORD ' + record.name);
 
     if (record.description) {
       const copy = JSON.parse(JSON.stringify(record));
@@ -110,7 +104,7 @@ exports.publish = function(data, opts) {
       if (memberRecord.undocumented) {
         return;
       }
-      console.log('-MEMBER ' + memberRecord.name + ':' + memberRecord.undocumented);
+
       memberRecord.skip = true;
       memberRecord.slug = slugify(memberRecord.longname);
 
@@ -135,9 +129,9 @@ exports.publish = function(data, opts) {
     }
   });
 
-  console.log('================');
+  logger.log('================');
   let sourceFiles = [];
-  data().each((record, i) => {
+  data().each((record) => {
 
     if (!record.meta) {
       if (record.kind === 'package') {
@@ -146,49 +140,46 @@ exports.publish = function(data, opts) {
       return;
     }
     if (record.undocumented) return;
-    // console.log(i, record);
-    const { undocumented, name, kind, scope } = record;
-    const { filename, path: filepath, range, lineno, code } = record.meta;
+
+    const { name, kind, scope } = record;
+    const { filename, path: filepath, lineno } = record.meta;
     const relpath = filepath.replace(srcpath, '').slice(1, filepath.length - srcpath.length);
     const fullpath = path.join(relpath, filename);
-    const modulepath = relpath; //fullpath.replace('.js', '');
+    const modulepath = relpath; 
     const menupath = tplConf.referencePaths === 'folder' ? modulepath : fullpath.replace('.js', '');
     const filepath2 = path.join(relpath, filename);
     record.filepath = filepath2;
 
-    console.log(name, '(', fullpath, '-', lineno, ')', kind, scope);
+    logger.log(name, '(', fullpath, '-', lineno, ')', kind, scope);
 
     if (!menuData[menupath]) {
       menuData[menupath] = [];
     }
 
     if (name === 'applyBlueprint') {
-      console.log(record);
+      logger.log(record);
     }
 
-    if (kind === 'class') {
-      //record.$attributes = [];
-      //record.$methods = [];
-    } else if (record.meta.code.type === 'MethodDefinition') {
-      var klassRecord = data({ name: record.memberof, kind: 'class' }).first();
+    let klassRecord = null;
+
+    if (record.meta.code.type === 'MethodDefinition') {
+      klassRecord = data({ name: record.memberof, kind: 'class' }).first();
       if (name === 'applyBlueprint') {
-        console.log(klassRecord);
+        logger.log(klassRecord);
       }
       if (klassRecord) {
         record.skip = true;
-        //klassRecord.$methods.push(record);
       } else {
-        console.warn('member will not show up in documentation');
+        logger.warn('member will not show up in documentation');
       }
     } else if (record.scope === 'instance' && record.memberof) {
       // attribute
-      var klassRecord = data({ name: record.memberof, kind: 'class' }).first();
+      klassRecord = data({ name: record.memberof, kind: 'class' }).first();
 
       if (klassRecord) {
         record.skip = true;
-        //klassRecord.$attributes.push(record);
       } else {
-        console.warn('member attribute will not show up in documentation');
+        logger.warn('member attribute will not show up in documentation');
       }
     }
 
@@ -209,12 +200,6 @@ exports.publish = function(data, opts) {
         recordUrl: recordUrl,
       });
     }
-
-    // console.log(record);
-
-    /*if (i > 100) {
-      process.exit(0);
-    }*/
   });
 
   let _menuhtml = null;

@@ -4,10 +4,6 @@ const identifier = /^[a-z_$][a-z0-9_$]*$/i;
 
 const NATIVE_TYPES = ['String', 'Number', 'Boolean', 'Map', 'Set', 'Object'];
 
-function icon(name) {
-  return `<i class="fa fa-${name}" aria-hidden="true" style="font-size: 0.8em; margin-left: 2px;"></i>`;
-}
-
 module.exports = class LinkHelper {
   constructor() {
     this.typesTpl = {
@@ -24,9 +20,6 @@ module.exports = class LinkHelper {
     return returnsData.map(typeData =>
       this.type(typeData.type.names.join(', '))
     ).join(', ');
-  }
-  formatParams(paramsData) {
-
   }
   registerType(type, url) {
     this.typesTpl[type] = url;
@@ -56,4 +49,4 @@ module.exports = class LinkHelper {
 
     return `<a ${href} ${target}>${content}</a>`;
   }
-}
+};
