@@ -1,11 +1,26 @@
 {
-  "name": "jsdoc-template",
+  "name": "jsdoc-template-argon",
+  "description": "A JSDoc template.",
   "version": "0.1.0",
+  "main": "publish.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Oza94/jsdoc-template-argon"
+  },
+  "bugs": {
+    "url": "https://github.com/Oza94/jsdoc-template-argon/issues"
+  },
+  "keywords": [
+    "jsdoc",
+    "jsdoc3",
+    "template"
+  ],
   "dependencies": {
     "bluebird": "^3.5.0",
     "ejs": "^2.5.6",
     "fs-extra-promise": "^0.4.1",
     "slugify": "^1.1.0",
     "taffydb": "^2.7.3"
-  }
+  },
+  "license": "MIT"
 }
