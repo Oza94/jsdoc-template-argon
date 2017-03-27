@@ -11,16 +11,27 @@ During my own documentation journey with es2015+ code, I found that it was tedio
 
 An example of how the template look likes :
 
-![Template Screenshot](http://i.imgur.com/nCrkXdY.png)
+![Template Screenshot](http://i.imgur.com/5WtQ3zq.png)
 
 # Usage
+
+Install `jsdoc-template-argon` somewhere on your machine (it can be in your deps)
+
+```bash
+npm install --save-dev jsdoc-template-argon
+jsdoc src/ -c .jsdoc.json -r -d docs -t node_modules/jsdoc-template-argon
+```
+
+Please if you have any problem with es2015, make sure to read [ES2015+ issues](docs/es2015-issues.md) before posting.
+
+## Options
 
 Todo !
 
 # Todo v1.0
 
  * Some tags are not handled (@abstract, @namespace, @module)
- * Code cleaning because its really disgusting right now
+ * Code cleaning
  * Documentation
  * Testing ?
  * Host some examples
