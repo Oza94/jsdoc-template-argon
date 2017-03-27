@@ -72,7 +72,10 @@
       <tbody>
       <% record.$methods.forEach(method => { %>
         <tr>
-          <td></td>
+          <td>
+            <%= method.access || 'public' %>
+            <%= method.scope === 'static' ? 'static' : '' %>
+          </td>
           <td>
             <%-
               include('../components/function-signature', {
@@ -89,6 +92,7 @@
   <% } %>
   <% if (record.$attributes && record.$attributes.length) { %>
     <h2>Properties</h2>
+    <hr />
     <table>
       <thead>
         <tr>
@@ -135,7 +139,7 @@
   <% }); %>
 <% } %>
 
-<button data-spoiler-button="<%= record.___id %>">toggle</button>
+<button data-spoiler-button="<%= record.___id %>">DEBUG BUTTON NOT FOR PRODUCTION : toggle JSDoc record visibility</button>
 <pre data-spoiler="<%= record.___id %>" style="display: none;">
   <%- JSON.stringify(record, null, 4).replace(/\n/g, '<br>') %>
 </pre>

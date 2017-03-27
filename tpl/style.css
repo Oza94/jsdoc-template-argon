@@ -40,7 +40,7 @@ html, body {
 
 table {
   border-collapse: collapse;
-  width: 100%;
+  width: calc(100% - 24px);
   margin: 10px 0px;
 }
 
@@ -75,8 +75,13 @@ h4 {
   font-weight: bold;
 }
 
-a {
+a[href] {
+  color: #039BE5;
   text-decoration: none;
+}
+
+p, table {
+  margin: 12px 12px;
 }
 
 header {
@@ -85,6 +90,10 @@ header {
   padding: 0px 16px;
   border-bottom: solid 1px #ddd;
   background: #fafafa;
+}
+
+td > p {
+  margin: 0px;
 }
 
 .monospace {
