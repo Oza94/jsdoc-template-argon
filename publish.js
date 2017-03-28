@@ -72,11 +72,32 @@ exports.publish = function(data, opts) {
 
   // find modules members
   data({ kind: 'module' }).each((module) => {
-    module.$members = [];
+    module.$functions = [];
+    module.$typedefs = [];
+    module.$constants = [];
+    module.$classes = [];
+    module.$other = [];
 
-    data({ memberof: module.longname }).each(moduleMember => {
+    data({ memberof: module.longname, undocumented: { '!is': true } }).each(moduleMember => {
       moduleMember.skip = true;
-      module.$members.push(moduleMember);
+
+      switch (moduleMember.kind) {
+        case 'function':
+          module.$functions.push(moduleMember);
+          break;
+        case 'typedef':
+          module.$typedefs.push(moduleMember);
+          break;
+        case 'constant':
+          module.$constants.push(moduleMember);
+          break;
+        case 'classes':
+          module.$classes.push(moduleMember);
+          break;
+        default:
+          module.$other.push(moduleMember);
+          break;
+      }
     });
   });
 
@@ -183,7 +204,7 @@ exports.publish = function(data, opts) {
       }
     }
 
-    if (record.kind !== 'member') {
+    if (record.kind !== 'member' && !record.skip) {
       const recordUrl = slugify(`${menupath}-${name}.html`);
       helpers.link.registerType(name, recordUrl);
       menuData[menupath].push({

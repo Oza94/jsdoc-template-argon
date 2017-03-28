@@ -1,0 +1,24 @@
+<div class="doc-gutter">
+  <%
+  Object.keys(menuData).forEach(function(modulePath) {
+    const symbols = menuData[modulePath];
+    if (!symbols.length) return;
+  %>
+  <div class="doc-menupath"><%= modulePath %></div>
+  <ul class="doc-menu">
+    <%
+      symbols.forEach(function (symbol) {
+        if (symbol.record.skip) return;
+    %>
+      <li>
+        <span title="<%= symbol.kind %>" class="letter-icon letter-icon-<%= symbol.kind %>">
+          <%= symbol.kind[0].toUpperCase() %>
+        </span>
+        &nbsp;
+        <a href="<%= symbol.recordUrl %>"><%= symbol.name %></a>
+      </li>
+    <% }); %>
+  </ul>
+  <% }); %>
+
+</div>

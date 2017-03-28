@@ -1,0 +1,34 @@
+<%
+  const _showAccess = typeof showAccess !== 'undefined' && showAccess;
+  const columns = _showAccess ? 2 : 1;
+%>
+<table>
+  <% if (typeof title !== 'undefined' && title.length) { %>
+    <thead>
+      <tr>
+        <th colspan="<%= columns %>"><%= title %></th>
+      </tr>
+    </thead>
+  <% } %>
+  <tbody>
+  <% funcs.forEach(func => { %>
+    <tr>
+      <% if (_showAccess) { %>
+        <td>
+          <%= func.access || 'public' %>
+          <%= func.scope === 'static' ? 'static' : '' %>
+        </td>
+      <% } %>
+      <td>
+        <%-
+          include('../components/function-signature', {
+            func: func,
+            helpers: helpers,
+            linkTo: `#${func.slug}`,
+          });
+        %>
+      </td>
+    </tr>
+  <% }) %>
+  </tbody>
+</table>

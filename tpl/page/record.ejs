@@ -42,6 +42,34 @@
   </table>
 <% } %>
 
+<% if (record.kind === 'module') { %>
+  <% if (record.$functions && record.$functions.length) { %>
+    <h2>Functions summary</h2>
+    <hr />
+    <%-
+      include('../components/functions-summary', {
+        funcs: record.$functions,
+        helpers: helpers,
+      });
+    %>
+  <% } %>
+
+  <% if (record.$functions && record.$functions.length) { %>
+    <h2>Functions</h2>
+    <hr />
+    <% record.$functions.forEach(func => { %>
+      <%-
+        include('../components/function', {
+          func: func,
+          helpers: helpers,
+          permalink: recordUrl + '#' + func.slug,
+        });
+      %>
+      <br/>
+    <% }); %>
+  <% } %>
+<% } %>
+
 <% if (record.kind === 'class') { %>
   <% if (record.$augments && record.$augments.length) { %>
     <h4>Extends:</h4>
@@ -141,6 +169,6 @@
 
 <button data-spoiler-button="<%= record.___id %>">DEBUG BUTTON NOT FOR PRODUCTION : toggle JSDoc record visibility</button>
 <pre data-spoiler="<%= record.___id %>" style="display: none;">
-  <%- JSON.stringify(record, null, 4).replace(/\n/g, '<br>') %>
+  <%- JSON.stringify(record, null, 4) %>
 </pre>
 </div>
