@@ -62,7 +62,7 @@ exports.publish = function(data, opts) {
   const package = {
     name: conf ? conf.title : 'documentation',
   };
-  const tplConf = conf ? conf.template : {};
+  const tplConf = conf && conf.template ? conf.template : {};
   const outpath = path.resolve(process.cwd(), opts.destination || 'docs');
   // @todo handle multiple entries
   const srcpath = path.resolve(process.cwd(), opts._[0]);
@@ -104,7 +104,7 @@ exports.publish = function(data, opts) {
     });
   });
 
-  // find class members (attributes / methods)
+    // defines members arrays
   data({ kind: 'class' }).each((record) => {
     record.$methods = [];
     record.$attributes = [];
@@ -112,7 +112,10 @@ exports.publish = function(data, opts) {
     record.$staticproperties = [];
     record.$augments = [];
     record.$augmentedBy = [];
+  });
 
+  // associate classes with members
+  data({ kind: 'class' }).each((record) => {
     if (record.description) {
       const copy = JSON.parse(JSON.stringify(record));
       copy.name = 'constructor';
@@ -143,7 +146,7 @@ exports.publish = function(data, opts) {
     if (record.augments) {
       record.augments.forEach(typeName => {
         const superclassRecord = data({ longname: typeName }).first();
-        if (superclassRecord) {
+        if (superclassRecord && superclassRecord.$augmentedBy !== undefined) {
           record.$augments.push(superclassRecord);
           superclassRecord.$augmentedBy.push({ name: record.name });
         } else {
