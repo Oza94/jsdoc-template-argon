@@ -3,7 +3,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>JSDoc template Argon</title>
+    <% if (typeof title === 'undefined') { %>
+      <title>JSDoc template Argon</title>
+    <% } else { %>
+      <title><%= title %></title>
+    <% } %>
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600,700|Source+Sans+Pro:400,700" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
@@ -15,7 +19,7 @@
         <button class="show-mobile menu-toggle-button" id="toggle-menu">
           <i class="fa fa-bars"></i>
         </button>
-        <a href="/">Hello world documentation</a>
+        <a href="/">Home</a>
       </header>
       <div class="row flex">
         <div class="scroll-y nav-menu" id="menu">

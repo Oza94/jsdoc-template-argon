@@ -46,7 +46,7 @@ function renderTemplate(relpath, data, options) {
 
 function createRecordPage(outpath, page, wrapper) {
   return renderTemplate('tpl/page/record.ejs', page)
-    .then(html => wrapper(html))
+    .then(html => wrapper(html, page.record.longname))
     .then(html => fs.outputFileAsync(path.resolve(outpath, page.recordUrl), html));
 }
 
@@ -59,6 +59,9 @@ function createRecordPage(outpath, page, wrapper) {
  */
 exports.publish = function(data, opts) {
   const conf = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), opts.configure), 'utf-8'));
+  const package = {
+    name: conf.title || 'documentation',
+  };
   const tplConf = conf.template || {};
   const outpath = path.resolve(process.cwd(), opts.destination || 'docs');
   // @todo handle multiple entries
@@ -224,14 +227,12 @@ exports.publish = function(data, opts) {
   });
 
   let _menuhtml = null;
-  const menuWrapper = html => renderTemplate('tpl/index.ejs', {
+  const menuWrapper = (html, pageTitle) => renderTemplate('tpl/index.ejs', {
     menu: _menuhtml,
+    title: `${pageTitle || 'Doclet'} - ${package.name}`,
     content: html,
   });
 
-  //console.log('outpath', srcpath, outpath);
-  // index.html generation
-  // copyFile(path.resolve(__dirname, 'tpl/index.html'), path.resolve(outpath, 'index.html'));
   renderTemplate('tpl/menu/menu.ejs', { menuData: menuData })
     .then(html => {
       _menuhtml = html;
@@ -240,7 +241,8 @@ exports.publish = function(data, opts) {
     // index page
     .then(html => renderTemplate('tpl/index.ejs', {
       menu: html,
-      content: 'This is the homepage',
+      title: `Home - ${package.name}`,
+      content: `<div class="doc-gutter">${opts.readme}</div>`,
     }))
     .then(html => fs.outputFileAsync(path.resolve(outpath, 'index.html'), html))
     .then(() => bluebird.map(pages, page => createRecordPage(outpath, page, menuWrapper)))
@@ -253,6 +255,7 @@ exports.publish = function(data, opts) {
           path: filepath.replace(srcpath, ''),
         })).then(html => renderTemplate('tpl/index.ejs', {
           menu: _menuhtml,
+          title: `source: ${relpath} - ${package.name}`,
           content: html,
         }))
         .then(html =>
