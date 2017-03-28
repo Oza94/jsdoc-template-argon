@@ -58,11 +58,11 @@ function createRecordPage(outpath, page, wrapper) {
  * @param {object} opts - An object with options information.
  */
 exports.publish = function(data, opts) {
-  const conf = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), opts.configure), 'utf-8'));
+  const conf = opts.configure ? JSON.parse(fs.readFileSync(path.resolve(process.cwd(), opts.configure), 'utf-8')) : null;
   const package = {
-    name: conf.title || 'documentation',
+    name: conf ? conf.title : 'documentation',
   };
-  const tplConf = conf.template || {};
+  const tplConf = conf ? conf.template : {};
   const outpath = path.resolve(process.cwd(), opts.destination || 'docs');
   // @todo handle multiple entries
   const srcpath = path.resolve(process.cwd(), opts._[0]);
@@ -169,15 +169,18 @@ exports.publish = function(data, opts) {
     const { filename, path: filepath, lineno } = record.meta;
     const relpath = filepath.replace(srcpath, '').slice(1, filepath.length - srcpath.length);
     const fullpath = path.join(relpath, filename);
-    const modulepath = relpath; 
-    const menupath = tplConf.referencePaths === 'folder' ? modulepath : fullpath.replace('.js', '');
+    const modulepath = relpath;
+    const menupath = tplConf.referencePaths !== 'folder' ? fullpath.replace('.js', '') : modulepath;
+    // prefix with menu object keys with `_` to avoid conflict with native 
+    // object methods. e.g. if `menupath === "toString"`
+    const menukey = `_${menupath}`;
     const filepath2 = path.join(relpath, filename);
     record.filepath = filepath2;
 
     logger.log(name, '(', fullpath, '-', lineno, ')', kind, scope);
 
-    if (!menuData[menupath]) {
-      menuData[menupath] = [];
+    if (!menuData[menukey]) {
+      menuData[menukey] = [];
     }
 
     if (name === 'applyBlueprint') {
@@ -208,9 +211,12 @@ exports.publish = function(data, opts) {
     }
 
     if (record.kind !== 'member' && !record.skip) {
-      const recordUrl = slugify(`${menupath}-${name}.html`);
+      recordUrl = slugify(`${menupath}-${name}.html`);
+      if (recordUrl.startsWith('-')) {
+        recordUrl = recordUrl.slice(1, recordUrl.length - 1);
+      }
       helpers.link.registerType(name, recordUrl);
-      menuData[menupath].push({
+      menuData[menukey].push({
         name: name,
         kind: kind,
         record: record,
