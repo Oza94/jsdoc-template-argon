@@ -2,18 +2,23 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>JSDoc template Argon</title>
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600,700|Source+Sans+Pro:400,700" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
   </head>
   <body>
+    <div class="overlay" id="menu-overlay" style="display: none;"></div>
     <div class="content column">
-      <header>
+      <header class="row">
+        <button class="show-mobile menu-toggle-button" id="toggle-menu">
+          <i class="fa fa-bars"></i>
+        </button>
         <a href="/">Hello world documentation</a>
       </header>
       <div class="row flex">
-        <div class="scroll-y">
+        <div class="scroll-y nav-menu" id="menu">
           <%- menu %>
         </div>
         <div class="flex scroll-y">
@@ -22,6 +27,7 @@
       </div>
     </div>
     <script>
+      // spoiler code
       function toggle(element) {
         if (element.style.display === 'block') {
           element.style.display = 'none';
@@ -38,6 +44,34 @@
           button.addEventListener('click', () => toggle(spoilElement));
         }
       });
+
+      // toggle menu mobile nav code
+      const menu = document.getElementById('menu');
+      const toggleMenuBtn = document.getElementById('toggle-menu');
+      const menuOverlay = document.getElementById('menu-overlay');
+
+      function openMenu() {
+        menu.className += ' open';
+        menuOverlay.style.display = 'block';
+        setTimeout(() => menuOverlay.className += ' open', 1);
+      }
+
+      function closeMenu() {        
+        menu.className = menu.className.replace('open', '');
+        menuOverlay.className = menuOverlay.className.replace('open', '');
+        setTimeout(() => menuOverlay.style.display = 'none', 300);
+      }
+
+      function toggleMenu() {
+        if (menu.className.indexOf('open') !== -1) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      }
+
+      toggleMenuBtn.addEventListener('click', toggleMenu);
+      menuOverlay.addEventListener('click', closeMenu);
     </script>
   </body>
 </html>
