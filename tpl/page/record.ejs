@@ -73,10 +73,17 @@
 <% if (record.kind === 'class') { %>
   <% if (record.$augments && record.$augments.length) { %>
     <h4>Extends:</h4>
-    <% record.$augments.forEach(augmentedRecord => { %>
-      <%- helpers.link.singleType(augmentedRecord.name) %> &rarr;
-    <% }); %> 
-    <%= record.name %>
+    <% 
+      let augmentChain = '';
+      // let's assume there's only one extended expression following es6 standards
+      let augmentedRecord = record.$augments[0];
+      do {
+        augmentChain = helpers.link.singleType(augmentedRecord.name) + ' &rarr; ' + augmentChain;
+        augmentedRecord = augmentedRecord.$augments ? augmentedRecord.$augments[0] : null;
+      } while (augmentedRecord);
+      augmentChain += record.name;
+    %>
+    <%- augmentChain %>
   <% } %>
 
   <% if (record.$augmentedBy && record.$augmentedBy.length) { %>
