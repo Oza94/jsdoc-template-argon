@@ -59,7 +59,7 @@ function createRecordPage(outpath, page, wrapper) {
  */
 exports.publish = function(data, opts) {
   const conf = opts.configure ? JSON.parse(fs.readFileSync(path.resolve(process.cwd(), opts.configure), 'utf-8')) : null;
-  const package = {
+  const pkg = {
     name: conf ? conf.title : 'documentation',
   };
   const tplConf = conf && conf.template ? conf.template : {};
@@ -238,7 +238,7 @@ exports.publish = function(data, opts) {
   let _menuhtml = null;
   const menuWrapper = (html, pageTitle) => renderTemplate('tpl/index.ejs', {
     menu: _menuhtml,
-    title: `${pageTitle || 'Doclet'} - ${package.name}`,
+    title: `${pageTitle || 'Doclet'} - ${pkg.name}`,
     content: html,
   });
 
@@ -250,7 +250,7 @@ exports.publish = function(data, opts) {
     // index page
     .then(html => renderTemplate('tpl/index.ejs', {
       menu: html,
-      title: `Home - ${package.name}`,
+      title: `Home - ${pkg.name}`,
       content: `<div class="doc-gutter">${opts.readme}</div>`,
     }))
     .then(html => fs.outputFileAsync(path.resolve(outpath, 'index.html'), html))
@@ -264,7 +264,7 @@ exports.publish = function(data, opts) {
           path: filepath.replace(srcpath, ''),
         })).then(html => renderTemplate('tpl/index.ejs', {
           menu: _menuhtml,
-          title: `source: ${relpath} - ${package.name}`,
+          title: `source: ${relpath} - ${pkg.name}`,
           content: html,
         }))
         .then(html =>
