@@ -1,24 +1,45 @@
-<div class="doc-gutter">
-  <%
-  Object.keys(menuData).forEach(function(modulePath) {
-    const symbols = menuData[modulePath];
-    if (!symbols.length) return;
-  %>
-  <div class="doc-menupath"><%= modulePath.slice(1, modulePath.length) %></div>
-  <ul class="doc-menu">
+<div class="column max-height-100" id="leftpane">
+  <div class="doc-gutter doc-search-box">
+    <input type="text" id="search" class="doc-search-input" placeholder="Search documentation" />
+  </div>
+  <div class="doc-menu-wrapper doc-gutter flex scroll-y" id="search-results">
     <%
-      symbols.forEach(function (symbol) {
-        if (symbol.record.skip) return;
+    Object.keys(menuData).forEach(function(modulePath) {
+      const symbols = menuData[modulePath];
+      if (!symbols.length) return;
     %>
-      <li>
-        <span title="<%= symbol.kind %>" class="letter-icon letter-icon-<%= symbol.kind %>">
-          <%= symbol.kind[0].toUpperCase() %>
-        </span>
-        &nbsp;
-        <a href="<%= symbol.recordUrl %>"><%= symbol.name %></a>
-      </li>
+    <div class="doc-menupath"><%= modulePath.slice(1, modulePath.length) %></div>
+    <ul class="doc-menu">
+      <%
+        symbols.forEach(function (symbol) {
+          if (symbol.record.skip) return;
+      %>
+        <li>
+          <span title="<%= symbol.kind %>" class="letter-icon letter-icon-<%= symbol.kind %>">
+            <%= symbol.kind[0].toUpperCase() %>
+          </span>
+          &nbsp;
+          <a href="<%= symbol.recordUrl %>"><%= symbol.name %></a>
+        </li>
+      <% }); %>
+    </ul>
     <% }); %>
-  </ul>
-  <% }); %>
+  </div>
 
 </div>
+<script>
+  // define a global JS client containing menu data object for search
+  <%
+    const jsonMenuData = {};
+    Object.keys(menuData).forEach(modulePath => {
+      jsonMenuData[modulePath] = menuData[modulePath].map(symbol => ({
+        name: symbol.name,
+        scope: symbol.scope,
+        kind: symbol.kind,
+        recordUrl: symbol.recordUrl,
+      }));
+    })
+  %>
+  // global containing menu data
+  window.__MENUDATA = <%- JSON.stringify(jsonMenuData) %>;
+</script>

@@ -22,7 +22,7 @@
         <a href="index.html">Home</a>
       </header>
       <div class="row flex">
-        <div class="scroll-y nav-menu" id="menu">
+        <div class="nav-menu" id="menu">
           <%- menu %>
         </div>
         <div class="flex scroll-y">
@@ -76,6 +76,56 @@
 
       toggleMenuBtn.addEventListener('click', toggleMenu);
       menuOverlay.addEventListener('click', closeMenu);
+
+      // search menu
+      console.log(__MENUDATA);
+      const leftpane = document.getElementById('leftpane');
+      const searchField = document.getElementById('search');
+      const searchResults = document.getElementById('search-results');
+      // fix menu width for search
+      leftpane.style.width = `${leftpane.offsetWidth}px`;
+
+      function renderMenu(results) {
+        let html = '';
+
+        Object.keys(results).forEach((menupath) => {
+          html += `<div class="doc-menupath">${menupath.slice(1, menupath.length)}</div>`;
+          html += '<ul class="doc-menu">';
+          html += results[menupath].map(symbol => `<li>
+            <span title="${symbol.kind}" class="letter-icon letter-icon-${symbol.kind}">${symbol.kind[0]}</span>
+            <a href="${symbol.recordUrl}">${symbol.name}</a>
+          </li>`).join('');
+          html += '</ul>';
+        });
+
+        if (html === '') {
+          html = '<p>No results.</p>';
+        }
+
+        searchResults.innerHTML = html;
+      }
+
+      searchField.addEventListener('keyup', (event) => {
+        const searchStr = event.target.value.toLowerCase();
+
+        const results = {};
+
+        Object.keys(__MENUDATA).forEach((menupath) => {
+          const matches = [];
+
+          __MENUDATA[menupath].forEach((symbol) => {
+            if (symbol.name.toLowerCase().indexOf(searchStr) !== -1) {
+              matches.push(symbol);
+            }
+          });
+
+          if (matches.length) {
+            results[menupath] = matches;
+          }
+        });
+
+        renderMenu(results);
+      });
     </script>
   </body>
 </html>
