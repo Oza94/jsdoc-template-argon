@@ -1,0 +1,5 @@
+# robots.txt for jsdoc-template-argon website
+# disallow template examples indexation
+
+User-agent: *
+Disallow: /example/*
