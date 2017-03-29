@@ -5,6 +5,7 @@
   "main": "publish.js",
   "scripts": {
     "lint": "eslint publish.js src/",
+    "example:lodash": "jsdoc examples/lodash/lodash-repo -t . -d docs/example/lodash -R examples/lodash/README.md",
     "docs": "jsdoc . -t . -d docs -R docs-static/README.md"
   },
   "repository": {
