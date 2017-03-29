@@ -22,7 +22,7 @@ npm install --save-dev jsdoc-template-argon
 jsdoc src/ -c .jsdoc.json -r -d docs -t node_modules/jsdoc-template-argon
 ```
 
-Please if you have any problem with es2015, make sure to read [ES2015+ issues](docs/es2015-issues.md) before posting.
+Please if you have any problem with es2015, make sure to read [ES2015+ issues](tutorials/es2015-issues.md) before posting.
 
 ## Options
 
