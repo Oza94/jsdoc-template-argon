@@ -4,7 +4,8 @@
   "version": "0.1.0",
   "main": "publish.js",
   "scripts": {
-    "lint": "eslint publish.js src/"
+    "lint": "eslint publish.js src/",
+    "docs": "jsdoc . -t . -d docs -R docs-static/README.md"
   },
   "repository": {
     "type": "git",

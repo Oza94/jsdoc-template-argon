@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-      <title>Home - documentation</title>
+      <title>source: \test.js - documentation</title>
     
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600,700|Source+Sans+Pro:400,700" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -41,8 +41,15 @@
 
         </div>
         <div class="flex scroll-y">
-          <div class="doc-gutter"><h1>JSDoc template Argon</h1><p>This website will soon host Argon template examples.</p>
-<p>This site was built with Argon template :)</p></div>
+          <h1>Source: \test.js</h1>
+<pre>
+  const data = require('./fixtures/test.json');<br>const opts = require('./fixtures/test-opts.json');
+const taffy = require('taffydb').taffy;
+const db = taffy(data);
+
+require('./publish').publish(db, opts);
+
+</pre>
         </div>
       </div>
     </div>
