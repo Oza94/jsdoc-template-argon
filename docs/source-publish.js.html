@@ -8,6 +8,7 @@
     
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600,700|Source+Sans+Pro:400,700" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/default.min.css">
     <link href="style.css" rel="stylesheet">
   </head>
   <body>
@@ -20,30 +21,44 @@
         <a href="index.html">Home</a>
       </header>
       <div class="row flex">
-        <div class="scroll-y nav-menu" id="menu">
-          <div class="doc-gutter">
-  
-  <div class="doc-menupath">publish</div>
-  <ul class="doc-menu">
+        <div class="nav-menu" id="menu">
+          <div class="column max-height-100" id="leftpane">
+  <div class="doc-gutter doc-search-box">
+    <input type="text" id="search" class="doc-search-input" placeholder="Search documentation" />
+  </div>
+  <div class="doc-menu-wrapper doc-gutter flex scroll-y" id="search-results">
     
-      <li>
-        <span title="module" class="letter-icon letter-icon-module">
-          M
-        </span>
-        &nbsp;
-        <a href="publish-publish.html">publish</a>
-      </li>
+    <div class="doc-menupath">publish</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="module" class="letter-icon letter-icon-module">
+            M
+          </span>
+          &nbsp;
+          <a href="publish-publish.html">publish</a>
+        </li>
+      
+    </ul>
     
-  </ul>
-  
+  </div>
 
 </div>
+<script>
+  // define a global JS client containing menu data object for search
+  
+  // global containing menu data
+  window.__MENUDATA = {"_publish":[{"name":"publish","kind":"module","recordUrl":"publish-publish.html"}]};
+</script>
 
         </div>
         <div class="flex scroll-y">
-          <h1>Source: \publish.js</h1>
-<pre>
-  /** @module publish */<br>const path = require('path');
+          <div class="doc-gutter">
+  <h1>Source: \publish.js</h1>
+  <hr />
+  <pre>
+    <code>/** @module publish */
+const path = require('path');
 const ejs = require('ejs');
 const fs = require('fs-extra-promise');
 const slugify = require('slugify');
@@ -114,8 +129,14 @@ exports.publish = function(data, opts) {
   const menuData = {};
   const pages = [];
 
+  // store list of classes declared with "unique identifier" generated from name,
+  // filename and lineno.
+  const declaredClasses = new Set();
+
   // @todo move this thing in a "outputTaffy" debug template
   fs.outputFileAsync('./taffydata.json', data().stringify()).then(() => logger.log('output done'));
+
+  data({ name: 'AccessibilityManager' }).each(record => console.log(record));
 
   // find modules members
   data({ kind: 'module' }).each((module) => {
@@ -202,6 +223,7 @@ exports.publish = function(data, opts) {
 
   logger.log('================');
   let sourceFiles = [];
+
   data().each((record) => {
 
     if (!record.meta) {
@@ -224,7 +246,18 @@ exports.publish = function(data, opts) {
     const filepath2 = path.join(relpath, filename);
     record.filepath = filepath2;
 
-    logger.log(name, '(', fullpath, '-', lineno, ')', kind, scope);
+    //logger.log(name, '(', fullpath, '-', lineno, ')', kind, scope);
+    if (kind === 'class' || kind === 'function') {
+      // check this is not a duplicate record
+      const classUniqueKey = `${record.londname}:${fullpath}:${lineno}`;
+      
+      if (declaredClasses.has(classUniqueKey)) {
+        logger.warn('Dropping duplicate record ', record.longname);
+        return;
+      } else {
+        declaredClasses.add(classUniqueKey);
+      }
+    }
 
     if (!menuData[menukey]) {
       menuData[menukey] = [];
@@ -244,7 +277,7 @@ exports.publish = function(data, opts) {
       if (klassRecord) {
         record.skip = true;
       } else {
-        logger.warn('member will not show up in documentation');
+        // logger.warn('member will not show up in documentation');
       }
     } else if (record.scope === 'instance' && record.memberof) {
       // attribute
@@ -253,7 +286,7 @@ exports.publish = function(data, opts) {
       if (klassRecord) {
         record.skip = true;
       } else {
-        logger.warn('member attribute will not show up in documentation');
+        // logger.warn('member attribute will not show up in documentation');
       }
     }
 
@@ -316,12 +349,18 @@ exports.publish = function(data, opts) {
         );
     }, { concurrency: 5 }));
 };
+</code>
+  </pre>
+</div>
 
-</pre>
         </div>
       </div>
     </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
     <script>
+      // syntax highlight code
+      document.querySelectorAll('pre code').forEach(el => hljs.highlightBlock(el));
+      
       // spoiler code
       function toggle(element) {
         if (element.style.display === 'block') {
@@ -367,6 +406,56 @@ exports.publish = function(data, opts) {
 
       toggleMenuBtn.addEventListener('click', toggleMenu);
       menuOverlay.addEventListener('click', closeMenu);
+
+      // search menu
+      console.log(__MENUDATA);
+      const leftpane = document.getElementById('leftpane');
+      const searchField = document.getElementById('search');
+      const searchResults = document.getElementById('search-results');
+      // fix menu width for search
+      leftpane.style.width = `${leftpane.offsetWidth}px`;
+
+      function renderMenu(results) {
+        let html = '';
+
+        Object.keys(results).forEach((menupath) => {
+          html += `<div class="doc-menupath">${menupath.slice(1, menupath.length)}</div>`;
+          html += '<ul class="doc-menu">';
+          html += results[menupath].map(symbol => `<li>
+            <span title="${symbol.kind}" class="letter-icon letter-icon-${symbol.kind}">${symbol.kind[0]}</span>
+            <a href="${symbol.recordUrl}">${symbol.name}</a>
+          </li>`).join('');
+          html += '</ul>';
+        });
+
+        if (html === '') {
+          html = '<p>No results.</p>';
+        }
+
+        searchResults.innerHTML = html;
+      }
+
+      searchField.addEventListener('keyup', (event) => {
+        const searchStr = event.target.value.toLowerCase();
+
+        const results = {};
+
+        Object.keys(__MENUDATA).forEach((menupath) => {
+          const matches = [];
+
+          __MENUDATA[menupath].forEach((symbol) => {
+            if (symbol.name.toLowerCase().indexOf(searchStr) !== -1) {
+              matches.push(symbol);
+            }
+          });
+
+          if (matches.length) {
+            results[menupath] = matches;
+          }
+        });
+
+        renderMenu(results);
+      });
     </script>
   </body>
 </html>

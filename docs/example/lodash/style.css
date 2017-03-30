@@ -251,3 +251,17 @@ td > p {
 .doc-search-box {
   border-bottom: 1px solid #ccc;
 }
+
+pre {
+  background: #efefef;
+  padding: 6px;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  margin: 12px;
+  max-width: calc(100% - 24px);
+  overflow-x: auto;
+}
+
+.hljs {
+  padding: 0;
+}

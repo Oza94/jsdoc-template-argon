@@ -1,0 +1,4889 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+      <title>PIXI.filters.DisplacementFilter - undefined</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600,700|Source+Sans+Pro:400,700" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/default.min.css">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="overlay" id="menu-overlay" style="display: none;"></div>
+    <div class="content column">
+      <header class="row">
+        <button class="show-mobile menu-toggle-button" id="toggle-menu">
+          <i class="fa fa-bars"></i>
+        </button>
+        <a href="index.html">Home</a>
+      </header>
+      <div class="row flex">
+        <div class="nav-menu" id="menu">
+          <div class="column max-height-100" id="leftpane">
+  <div class="doc-gutter doc-search-box">
+    <input type="text" id="search" class="doc-search-input" placeholder="Search documentation" />
+  </div>
+  <div class="doc-menu-wrapper doc-gutter flex scroll-y" id="search-results">
+    
+    <div class="doc-menupath">accessibility\AccessibilityManager</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="accessibilityAccessibilityManager-AccessibilityManager.html">AccessibilityManager</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">accessibility\accessibleTarget</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="accessibilityaccessibleTarget-accessibleTarget.html">accessibleTarget</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">accessibility\index</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="namespace" class="letter-icon letter-icon-namespace">
+            N
+          </span>
+          &nbsp;
+          <a href="accessibilityindex-accessibility.html">accessibility</a>
+        </li>
+      
+        <li>
+          <span title="namespace" class="letter-icon letter-icon-namespace">
+            N
+          </span>
+          &nbsp;
+          <a href="accessibilityindex-accessibility.html">accessibility</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\Application</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coreApplication-Application.html">Application</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\autoDetectRenderer</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreautoDetectRenderer-autoDetectRenderer.html">autoDetectRenderer</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\const</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-VERSION.html">VERSION</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-PI_2.html">PI_2</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-RAD_TO_DEG.html">RAD_TO_DEG</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-DEG_TO_RAD.html">DEG_TO_RAD</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-RENDERER_TYPE.html">RENDERER_TYPE</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-BLEND_MODES.html">BLEND_MODES</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-DRAW_MODES.html">DRAW_MODES</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-SCALE_MODES.html">SCALE_MODES</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-WRAP_MODES.html">WRAP_MODES</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-GC_MODES.html">GC_MODES</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-URL_FILE_EXTENSION.html">URL_FILE_EXTENSION</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-DATA_URI.html">DATA_URI</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-SVG_SIZE.html">SVG_SIZE</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-SHAPES.html">SHAPES</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-PRECISION.html">PRECISION</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-TRANSFORM_MODE.html">TRANSFORM_MODE</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-TEXT_GRADIENT.html">TEXT_GRADIENT</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-UPDATE_PRIORITY.html">UPDATE_PRIORITY</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-VERSION.html">VERSION</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-PI_2.html">PI_2</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-RAD_TO_DEG.html">RAD_TO_DEG</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-DEG_TO_RAD.html">DEG_TO_RAD</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-RENDERER_TYPE.html">RENDERER_TYPE</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-BLEND_MODES.html">BLEND_MODES</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-DRAW_MODES.html">DRAW_MODES</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-SCALE_MODES.html">SCALE_MODES</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-WRAP_MODES.html">WRAP_MODES</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-GC_MODES.html">GC_MODES</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-URL_FILE_EXTENSION.html">URL_FILE_EXTENSION</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-DATA_URI.html">DATA_URI</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-SVG_SIZE.html">SVG_SIZE</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-SHAPES.html">SHAPES</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-PRECISION.html">PRECISION</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-TRANSFORM_MODE.html">TRANSFORM_MODE</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-TEXT_GRADIENT.html">TEXT_GRADIENT</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreconst-UPDATE_PRIORITY.html">UPDATE_PRIORITY</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\display\Bounds</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coredisplayBounds-Bounds.html">Bounds</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\display\Container</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coredisplayContainer-Container.html">Container</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\display\DisplayObject</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coredisplayDisplayObject-DisplayObject.html">DisplayObject</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\display\Transform</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coredisplayTransform-Transform.html">Transform</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\display\TransformBase</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coredisplayTransformBase-TransformBase.html">TransformBase</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\display\TransformStatic</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coredisplayTransformStatic-TransformStatic.html">TransformStatic</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\graphics\canvas\CanvasGraphicsRenderer</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coregraphicscanvasCanvasGraphicsRenderer-CanvasGraphicsRenderer.html">CanvasGraphicsRenderer</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\graphics\Graphics</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coregraphicsGraphics-Graphics.html">Graphics</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\graphics\GraphicsData</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coregraphicsGraphicsData-GraphicsData.html">GraphicsData</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\graphics\utils\bezierCurveTo</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coregraphicsutilsbezierCurveTo-exports.html">exports</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\graphics\webgl\GraphicsRenderer</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coregraphicswebglGraphicsRenderer-GraphicsRenderer.html">GraphicsRenderer</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\graphics\webgl\shaders\PrimitiveShader</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coregraphicswebglshadersPrimitiveShader-PrimitiveShader.html">PrimitiveShader</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\graphics\webgl\utils\buildCircle</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coregraphicswebglutilsbuildCircle-exports.html">exports</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\graphics\webgl\utils\buildComplexPoly</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coregraphicswebglutilsbuildComplexPoly-exports.html">exports</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\graphics\webgl\utils\buildLine</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coregraphicswebglutilsbuildLine-exports.html">exports</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coregraphicswebglutilsbuildLine-buildLine.html">buildLine</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coregraphicswebglutilsbuildLine-buildNativeLine.html">buildNativeLine</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\graphics\webgl\utils\buildPoly</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coregraphicswebglutilsbuildPoly-exports.html">exports</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\graphics\webgl\utils\buildRectangle</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coregraphicswebglutilsbuildRectangle-exports.html">exports</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\graphics\webgl\utils\buildRoundedRectangle</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coregraphicswebglutilsbuildRoundedRectangle-exports.html">exports</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coregraphicswebglutilsbuildRoundedRectangle-getPt.html">getPt</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coregraphicswebglutilsbuildRoundedRectangle-quadraticBezierCurve.html">quadraticBezierCurve</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\graphics\webgl\WebGLGraphicsData</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coregraphicswebglWebGLGraphicsData-WebGLGraphicsData.html">WebGLGraphicsData</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\index</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="namespace" class="letter-icon letter-icon-namespace">
+            N
+          </span>
+          &nbsp;
+          <a href="coreindex-PIXI.html">PIXI</a>
+        </li>
+      
+        <li>
+          <span title="namespace" class="letter-icon letter-icon-namespace">
+            N
+          </span>
+          &nbsp;
+          <a href="coreindex-PIXI.html">PIXI</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\math\GroupD8</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coremathGroupD8-GroupD8.html">GroupD8</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\math\Matrix</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coremathMatrix-Matrix.html">Matrix</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\math\ObservablePoint</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coremathObservablePoint-ObservablePoint.html">ObservablePoint</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\math\Point</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coremathPoint-Point.html">Point</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\math\shapes\Circle</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coremathshapesCircle-Circle.html">Circle</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\math\shapes\Ellipse</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coremathshapesEllipse-Ellipse.html">Ellipse</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\math\shapes\Polygon</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coremathshapesPolygon-Polygon.html">Polygon</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\math\shapes\Rectangle</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coremathshapesRectangle-Rectangle.html">Rectangle</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\math\shapes\RoundedRectangle</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coremathshapesRoundedRectangle-RoundedRectangle.html">RoundedRectangle</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\renderers\canvas\CanvasRenderer</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="corerendererscanvasCanvasRenderer-CanvasRenderer.html">CanvasRenderer</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\renderers\canvas\utils\canUseNewCanvasBlendModes</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="corerendererscanvasutilscanUseNewCanvasBlendModes-createColoredCanvas.html">createColoredCanvas</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="corerendererscanvasutilscanUseNewCanvasBlendModes-exports.html">exports</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\renderers\canvas\utils\CanvasMaskManager</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="corerendererscanvasutilsCanvasMaskManager-CanvasMaskManager.html">CanvasMaskManager</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\renderers\canvas\utils\CanvasRenderTarget</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="corerendererscanvasutilsCanvasRenderTarget-CanvasRenderTarget.html">CanvasRenderTarget</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\renderers\canvas\utils\mapCanvasBlendModesToPixi</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="corerendererscanvasutilsmapCanvasBlendModesToPixi-mapCanvasBlendModesToPixi.html">mapCanvasBlendModesToPixi</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\renderers\SystemRenderer</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="corerenderersSystemRenderer-SystemRenderer.html">SystemRenderer</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\renderers\webgl\filters\Filter</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="corerendererswebglfiltersFilter-Filter.html">Filter</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\renderers\webgl\filters\spriteMask\SpriteMaskFilter</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="corerendererswebglfiltersspriteMaskSpriteMaskFilter-SpriteMaskFilter.html">SpriteMaskFilter</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\renderers\webgl\managers\BlendModeManager</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="corerendererswebglmanagersBlendModeManager-BlendModeManager.html">BlendModeManager</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\renderers\webgl\managers\FilterManager</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="corerendererswebglmanagersFilterManager-FilterState.html">FilterState</a>
+        </li>
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="corerendererswebglmanagersFilterManager-FilterManager.html">FilterManager</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\renderers\webgl\managers\MaskManager</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="corerendererswebglmanagersMaskManager-MaskManager.html">MaskManager</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\renderers\webgl\managers\StencilManager</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="corerendererswebglmanagersStencilManager-StencilManager.html">StencilManager</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\renderers\webgl\managers\WebGLManager</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="corerendererswebglmanagersWebGLManager-WebGLManager.html">WebGLManager</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\renderers\webgl\TextureGarbageCollector</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="corerendererswebglTextureGarbageCollector-TextureGarbageCollector.html">TextureGarbageCollector</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\renderers\webgl\TextureManager</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="corerendererswebglTextureManager-TextureManager.html">TextureManager</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\renderers\webgl\utils\mapWebGLBlendModesToPixi</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="corerendererswebglutilsmapWebGLBlendModesToPixi-mapWebGLBlendModesToPixi.html">mapWebGLBlendModesToPixi</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\renderers\webgl\utils\mapWebGLDrawModesToPixi</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="corerendererswebglutilsmapWebGLDrawModesToPixi-mapWebGLDrawModesToPixi.html">mapWebGLDrawModesToPixi</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\renderers\webgl\utils\ObjectRenderer</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="corerendererswebglutilsObjectRenderer-ObjectRenderer.html">ObjectRenderer</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\renderers\webgl\utils\Quad</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="corerendererswebglutilsQuad-Quad.html">Quad</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\renderers\webgl\utils\RenderTarget</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="corerendererswebglutilsRenderTarget-RenderTarget.html">RenderTarget</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\renderers\webgl\WebGLRenderer</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="corerendererswebglWebGLRenderer-WebGLRenderer.html">WebGLRenderer</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\renderers\webgl\WebGLState</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="corerendererswebglWebGLState-WebGLState.html">WebGLState</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\settings</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="namespace" class="letter-icon letter-icon-namespace">
+            N
+          </span>
+          &nbsp;
+          <a href="coresettings-settings.html">settings</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coresettings-RENDER_OPTIONS.html">RENDER_OPTIONS</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coresettings-CAN_UPLOAD_SAME_BUFFER.html">CAN_UPLOAD_SAME_BUFFER</a>
+        </li>
+      
+        <li>
+          <span title="namespace" class="letter-icon letter-icon-namespace">
+            N
+          </span>
+          &nbsp;
+          <a href="coresettings-settings.html">settings</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coresettings-RENDER_OPTIONS.html">RENDER_OPTIONS</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coresettings-CAN_UPLOAD_SAME_BUFFER.html">CAN_UPLOAD_SAME_BUFFER</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\Shader</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coreShader-Shader.html">Shader</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\sprites\canvas\CanvasSpriteRenderer</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="corespritescanvasCanvasSpriteRenderer-CanvasSpriteRenderer.html">CanvasSpriteRenderer</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\sprites\canvas\CanvasTinter</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="corespritescanvasCanvasTinter-CanvasTinter.html">CanvasTinter</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\sprites\Sprite</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="corespritesSprite-Sprite.html">Sprite</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\sprites\webgl\BatchBuffer</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="corespriteswebglBatchBuffer-Buffer.html">Buffer</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\sprites\webgl\SpriteRenderer</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="corespriteswebglSpriteRenderer-SpriteRenderer.html">SpriteRenderer</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\text\Text</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coretextText-Text.html">Text</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\text\TextStyle</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coretextTextStyle-TextStyle.html">TextStyle</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coretextTextStyle-getSingleColor.html">getSingleColor</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coretextTextStyle-getColor.html">getColor</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coretextTextStyle-areArraysEqual.html">areArraysEqual</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\textures\BaseRenderTexture</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coretexturesBaseRenderTexture-BaseRenderTexture.html">BaseRenderTexture</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\textures\BaseTexture</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coretexturesBaseTexture-BaseTexture.html">BaseTexture</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\textures\RenderTexture</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coretexturesRenderTexture-RenderTexture.html">RenderTexture</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\textures\Spritesheet</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coretexturesSpritesheet-Spritesheet.html">Spritesheet</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\textures\Texture</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coretexturesTexture-Texture.html">Texture</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\textures\TextureUvs</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coretexturesTextureUvs-TextureUvs.html">TextureUvs</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\textures\VideoBaseTexture</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coretexturesVideoBaseTexture-VideoBaseTexture.html">VideoBaseTexture</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\ticker\index</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coretickerindex-shared.html">shared</a>
+        </li>
+      
+        <li>
+          <span title="namespace" class="letter-icon letter-icon-namespace">
+            N
+          </span>
+          &nbsp;
+          <a href="coretickerindex-ticker.html">ticker</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coretickerindex-shared.html">shared</a>
+        </li>
+      
+        <li>
+          <span title="namespace" class="letter-icon letter-icon-namespace">
+            N
+          </span>
+          &nbsp;
+          <a href="coretickerindex-ticker.html">ticker</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\ticker\Ticker</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coretickerTicker-Ticker.html">Ticker</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\ticker\TickerListener</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coretickerTickerListener-TickerListener.html">TickerListener</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\utils\createIndicesForQuads</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreutilscreateIndicesForQuads-createIndicesForQuads.html">createIndicesForQuads</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\utils\determineCrossOrigin</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreutilsdetermineCrossOrigin-exports.html">exports</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\utils\index</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="namespace" class="letter-icon letter-icon-namespace">
+            N
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-utils.html">utils</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-isMobile.html">isMobile</a>
+        </li>
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-EventEmitter.html">EventEmitter</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-pluginTarget.html">pluginTarget</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-uid.html">uid</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-hex2rgb.html">hex2rgb</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-hex2string.html">hex2string</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-rgb2hex.html">rgb2hex</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-getResolutionOfUrl.html">getResolutionOfUrl</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-decomposeDataUri.html">decomposeDataUri</a>
+        </li>
+      
+        <li>
+          <span title="typedef" class="letter-icon letter-icon-typedef">
+            T
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-DecomposedDataUri.html">DecomposedDataUri</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-getUrlFileExtension.html">getUrlFileExtension</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-getSvgSize.html">getSvgSize</a>
+        </li>
+      
+        <li>
+          <span title="typedef" class="letter-icon letter-icon-typedef">
+            T
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-Size.html">Size</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-skipHello.html">skipHello</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-sayHello.html">sayHello</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-isWebGLSupported.html">isWebGLSupported</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-sign.html">sign</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-removeItems.html">removeItems</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-exports.TextureCache.html">exports.TextureCache</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-exports.BaseTextureCache.html">exports.BaseTextureCache</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-destroyTextureCache.html">destroyTextureCache</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-clearTextureCache.html">clearTextureCache</a>
+        </li>
+      
+        <li>
+          <span title="namespace" class="letter-icon letter-icon-namespace">
+            N
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-utils.html">utils</a>
+        </li>
+      
+        <li>
+          <span title="typedef" class="letter-icon letter-icon-typedef">
+            T
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-DecomposedDataUri.html">DecomposedDataUri</a>
+        </li>
+      
+        <li>
+          <span title="typedef" class="letter-icon letter-icon-typedef">
+            T
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-Size.html">Size</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-exports.TextureCache.html">exports.TextureCache</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="coreutilsindex-exports.BaseTextureCache.html">exports.BaseTextureCache</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\utils\mixin</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreutilsmixin-mixin.html">mixin</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreutilsmixin-delayMixin.html">delayMixin</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreutilsmixin-performMixins.html">performMixins</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\utils\pluginTarget</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="mixin" class="letter-icon letter-icon-mixin">
+            M
+          </span>
+          &nbsp;
+          <a href="coreutilspluginTarget-pluginTarget.html">pluginTarget</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreutilspluginTarget-registerPlugin.html">registerPlugin</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreutilspluginTarget-initPlugins.html">initPlugins</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreutilspluginTarget-destroyPlugins.html">destroyPlugins</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreutilspluginTarget-mixin.html">mixin</a>
+        </li>
+      
+        <li>
+          <span title="mixin" class="letter-icon letter-icon-mixin">
+            M
+          </span>
+          &nbsp;
+          <a href="coreutilspluginTarget-pluginTarget.html">pluginTarget</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">core\utils\trimCanvas</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="coreutilstrimCanvas-trimCanvas.html">trimCanvas</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">deprecation</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-SpriteBatch.html">SpriteBatch</a>
+        </li>
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-AssetLoader.html">AssetLoader</a>
+        </li>
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-Stage.html">Stage</a>
+        </li>
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-DisplayObjectContainer.html">DisplayObjectContainer</a>
+        </li>
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-Strip.html">Strip</a>
+        </li>
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-Rope.html">Rope</a>
+        </li>
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-ParticleContainer.html">ParticleContainer</a>
+        </li>
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-MovieClip.html">MovieClip</a>
+        </li>
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-TilingSprite.html">TilingSprite</a>
+        </li>
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-BitmapText.html">BitmapText</a>
+        </li>
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-blendModes.html">blendModes</a>
+        </li>
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-scaleModes.html">scaleModes</a>
+        </li>
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-BaseTextureCache.html">BaseTextureCache</a>
+        </li>
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-TextureCache.html">TextureCache</a>
+        </li>
+      
+        <li>
+          <span title="namespace" class="letter-icon letter-icon-namespace">
+            N
+          </span>
+          &nbsp;
+          <a href="deprecation-math.html">math</a>
+        </li>
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-AbstractFilter.html">AbstractFilter</a>
+        </li>
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-TransformManual.html">TransformManual</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-TARGET_FPMS.html">TARGET_FPMS</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-FILTER_RESOLUTION.html">FILTER_RESOLUTION</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-RESOLUTION.html">RESOLUTION</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-MIPMAP_TEXTURES.html">MIPMAP_TEXTURES</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-SPRITE_BATCH_SIZE.html">SPRITE_BATCH_SIZE</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-SPRITE_MAX_TEXTURES.html">SPRITE_MAX_TEXTURES</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-RETINA_PREFIX.html">RETINA_PREFIX</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-DEFAULT_RENDER_OPTIONS.html">DEFAULT_RENDER_OPTIONS</a>
+        </li>
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-MovieClip.html">MovieClip</a>
+        </li>
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-AbstractFilter.html">AbstractFilter</a>
+        </li>
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-SpriteMaskFilter.html">SpriteMaskFilter</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="deprecation-uuid.html">uuid</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="deprecation-canUseNewCanvasBlendModes.html">canUseNewCanvasBlendModes</a>
+        </li>
+      
+        <li>
+          <span title="namespace" class="letter-icon letter-icon-namespace">
+            N
+          </span>
+          &nbsp;
+          <a href="deprecation-math.html">math</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-TARGET_FPMS.html">TARGET_FPMS</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-FILTER_RESOLUTION.html">FILTER_RESOLUTION</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-RESOLUTION.html">RESOLUTION</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-MIPMAP_TEXTURES.html">MIPMAP_TEXTURES</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-SPRITE_BATCH_SIZE.html">SPRITE_BATCH_SIZE</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-SPRITE_MAX_TEXTURES.html">SPRITE_MAX_TEXTURES</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-RETINA_PREFIX.html">RETINA_PREFIX</a>
+        </li>
+      
+        <li>
+          <span title="constant" class="letter-icon letter-icon-constant">
+            C
+          </span>
+          &nbsp;
+          <a href="deprecation-DEFAULT_RENDER_OPTIONS.html">DEFAULT_RENDER_OPTIONS</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">extract\canvas\CanvasExtract</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="extractcanvasCanvasExtract-CanvasExtract.html">CanvasExtract</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">extract\webgl\WebGLExtract</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="extractwebglWebGLExtract-WebGLExtract.html">WebGLExtract</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">extras\AnimatedSprite</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="typedef" class="letter-icon letter-icon-typedef">
+            T
+          </span>
+          &nbsp;
+          <a href="extrasAnimatedSprite-FrameObject.html">FrameObject</a>
+        </li>
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="extrasAnimatedSprite-AnimatedSprite.html">AnimatedSprite</a>
+        </li>
+      
+        <li>
+          <span title="typedef" class="letter-icon letter-icon-typedef">
+            T
+          </span>
+          &nbsp;
+          <a href="extrasAnimatedSprite-FrameObject.html">FrameObject</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">extras\BitmapText</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="extrasBitmapText-BitmapText.html">BitmapText</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">extras\cacheAsBitmap</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="extrascacheAsBitmap-CacheData.html">CacheData</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="extrascacheAsBitmap-_renderCachedWebGL.html">_renderCachedWebGL</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="extrascacheAsBitmap-_initCachedDisplayObject.html">_initCachedDisplayObject</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="extrascacheAsBitmap-_renderCachedCanvas.html">_renderCachedCanvas</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="extrascacheAsBitmap-_initCachedDisplayObjectCanvas.html">_initCachedDisplayObjectCanvas</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">extras\getChildByName</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="extrasgetChildByName-getChildByName.html">getChildByName</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">extras\getGlobalPosition</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="extrasgetGlobalPosition-getGlobalPosition.html">getGlobalPosition</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">extras\index</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="namespace" class="letter-icon letter-icon-namespace">
+            N
+          </span>
+          &nbsp;
+          <a href="extrasindex-extras.html">extras</a>
+        </li>
+      
+        <li>
+          <span title="namespace" class="letter-icon letter-icon-namespace">
+            N
+          </span>
+          &nbsp;
+          <a href="extrasindex-extras.html">extras</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">extras\TextureTransform</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="extrasTextureTransform-TextureTransform.html">TextureTransform</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">extras\TilingSprite</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="extrasTilingSprite-TilingSprite.html">TilingSprite</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">extras\webgl\TilingSpriteRenderer</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="extraswebglTilingSpriteRenderer-TilingSpriteRenderer.html">TilingSpriteRenderer</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">filters\blur\BlurFilter</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="filtersblurBlurFilter-BlurFilter.html">BlurFilter</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">filters\blur\BlurXFilter</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="filtersblurBlurXFilter-BlurXFilter.html">BlurXFilter</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">filters\blur\BlurYFilter</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="filtersblurBlurYFilter-BlurYFilter.html">BlurYFilter</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">filters\colormatrix\ColorMatrixFilter</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="filterscolormatrixColorMatrixFilter-ColorMatrixFilter.html">ColorMatrixFilter</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">filters\displacement\DisplacementFilter</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="filtersdisplacementDisplacementFilter-DisplacementFilter.html">DisplacementFilter</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">filters\fxaa\FXAAFilter</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="filtersfxaaFXAAFilter-FXAAFilter.html">FXAAFilter</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">filters\index</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="namespace" class="letter-icon letter-icon-namespace">
+            N
+          </span>
+          &nbsp;
+          <a href="filtersindex-filters.html">filters</a>
+        </li>
+      
+        <li>
+          <span title="namespace" class="letter-icon letter-icon-namespace">
+            N
+          </span>
+          &nbsp;
+          <a href="filtersindex-filters.html">filters</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">filters\noise\NoiseFilter</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="filtersnoiseNoiseFilter-NoiseFilter.html">NoiseFilter</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">filters\void\VoidFilter</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="filtersvoidVoidFilter-VoidFilter.html">VoidFilter</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">interaction\index</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="namespace" class="letter-icon letter-icon-namespace">
+            N
+          </span>
+          &nbsp;
+          <a href="interactionindex-interaction.html">interaction</a>
+        </li>
+      
+        <li>
+          <span title="namespace" class="letter-icon letter-icon-namespace">
+            N
+          </span>
+          &nbsp;
+          <a href="interactionindex-interaction.html">interaction</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">interaction\InteractionData</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="interactionInteractionData-InteractionData.html">InteractionData</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">interaction\InteractionEvent</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="interactionInteractionEvent-InteractionEvent.html">InteractionEvent</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">interaction\InteractionManager</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="interactionInteractionManager-InteractionManager.html">InteractionManager</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">interaction\InteractionTrackingData</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="interactionInteractionTrackingData-InteractionTrackingData.html">InteractionTrackingData</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">interaction\interactiveTarget</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="mixin" class="letter-icon letter-icon-mixin">
+            M
+          </span>
+          &nbsp;
+          <a href="interactioninteractiveTarget-interactiveTarget.html">interactiveTarget</a>
+        </li>
+      
+        <li>
+          <span title="mixin" class="letter-icon letter-icon-mixin">
+            M
+          </span>
+          &nbsp;
+          <a href="interactioninteractiveTarget-interactiveTarget.html">interactiveTarget</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">loaders\bitmapFontParser</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="loadersbitmapFontParser-parseBitmapFontData.html">parseBitmapFontData</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">loaders\index</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="namespace" class="letter-icon letter-icon-namespace">
+            N
+          </span>
+          &nbsp;
+          <a href="loadersindex-loaders.html">loaders</a>
+        </li>
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="loadersindex-Resource.html">Resource</a>
+        </li>
+      
+        <li>
+          <span title="namespace" class="letter-icon letter-icon-namespace">
+            N
+          </span>
+          &nbsp;
+          <a href="loadersindex-loaders.html">loaders</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">loaders\loader</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="loadersloader-Loader.html">Loader</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">mesh\canvas\CanvasMeshRenderer</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="meshcanvasCanvasMeshRenderer-MeshSpriteRenderer.html">MeshSpriteRenderer</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">mesh\index</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="namespace" class="letter-icon letter-icon-namespace">
+            N
+          </span>
+          &nbsp;
+          <a href="meshindex-mesh.html">mesh</a>
+        </li>
+      
+        <li>
+          <span title="namespace" class="letter-icon letter-icon-namespace">
+            N
+          </span>
+          &nbsp;
+          <a href="meshindex-mesh.html">mesh</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">mesh\Mesh</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="meshMesh-Mesh.html">Mesh</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">mesh\NineSlicePlane</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="meshNineSlicePlane-NineSlicePlane.html">NineSlicePlane</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">mesh\Plane</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="meshPlane-Plane.html">Plane</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">mesh\Rope</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="meshRope-Rope.html">Rope</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">mesh\webgl\MeshRenderer</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="meshwebglMeshRenderer-MeshRenderer.html">MeshRenderer</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">particles\index</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="namespace" class="letter-icon letter-icon-namespace">
+            N
+          </span>
+          &nbsp;
+          <a href="particlesindex-particles.html">particles</a>
+        </li>
+      
+        <li>
+          <span title="namespace" class="letter-icon letter-icon-namespace">
+            N
+          </span>
+          &nbsp;
+          <a href="particlesindex-particles.html">particles</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">particles\ParticleContainer</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="particlesParticleContainer-ParticleContainer.html">ParticleContainer</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">particles\webgl\ParticleBuffer</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="particleswebglParticleBuffer-ParticleBuffer.html">ParticleBuffer</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">particles\webgl\ParticleRenderer</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="particleswebglParticleRenderer-ParticleRenderer.html">ParticleRenderer</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">particles\webgl\ParticleShader</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="particleswebglParticleShader-ParticleShader.html">ParticleShader</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">prepare\BasePrepare</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="prepareBasePrepare-BasePrepare.html">BasePrepare</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="prepareBasePrepare-findMultipleBaseTextures.html">findMultipleBaseTextures</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="prepareBasePrepare-findBaseTexture.html">findBaseTexture</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="prepareBasePrepare-findTexture.html">findTexture</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="prepareBasePrepare-drawText.html">drawText</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="prepareBasePrepare-calculateTextStyle.html">calculateTextStyle</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="prepareBasePrepare-findText.html">findText</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="prepareBasePrepare-findTextStyle.html">findTextStyle</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">prepare\canvas\CanvasPrepare</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="preparecanvasCanvasPrepare-CanvasPrepare.html">CanvasPrepare</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="preparecanvasCanvasPrepare-uploadBaseTextures.html">uploadBaseTextures</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">prepare\index</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="namespace" class="letter-icon letter-icon-namespace">
+            N
+          </span>
+          &nbsp;
+          <a href="prepareindex-prepare.html">prepare</a>
+        </li>
+      
+        <li>
+          <span title="namespace" class="letter-icon letter-icon-namespace">
+            N
+          </span>
+          &nbsp;
+          <a href="prepareindex-prepare.html">prepare</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">prepare\limiters\CountLimiter</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="preparelimitersCountLimiter-CountLimiter.html">CountLimiter</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">prepare\limiters\TimeLimiter</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="preparelimitersTimeLimiter-TimeLimiter.html">TimeLimiter</a>
+        </li>
+      
+    </ul>
+    
+    <div class="doc-menupath">prepare\webgl\WebGLPrepare</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="class" class="letter-icon letter-icon-class">
+            C
+          </span>
+          &nbsp;
+          <a href="preparewebglWebGLPrepare-WebGLPrepare.html">WebGLPrepare</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="preparewebglWebGLPrepare-uploadBaseTextures.html">uploadBaseTextures</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="preparewebglWebGLPrepare-uploadGraphics.html">uploadGraphics</a>
+        </li>
+      
+        <li>
+          <span title="function" class="letter-icon letter-icon-function">
+            F
+          </span>
+          &nbsp;
+          <a href="preparewebglWebGLPrepare-findGraphics.html">findGraphics</a>
+        </li>
+      
+    </ul>
+    
+  </div>
+
+</div>
+<script>
+  // define a global JS client containing menu data object for search
+  
+  // global containing menu data
+  window.__MENUDATA = {"_accessibility\\AccessibilityManager":[{"name":"AccessibilityManager","scope":"static","kind":"class","recordUrl":"accessibilityAccessibilityManager-AccessibilityManager.html"}],"_accessibility\\accessibleTarget":[{"name":"accessibleTarget","scope":"static","kind":"function","recordUrl":"accessibilityaccessibleTarget-accessibleTarget.html"}],"_accessibility\\index":[{"name":"accessibility","scope":"static","kind":"namespace","recordUrl":"accessibilityindex-accessibility.html"},{"name":"accessibility","scope":"static","kind":"namespace","recordUrl":"accessibilityindex-accessibility.html"}],"_core\\Application":[{"name":"Application","scope":"static","kind":"class","recordUrl":"coreApplication-Application.html"}],"_core\\autoDetectRenderer":[{"name":"autoDetectRenderer","scope":"static","kind":"function","recordUrl":"coreautoDetectRenderer-autoDetectRenderer.html"}],"_core\\const":[{"name":"VERSION","scope":"static","kind":"constant","recordUrl":"coreconst-VERSION.html"},{"name":"PI_2","scope":"static","kind":"constant","recordUrl":"coreconst-PI_2.html"},{"name":"RAD_TO_DEG","scope":"static","kind":"constant","recordUrl":"coreconst-RAD_TO_DEG.html"},{"name":"DEG_TO_RAD","scope":"static","kind":"constant","recordUrl":"coreconst-DEG_TO_RAD.html"},{"name":"RENDERER_TYPE","scope":"static","kind":"constant","recordUrl":"coreconst-RENDERER_TYPE.html"},{"name":"BLEND_MODES","scope":"static","kind":"constant","recordUrl":"coreconst-BLEND_MODES.html"},{"name":"DRAW_MODES","scope":"static","kind":"constant","recordUrl":"coreconst-DRAW_MODES.html"},{"name":"SCALE_MODES","scope":"static","kind":"constant","recordUrl":"coreconst-SCALE_MODES.html"},{"name":"WRAP_MODES","scope":"static","kind":"constant","recordUrl":"coreconst-WRAP_MODES.html"},{"name":"GC_MODES","scope":"static","kind":"constant","recordUrl":"coreconst-GC_MODES.html"},{"name":"URL_FILE_EXTENSION","scope":"static","kind":"constant","recordUrl":"coreconst-URL_FILE_EXTENSION.html"},{"name":"DATA_URI","scope":"static","kind":"constant","recordUrl":"coreconst-DATA_URI.html"},{"name":"SVG_SIZE","scope":"static","kind":"constant","recordUrl":"coreconst-SVG_SIZE.html"},{"name":"SHAPES","scope":"static","kind":"constant","recordUrl":"coreconst-SHAPES.html"},{"name":"PRECISION","scope":"static","kind":"constant","recordUrl":"coreconst-PRECISION.html"},{"name":"TRANSFORM_MODE","scope":"static","kind":"constant","recordUrl":"coreconst-TRANSFORM_MODE.html"},{"name":"TEXT_GRADIENT","scope":"static","kind":"constant","recordUrl":"coreconst-TEXT_GRADIENT.html"},{"name":"UPDATE_PRIORITY","scope":"static","kind":"constant","recordUrl":"coreconst-UPDATE_PRIORITY.html"},{"name":"VERSION","scope":"static","kind":"constant","recordUrl":"coreconst-VERSION.html"},{"name":"PI_2","scope":"static","kind":"constant","recordUrl":"coreconst-PI_2.html"},{"name":"RAD_TO_DEG","scope":"static","kind":"constant","recordUrl":"coreconst-RAD_TO_DEG.html"},{"name":"DEG_TO_RAD","scope":"static","kind":"constant","recordUrl":"coreconst-DEG_TO_RAD.html"},{"name":"RENDERER_TYPE","scope":"static","kind":"constant","recordUrl":"coreconst-RENDERER_TYPE.html"},{"name":"BLEND_MODES","scope":"static","kind":"constant","recordUrl":"coreconst-BLEND_MODES.html"},{"name":"DRAW_MODES","scope":"static","kind":"constant","recordUrl":"coreconst-DRAW_MODES.html"},{"name":"SCALE_MODES","scope":"static","kind":"constant","recordUrl":"coreconst-SCALE_MODES.html"},{"name":"WRAP_MODES","scope":"static","kind":"constant","recordUrl":"coreconst-WRAP_MODES.html"},{"name":"GC_MODES","scope":"static","kind":"constant","recordUrl":"coreconst-GC_MODES.html"},{"name":"URL_FILE_EXTENSION","scope":"static","kind":"constant","recordUrl":"coreconst-URL_FILE_EXTENSION.html"},{"name":"DATA_URI","scope":"static","kind":"constant","recordUrl":"coreconst-DATA_URI.html"},{"name":"SVG_SIZE","scope":"static","kind":"constant","recordUrl":"coreconst-SVG_SIZE.html"},{"name":"SHAPES","scope":"static","kind":"constant","recordUrl":"coreconst-SHAPES.html"},{"name":"PRECISION","scope":"static","kind":"constant","recordUrl":"coreconst-PRECISION.html"},{"name":"TRANSFORM_MODE","scope":"static","kind":"constant","recordUrl":"coreconst-TRANSFORM_MODE.html"},{"name":"TEXT_GRADIENT","scope":"static","kind":"constant","recordUrl":"coreconst-TEXT_GRADIENT.html"},{"name":"UPDATE_PRIORITY","scope":"static","kind":"constant","recordUrl":"coreconst-UPDATE_PRIORITY.html"}],"_core\\display\\Bounds":[{"name":"Bounds","scope":"static","kind":"class","recordUrl":"coredisplayBounds-Bounds.html"}],"_core\\display\\Container":[{"name":"Container","scope":"static","kind":"class","recordUrl":"coredisplayContainer-Container.html"}],"_core\\display\\DisplayObject":[{"name":"DisplayObject","scope":"static","kind":"class","recordUrl":"coredisplayDisplayObject-DisplayObject.html"}],"_core\\display\\Transform":[{"name":"Transform","scope":"static","kind":"class","recordUrl":"coredisplayTransform-Transform.html"}],"_core\\display\\TransformBase":[{"name":"TransformBase","scope":"static","kind":"class","recordUrl":"coredisplayTransformBase-TransformBase.html"}],"_core\\display\\TransformStatic":[{"name":"TransformStatic","scope":"static","kind":"class","recordUrl":"coredisplayTransformStatic-TransformStatic.html"}],"_core\\graphics\\canvas\\CanvasGraphicsRenderer":[{"name":"CanvasGraphicsRenderer","scope":"static","kind":"class","recordUrl":"coregraphicscanvasCanvasGraphicsRenderer-CanvasGraphicsRenderer.html"}],"_core\\graphics\\Graphics":[{"name":"Graphics","scope":"static","kind":"class","recordUrl":"coregraphicsGraphics-Graphics.html"}],"_core\\graphics\\GraphicsData":[{"name":"GraphicsData","scope":"static","kind":"class","recordUrl":"coregraphicsGraphicsData-GraphicsData.html"}],"_core\\graphics\\utils\\bezierCurveTo":[{"name":"exports","scope":"static","kind":"function","recordUrl":"coregraphicsutilsbezierCurveTo-exports.html"}],"_core\\graphics\\webgl\\GraphicsRenderer":[{"name":"GraphicsRenderer","scope":"static","kind":"class","recordUrl":"coregraphicswebglGraphicsRenderer-GraphicsRenderer.html"}],"_core\\graphics\\webgl\\shaders\\PrimitiveShader":[{"name":"PrimitiveShader","scope":"static","kind":"class","recordUrl":"coregraphicswebglshadersPrimitiveShader-PrimitiveShader.html"}],"_core\\graphics\\webgl\\utils\\buildCircle":[{"name":"exports","scope":"static","kind":"function","recordUrl":"coregraphicswebglutilsbuildCircle-exports.html"}],"_core\\graphics\\webgl\\utils\\buildComplexPoly":[{"name":"exports","scope":"static","kind":"function","recordUrl":"coregraphicswebglutilsbuildComplexPoly-exports.html"}],"_core\\graphics\\webgl\\utils\\buildLine":[{"name":"exports","scope":"static","kind":"function","recordUrl":"coregraphicswebglutilsbuildLine-exports.html"},{"name":"buildLine","scope":"global","kind":"function","recordUrl":"coregraphicswebglutilsbuildLine-buildLine.html"},{"name":"buildNativeLine","scope":"global","kind":"function","recordUrl":"coregraphicswebglutilsbuildLine-buildNativeLine.html"}],"_core\\graphics\\webgl\\utils\\buildPoly":[{"name":"exports","scope":"static","kind":"function","recordUrl":"coregraphicswebglutilsbuildPoly-exports.html"}],"_core\\graphics\\webgl\\utils\\buildRectangle":[{"name":"exports","scope":"static","kind":"function","recordUrl":"coregraphicswebglutilsbuildRectangle-exports.html"}],"_core\\graphics\\webgl\\utils\\buildRoundedRectangle":[{"name":"exports","scope":"static","kind":"function","recordUrl":"coregraphicswebglutilsbuildRoundedRectangle-exports.html"},{"name":"getPt","scope":"global","kind":"function","recordUrl":"coregraphicswebglutilsbuildRoundedRectangle-getPt.html"},{"name":"quadraticBezierCurve","scope":"global","kind":"function","recordUrl":"coregraphicswebglutilsbuildRoundedRectangle-quadraticBezierCurve.html"}],"_core\\graphics\\webgl\\WebGLGraphicsData":[{"name":"WebGLGraphicsData","scope":"static","kind":"class","recordUrl":"coregraphicswebglWebGLGraphicsData-WebGLGraphicsData.html"}],"_core\\index":[{"name":"PIXI","scope":"global","kind":"namespace","recordUrl":"coreindex-PIXI.html"},{"name":"PIXI","scope":"global","kind":"namespace","recordUrl":"coreindex-PIXI.html"}],"_core\\math\\GroupD8":[{"name":"GroupD8","scope":"static","kind":"class","recordUrl":"coremathGroupD8-GroupD8.html"}],"_core\\math\\Matrix":[{"name":"Matrix","scope":"static","kind":"class","recordUrl":"coremathMatrix-Matrix.html"}],"_core\\math\\ObservablePoint":[{"name":"ObservablePoint","scope":"static","kind":"class","recordUrl":"coremathObservablePoint-ObservablePoint.html"}],"_core\\math\\Point":[{"name":"Point","scope":"static","kind":"class","recordUrl":"coremathPoint-Point.html"}],"_core\\math\\shapes\\Circle":[{"name":"Circle","scope":"static","kind":"class","recordUrl":"coremathshapesCircle-Circle.html"}],"_core\\math\\shapes\\Ellipse":[{"name":"Ellipse","scope":"static","kind":"class","recordUrl":"coremathshapesEllipse-Ellipse.html"}],"_core\\math\\shapes\\Polygon":[{"name":"Polygon","scope":"static","kind":"class","recordUrl":"coremathshapesPolygon-Polygon.html"}],"_core\\math\\shapes\\Rectangle":[{"name":"Rectangle","scope":"static","kind":"class","recordUrl":"coremathshapesRectangle-Rectangle.html"}],"_core\\math\\shapes\\RoundedRectangle":[{"name":"RoundedRectangle","scope":"static","kind":"class","recordUrl":"coremathshapesRoundedRectangle-RoundedRectangle.html"}],"_core\\renderers\\canvas\\CanvasRenderer":[{"name":"CanvasRenderer","scope":"static","kind":"class","recordUrl":"corerendererscanvasCanvasRenderer-CanvasRenderer.html"}],"_core\\renderers\\canvas\\utils\\canUseNewCanvasBlendModes":[{"name":"createColoredCanvas","scope":"global","kind":"function","recordUrl":"corerendererscanvasutilscanUseNewCanvasBlendModes-createColoredCanvas.html"},{"name":"exports","scope":"static","kind":"function","recordUrl":"corerendererscanvasutilscanUseNewCanvasBlendModes-exports.html"}],"_core\\renderers\\canvas\\utils\\CanvasMaskManager":[{"name":"CanvasMaskManager","scope":"static","kind":"class","recordUrl":"corerendererscanvasutilsCanvasMaskManager-CanvasMaskManager.html"}],"_core\\renderers\\canvas\\utils\\CanvasRenderTarget":[{"name":"CanvasRenderTarget","scope":"static","kind":"class","recordUrl":"corerendererscanvasutilsCanvasRenderTarget-CanvasRenderTarget.html"}],"_core\\renderers\\canvas\\utils\\mapCanvasBlendModesToPixi":[{"name":"mapCanvasBlendModesToPixi","scope":"static","kind":"function","recordUrl":"corerendererscanvasutilsmapCanvasBlendModesToPixi-mapCanvasBlendModesToPixi.html"}],"_core\\renderers\\SystemRenderer":[{"name":"SystemRenderer","scope":"static","kind":"class","recordUrl":"corerenderersSystemRenderer-SystemRenderer.html"}],"_core\\renderers\\webgl\\filters\\Filter":[{"name":"Filter","scope":"static","kind":"class","recordUrl":"corerendererswebglfiltersFilter-Filter.html"}],"_core\\renderers\\webgl\\filters\\spriteMask\\SpriteMaskFilter":[{"name":"SpriteMaskFilter","scope":"static","kind":"class","recordUrl":"corerendererswebglfiltersspriteMaskSpriteMaskFilter-SpriteMaskFilter.html"}],"_core\\renderers\\webgl\\managers\\BlendModeManager":[{"name":"BlendModeManager","scope":"static","kind":"class","recordUrl":"corerendererswebglmanagersBlendModeManager-BlendModeManager.html"}],"_core\\renderers\\webgl\\managers\\FilterManager":[{"name":"FilterState","scope":"global","kind":"class","recordUrl":"corerendererswebglmanagersFilterManager-FilterState.html"},{"name":"FilterManager","scope":"static","kind":"class","recordUrl":"corerendererswebglmanagersFilterManager-FilterManager.html"}],"_core\\renderers\\webgl\\managers\\MaskManager":[{"name":"MaskManager","scope":"static","kind":"class","recordUrl":"corerendererswebglmanagersMaskManager-MaskManager.html"}],"_core\\renderers\\webgl\\managers\\StencilManager":[{"name":"StencilManager","scope":"static","kind":"class","recordUrl":"corerendererswebglmanagersStencilManager-StencilManager.html"}],"_core\\renderers\\webgl\\managers\\WebGLManager":[{"name":"WebGLManager","scope":"static","kind":"class","recordUrl":"corerendererswebglmanagersWebGLManager-WebGLManager.html"}],"_core\\renderers\\webgl\\TextureGarbageCollector":[{"name":"TextureGarbageCollector","scope":"static","kind":"class","recordUrl":"corerendererswebglTextureGarbageCollector-TextureGarbageCollector.html"}],"_core\\renderers\\webgl\\TextureManager":[{"name":"TextureManager","scope":"static","kind":"class","recordUrl":"corerendererswebglTextureManager-TextureManager.html"}],"_core\\renderers\\webgl\\utils\\mapWebGLBlendModesToPixi":[{"name":"mapWebGLBlendModesToPixi","scope":"static","kind":"function","recordUrl":"corerendererswebglutilsmapWebGLBlendModesToPixi-mapWebGLBlendModesToPixi.html"}],"_core\\renderers\\webgl\\utils\\mapWebGLDrawModesToPixi":[{"name":"mapWebGLDrawModesToPixi","scope":"static","kind":"function","recordUrl":"corerendererswebglutilsmapWebGLDrawModesToPixi-mapWebGLDrawModesToPixi.html"}],"_core\\renderers\\webgl\\utils\\ObjectRenderer":[{"name":"ObjectRenderer","scope":"static","kind":"class","recordUrl":"corerendererswebglutilsObjectRenderer-ObjectRenderer.html"}],"_core\\renderers\\webgl\\utils\\Quad":[{"name":"Quad","scope":"static","kind":"class","recordUrl":"corerendererswebglutilsQuad-Quad.html"}],"_core\\renderers\\webgl\\utils\\RenderTarget":[{"name":"RenderTarget","scope":"static","kind":"class","recordUrl":"corerendererswebglutilsRenderTarget-RenderTarget.html"}],"_core\\renderers\\webgl\\WebGLRenderer":[{"name":"WebGLRenderer","scope":"static","kind":"class","recordUrl":"corerendererswebglWebGLRenderer-WebGLRenderer.html"}],"_core\\renderers\\webgl\\WebGLState":[{"name":"WebGLState","scope":"static","kind":"class","recordUrl":"corerendererswebglWebGLState-WebGLState.html"}],"_core\\settings":[{"name":"settings","scope":"static","kind":"namespace","recordUrl":"coresettings-settings.html"},{"name":"RENDER_OPTIONS","scope":"static","kind":"constant","recordUrl":"coresettings-RENDER_OPTIONS.html"},{"name":"CAN_UPLOAD_SAME_BUFFER","scope":"static","kind":"constant","recordUrl":"coresettings-CAN_UPLOAD_SAME_BUFFER.html"},{"name":"settings","scope":"static","kind":"namespace","recordUrl":"coresettings-settings.html"},{"name":"RENDER_OPTIONS","scope":"static","kind":"constant","recordUrl":"coresettings-RENDER_OPTIONS.html"},{"name":"CAN_UPLOAD_SAME_BUFFER","scope":"static","kind":"constant","recordUrl":"coresettings-CAN_UPLOAD_SAME_BUFFER.html"}],"_core\\Shader":[{"name":"Shader","scope":"static","kind":"class","recordUrl":"coreShader-Shader.html"}],"_core\\sprites\\canvas\\CanvasSpriteRenderer":[{"name":"CanvasSpriteRenderer","scope":"static","kind":"class","recordUrl":"corespritescanvasCanvasSpriteRenderer-CanvasSpriteRenderer.html"}],"_core\\sprites\\canvas\\CanvasTinter":[{"name":"CanvasTinter","scope":"static","kind":"class","recordUrl":"corespritescanvasCanvasTinter-CanvasTinter.html"}],"_core\\sprites\\Sprite":[{"name":"Sprite","scope":"static","kind":"class","recordUrl":"corespritesSprite-Sprite.html"}],"_core\\sprites\\webgl\\BatchBuffer":[{"name":"Buffer","scope":"static","kind":"class","recordUrl":"corespriteswebglBatchBuffer-Buffer.html"}],"_core\\sprites\\webgl\\SpriteRenderer":[{"name":"SpriteRenderer","scope":"static","kind":"class","recordUrl":"corespriteswebglSpriteRenderer-SpriteRenderer.html"}],"_core\\text\\Text":[{"name":"Text","scope":"static","kind":"class","recordUrl":"coretextText-Text.html"}],"_core\\text\\TextStyle":[{"name":"TextStyle","scope":"static","kind":"class","recordUrl":"coretextTextStyle-TextStyle.html"},{"name":"getSingleColor","scope":"global","kind":"function","recordUrl":"coretextTextStyle-getSingleColor.html"},{"name":"getColor","scope":"global","kind":"function","recordUrl":"coretextTextStyle-getColor.html"},{"name":"areArraysEqual","scope":"global","kind":"function","recordUrl":"coretextTextStyle-areArraysEqual.html"}],"_core\\textures\\BaseRenderTexture":[{"name":"BaseRenderTexture","scope":"static","kind":"class","recordUrl":"coretexturesBaseRenderTexture-BaseRenderTexture.html"}],"_core\\textures\\BaseTexture":[{"name":"BaseTexture","scope":"static","kind":"class","recordUrl":"coretexturesBaseTexture-BaseTexture.html"}],"_core\\textures\\RenderTexture":[{"name":"RenderTexture","scope":"static","kind":"class","recordUrl":"coretexturesRenderTexture-RenderTexture.html"}],"_core\\textures\\Spritesheet":[{"name":"Spritesheet","scope":"static","kind":"class","recordUrl":"coretexturesSpritesheet-Spritesheet.html"}],"_core\\textures\\Texture":[{"name":"Texture","scope":"static","kind":"class","recordUrl":"coretexturesTexture-Texture.html"}],"_core\\textures\\TextureUvs":[{"name":"TextureUvs","scope":"static","kind":"class","recordUrl":"coretexturesTextureUvs-TextureUvs.html"}],"_core\\textures\\VideoBaseTexture":[{"name":"VideoBaseTexture","scope":"static","kind":"class","recordUrl":"coretexturesVideoBaseTexture-VideoBaseTexture.html"}],"_core\\ticker\\index":[{"name":"shared","scope":"static","kind":"constant","recordUrl":"coretickerindex-shared.html"},{"name":"ticker","scope":"static","kind":"namespace","recordUrl":"coretickerindex-ticker.html"},{"name":"shared","scope":"static","kind":"constant","recordUrl":"coretickerindex-shared.html"},{"name":"ticker","scope":"static","kind":"namespace","recordUrl":"coretickerindex-ticker.html"}],"_core\\ticker\\Ticker":[{"name":"Ticker","scope":"static","kind":"class","recordUrl":"coretickerTicker-Ticker.html"}],"_core\\ticker\\TickerListener":[{"name":"TickerListener","scope":"static","kind":"class","recordUrl":"coretickerTickerListener-TickerListener.html"}],"_core\\utils\\createIndicesForQuads":[{"name":"createIndicesForQuads","scope":"static","kind":"function","recordUrl":"coreutilscreateIndicesForQuads-createIndicesForQuads.html"}],"_core\\utils\\determineCrossOrigin":[{"name":"exports","scope":"static","kind":"function","recordUrl":"coreutilsdetermineCrossOrigin-exports.html"}],"_core\\utils\\index":[{"name":"utils","scope":"static","kind":"namespace","recordUrl":"coreutilsindex-utils.html"},{"name":"isMobile","scope":"static","kind":"function","recordUrl":"coreutilsindex-isMobile.html"},{"name":"EventEmitter","scope":"static","kind":"class","recordUrl":"coreutilsindex-EventEmitter.html"},{"name":"pluginTarget","scope":"static","kind":"function","recordUrl":"coreutilsindex-pluginTarget.html"},{"name":"uid","scope":"static","kind":"function","recordUrl":"coreutilsindex-uid.html"},{"name":"hex2rgb","scope":"static","kind":"function","recordUrl":"coreutilsindex-hex2rgb.html"},{"name":"hex2string","scope":"static","kind":"function","recordUrl":"coreutilsindex-hex2string.html"},{"name":"rgb2hex","scope":"static","kind":"function","recordUrl":"coreutilsindex-rgb2hex.html"},{"name":"getResolutionOfUrl","scope":"static","kind":"function","recordUrl":"coreutilsindex-getResolutionOfUrl.html"},{"name":"decomposeDataUri","scope":"static","kind":"function","recordUrl":"coreutilsindex-decomposeDataUri.html"},{"name":"DecomposedDataUri","scope":"global","kind":"typedef","recordUrl":"coreutilsindex-DecomposedDataUri.html"},{"name":"getUrlFileExtension","scope":"static","kind":"function","recordUrl":"coreutilsindex-getUrlFileExtension.html"},{"name":"getSvgSize","scope":"static","kind":"function","recordUrl":"coreutilsindex-getSvgSize.html"},{"name":"Size","scope":"global","kind":"typedef","recordUrl":"coreutilsindex-Size.html"},{"name":"skipHello","scope":"static","kind":"function","recordUrl":"coreutilsindex-skipHello.html"},{"name":"sayHello","scope":"static","kind":"function","recordUrl":"coreutilsindex-sayHello.html"},{"name":"isWebGLSupported","scope":"static","kind":"function","recordUrl":"coreutilsindex-isWebGLSupported.html"},{"name":"sign","scope":"static","kind":"function","recordUrl":"coreutilsindex-sign.html"},{"name":"removeItems","scope":"static","kind":"function","recordUrl":"coreutilsindex-removeItems.html"},{"name":"exports.TextureCache","scope":"static","kind":"constant","recordUrl":"coreutilsindex-exports.TextureCache.html"},{"name":"exports.BaseTextureCache","scope":"static","kind":"constant","recordUrl":"coreutilsindex-exports.BaseTextureCache.html"},{"name":"destroyTextureCache","scope":"static","kind":"function","recordUrl":"coreutilsindex-destroyTextureCache.html"},{"name":"clearTextureCache","scope":"static","kind":"function","recordUrl":"coreutilsindex-clearTextureCache.html"},{"name":"utils","scope":"static","kind":"namespace","recordUrl":"coreutilsindex-utils.html"},{"name":"DecomposedDataUri","scope":"global","kind":"typedef","recordUrl":"coreutilsindex-DecomposedDataUri.html"},{"name":"Size","scope":"global","kind":"typedef","recordUrl":"coreutilsindex-Size.html"},{"name":"exports.TextureCache","scope":"static","kind":"constant","recordUrl":"coreutilsindex-exports.TextureCache.html"},{"name":"exports.BaseTextureCache","scope":"static","kind":"constant","recordUrl":"coreutilsindex-exports.BaseTextureCache.html"}],"_core\\utils\\mixin":[{"name":"mixin","scope":"static","kind":"function","recordUrl":"coreutilsmixin-mixin.html"},{"name":"delayMixin","scope":"static","kind":"function","recordUrl":"coreutilsmixin-delayMixin.html"},{"name":"performMixins","scope":"static","kind":"function","recordUrl":"coreutilsmixin-performMixins.html"}],"_core\\utils\\pluginTarget":[{"name":"pluginTarget","scope":"static","kind":"mixin","recordUrl":"coreutilspluginTarget-pluginTarget.html"},{"name":"registerPlugin","scope":"static","kind":"function","recordUrl":"coreutilspluginTarget-registerPlugin.html"},{"name":"initPlugins","scope":"instance","kind":"function","recordUrl":"coreutilspluginTarget-initPlugins.html"},{"name":"destroyPlugins","scope":"instance","kind":"function","recordUrl":"coreutilspluginTarget-destroyPlugins.html"},{"name":"mixin","scope":"static","kind":"function","recordUrl":"coreutilspluginTarget-mixin.html"},{"name":"pluginTarget","scope":"static","kind":"mixin","recordUrl":"coreutilspluginTarget-pluginTarget.html"}],"_core\\utils\\trimCanvas":[{"name":"trimCanvas","scope":"static","kind":"function","recordUrl":"coreutilstrimCanvas-trimCanvas.html"}],"_deprecation":[{"name":"SpriteBatch","scope":"static","kind":"class","recordUrl":"deprecation-SpriteBatch.html"},{"name":"AssetLoader","scope":"static","kind":"class","recordUrl":"deprecation-AssetLoader.html"},{"name":"Stage","scope":"static","kind":"class","recordUrl":"deprecation-Stage.html"},{"name":"DisplayObjectContainer","scope":"static","kind":"class","recordUrl":"deprecation-DisplayObjectContainer.html"},{"name":"Strip","scope":"static","kind":"class","recordUrl":"deprecation-Strip.html"},{"name":"Rope","scope":"static","kind":"class","recordUrl":"deprecation-Rope.html"},{"name":"ParticleContainer","scope":"static","kind":"class","recordUrl":"deprecation-ParticleContainer.html"},{"name":"MovieClip","scope":"static","kind":"class","recordUrl":"deprecation-MovieClip.html"},{"name":"TilingSprite","scope":"static","kind":"class","recordUrl":"deprecation-TilingSprite.html"},{"name":"BitmapText","scope":"static","kind":"class","recordUrl":"deprecation-BitmapText.html"},{"name":"blendModes","scope":"static","kind":"class","recordUrl":"deprecation-blendModes.html"},{"name":"scaleModes","scope":"static","kind":"class","recordUrl":"deprecation-scaleModes.html"},{"name":"BaseTextureCache","scope":"static","kind":"class","recordUrl":"deprecation-BaseTextureCache.html"},{"name":"TextureCache","scope":"static","kind":"class","recordUrl":"deprecation-TextureCache.html"},{"name":"math","scope":"static","kind":"namespace","recordUrl":"deprecation-math.html"},{"name":"AbstractFilter","scope":"static","kind":"class","recordUrl":"deprecation-AbstractFilter.html"},{"name":"TransformManual","scope":"static","kind":"class","recordUrl":"deprecation-TransformManual.html"},{"name":"TARGET_FPMS","scope":"static","kind":"constant","recordUrl":"deprecation-TARGET_FPMS.html"},{"name":"FILTER_RESOLUTION","scope":"static","kind":"constant","recordUrl":"deprecation-FILTER_RESOLUTION.html"},{"name":"RESOLUTION","scope":"static","kind":"constant","recordUrl":"deprecation-RESOLUTION.html"},{"name":"MIPMAP_TEXTURES","scope":"static","kind":"constant","recordUrl":"deprecation-MIPMAP_TEXTURES.html"},{"name":"SPRITE_BATCH_SIZE","scope":"static","kind":"constant","recordUrl":"deprecation-SPRITE_BATCH_SIZE.html"},{"name":"SPRITE_MAX_TEXTURES","scope":"static","kind":"constant","recordUrl":"deprecation-SPRITE_MAX_TEXTURES.html"},{"name":"RETINA_PREFIX","scope":"static","kind":"constant","recordUrl":"deprecation-RETINA_PREFIX.html"},{"name":"DEFAULT_RENDER_OPTIONS","scope":"static","kind":"constant","recordUrl":"deprecation-DEFAULT_RENDER_OPTIONS.html"},{"name":"MovieClip","scope":"static","kind":"class","recordUrl":"deprecation-MovieClip.html"},{"name":"AbstractFilter","scope":"static","kind":"class","recordUrl":"deprecation-AbstractFilter.html"},{"name":"SpriteMaskFilter","scope":"static","kind":"class","recordUrl":"deprecation-SpriteMaskFilter.html"},{"name":"uuid","scope":"static","kind":"function","recordUrl":"deprecation-uuid.html"},{"name":"canUseNewCanvasBlendModes","scope":"static","kind":"function","recordUrl":"deprecation-canUseNewCanvasBlendModes.html"},{"name":"math","scope":"static","kind":"namespace","recordUrl":"deprecation-math.html"},{"name":"TARGET_FPMS","scope":"static","kind":"constant","recordUrl":"deprecation-TARGET_FPMS.html"},{"name":"FILTER_RESOLUTION","scope":"static","kind":"constant","recordUrl":"deprecation-FILTER_RESOLUTION.html"},{"name":"RESOLUTION","scope":"static","kind":"constant","recordUrl":"deprecation-RESOLUTION.html"},{"name":"MIPMAP_TEXTURES","scope":"static","kind":"constant","recordUrl":"deprecation-MIPMAP_TEXTURES.html"},{"name":"SPRITE_BATCH_SIZE","scope":"static","kind":"constant","recordUrl":"deprecation-SPRITE_BATCH_SIZE.html"},{"name":"SPRITE_MAX_TEXTURES","scope":"static","kind":"constant","recordUrl":"deprecation-SPRITE_MAX_TEXTURES.html"},{"name":"RETINA_PREFIX","scope":"static","kind":"constant","recordUrl":"deprecation-RETINA_PREFIX.html"},{"name":"DEFAULT_RENDER_OPTIONS","scope":"static","kind":"constant","recordUrl":"deprecation-DEFAULT_RENDER_OPTIONS.html"}],"_extract\\canvas\\CanvasExtract":[{"name":"CanvasExtract","scope":"static","kind":"class","recordUrl":"extractcanvasCanvasExtract-CanvasExtract.html"}],"_extract\\webgl\\WebGLExtract":[{"name":"WebGLExtract","scope":"static","kind":"class","recordUrl":"extractwebglWebGLExtract-WebGLExtract.html"}],"_extras\\AnimatedSprite":[{"name":"FrameObject","scope":"global","kind":"typedef","recordUrl":"extrasAnimatedSprite-FrameObject.html"},{"name":"AnimatedSprite","scope":"static","kind":"class","recordUrl":"extrasAnimatedSprite-AnimatedSprite.html"},{"name":"FrameObject","scope":"global","kind":"typedef","recordUrl":"extrasAnimatedSprite-FrameObject.html"}],"_extras\\BitmapText":[{"name":"BitmapText","scope":"static","kind":"class","recordUrl":"extrasBitmapText-BitmapText.html"}],"_extras\\cacheAsBitmap":[{"name":"CacheData","scope":"global","kind":"class","recordUrl":"extrascacheAsBitmap-CacheData.html"},{"name":"_renderCachedWebGL","scope":"instance","kind":"function","recordUrl":"extrascacheAsBitmap-_renderCachedWebGL.html"},{"name":"_initCachedDisplayObject","scope":"instance","kind":"function","recordUrl":"extrascacheAsBitmap-_initCachedDisplayObject.html"},{"name":"_renderCachedCanvas","scope":"instance","kind":"function","recordUrl":"extrascacheAsBitmap-_renderCachedCanvas.html"},{"name":"_initCachedDisplayObjectCanvas","scope":"instance","kind":"function","recordUrl":"extrascacheAsBitmap-_initCachedDisplayObjectCanvas.html"}],"_extras\\getChildByName":[{"name":"getChildByName","scope":"instance","kind":"function","recordUrl":"extrasgetChildByName-getChildByName.html"}],"_extras\\getGlobalPosition":[{"name":"getGlobalPosition","scope":"instance","kind":"function","recordUrl":"extrasgetGlobalPosition-getGlobalPosition.html"}],"_extras\\index":[{"name":"extras","scope":"static","kind":"namespace","recordUrl":"extrasindex-extras.html"},{"name":"extras","scope":"static","kind":"namespace","recordUrl":"extrasindex-extras.html"}],"_extras\\TextureTransform":[{"name":"TextureTransform","scope":"static","kind":"class","recordUrl":"extrasTextureTransform-TextureTransform.html"}],"_extras\\TilingSprite":[{"name":"TilingSprite","scope":"static","kind":"class","recordUrl":"extrasTilingSprite-TilingSprite.html"}],"_extras\\webgl\\TilingSpriteRenderer":[{"name":"TilingSpriteRenderer","scope":"static","kind":"class","recordUrl":"extraswebglTilingSpriteRenderer-TilingSpriteRenderer.html"}],"_filters\\blur\\BlurFilter":[{"name":"BlurFilter","scope":"static","kind":"class","recordUrl":"filtersblurBlurFilter-BlurFilter.html"}],"_filters\\blur\\BlurXFilter":[{"name":"BlurXFilter","scope":"static","kind":"class","recordUrl":"filtersblurBlurXFilter-BlurXFilter.html"}],"_filters\\blur\\BlurYFilter":[{"name":"BlurYFilter","scope":"static","kind":"class","recordUrl":"filtersblurBlurYFilter-BlurYFilter.html"}],"_filters\\colormatrix\\ColorMatrixFilter":[{"name":"ColorMatrixFilter","scope":"static","kind":"class","recordUrl":"filterscolormatrixColorMatrixFilter-ColorMatrixFilter.html"}],"_filters\\displacement\\DisplacementFilter":[{"name":"DisplacementFilter","scope":"static","kind":"class","recordUrl":"filtersdisplacementDisplacementFilter-DisplacementFilter.html"}],"_filters\\fxaa\\FXAAFilter":[{"name":"FXAAFilter","scope":"static","kind":"class","recordUrl":"filtersfxaaFXAAFilter-FXAAFilter.html"}],"_filters\\index":[{"name":"filters","scope":"static","kind":"namespace","recordUrl":"filtersindex-filters.html"},{"name":"filters","scope":"static","kind":"namespace","recordUrl":"filtersindex-filters.html"}],"_filters\\noise\\NoiseFilter":[{"name":"NoiseFilter","scope":"static","kind":"class","recordUrl":"filtersnoiseNoiseFilter-NoiseFilter.html"}],"_filters\\void\\VoidFilter":[{"name":"VoidFilter","scope":"static","kind":"class","recordUrl":"filtersvoidVoidFilter-VoidFilter.html"}],"_index":[],"_interaction\\index":[{"name":"interaction","scope":"static","kind":"namespace","recordUrl":"interactionindex-interaction.html"},{"name":"interaction","scope":"static","kind":"namespace","recordUrl":"interactionindex-interaction.html"}],"_interaction\\InteractionData":[{"name":"InteractionData","scope":"static","kind":"class","recordUrl":"interactionInteractionData-InteractionData.html"}],"_interaction\\InteractionEvent":[{"name":"InteractionEvent","scope":"static","kind":"class","recordUrl":"interactionInteractionEvent-InteractionEvent.html"}],"_interaction\\InteractionManager":[{"name":"InteractionManager","scope":"static","kind":"class","recordUrl":"interactionInteractionManager-InteractionManager.html"}],"_interaction\\InteractionTrackingData":[{"name":"InteractionTrackingData","scope":"static","kind":"class","recordUrl":"interactionInteractionTrackingData-InteractionTrackingData.html"}],"_interaction\\interactiveTarget":[{"name":"interactiveTarget","scope":"static","kind":"mixin","recordUrl":"interactioninteractiveTarget-interactiveTarget.html"},{"name":"interactiveTarget","scope":"static","kind":"mixin","recordUrl":"interactioninteractiveTarget-interactiveTarget.html"}],"_loaders\\bitmapFontParser":[{"name":"parseBitmapFontData","scope":"static","kind":"function","recordUrl":"loadersbitmapFontParser-parseBitmapFontData.html"}],"_loaders\\index":[{"name":"loaders","scope":"static","kind":"namespace","recordUrl":"loadersindex-loaders.html"},{"name":"Resource","scope":"static","kind":"class","recordUrl":"loadersindex-Resource.html"},{"name":"loaders","scope":"static","kind":"namespace","recordUrl":"loadersindex-loaders.html"}],"_loaders\\loader":[{"name":"Loader","scope":"static","kind":"class","recordUrl":"loadersloader-Loader.html"}],"_mesh\\canvas\\CanvasMeshRenderer":[{"name":"MeshSpriteRenderer","scope":"static","kind":"class","recordUrl":"meshcanvasCanvasMeshRenderer-MeshSpriteRenderer.html"}],"_mesh\\index":[{"name":"mesh","scope":"static","kind":"namespace","recordUrl":"meshindex-mesh.html"},{"name":"mesh","scope":"static","kind":"namespace","recordUrl":"meshindex-mesh.html"}],"_mesh\\Mesh":[{"name":"Mesh","scope":"static","kind":"class","recordUrl":"meshMesh-Mesh.html"}],"_mesh\\NineSlicePlane":[{"name":"NineSlicePlane","scope":"static","kind":"class","recordUrl":"meshNineSlicePlane-NineSlicePlane.html"}],"_mesh\\Plane":[{"name":"Plane","scope":"static","kind":"class","recordUrl":"meshPlane-Plane.html"}],"_mesh\\Rope":[{"name":"Rope","scope":"static","kind":"class","recordUrl":"meshRope-Rope.html"}],"_mesh\\webgl\\MeshRenderer":[{"name":"MeshRenderer","scope":"static","kind":"class","recordUrl":"meshwebglMeshRenderer-MeshRenderer.html"}],"_particles\\index":[{"name":"particles","scope":"static","kind":"namespace","recordUrl":"particlesindex-particles.html"},{"name":"particles","scope":"static","kind":"namespace","recordUrl":"particlesindex-particles.html"}],"_particles\\ParticleContainer":[{"name":"ParticleContainer","scope":"static","kind":"class","recordUrl":"particlesParticleContainer-ParticleContainer.html"}],"_particles\\webgl\\ParticleBuffer":[{"name":"ParticleBuffer","scope":"static","kind":"class","recordUrl":"particleswebglParticleBuffer-ParticleBuffer.html"}],"_particles\\webgl\\ParticleRenderer":[{"name":"ParticleRenderer","scope":"static","kind":"class","recordUrl":"particleswebglParticleRenderer-ParticleRenderer.html"}],"_particles\\webgl\\ParticleShader":[{"name":"ParticleShader","scope":"static","kind":"class","recordUrl":"particleswebglParticleShader-ParticleShader.html"}],"_prepare\\BasePrepare":[{"name":"BasePrepare","scope":"static","kind":"class","recordUrl":"prepareBasePrepare-BasePrepare.html"},{"name":"findMultipleBaseTextures","scope":"global","kind":"function","recordUrl":"prepareBasePrepare-findMultipleBaseTextures.html"},{"name":"findBaseTexture","scope":"global","kind":"function","recordUrl":"prepareBasePrepare-findBaseTexture.html"},{"name":"findTexture","scope":"global","kind":"function","recordUrl":"prepareBasePrepare-findTexture.html"},{"name":"drawText","scope":"global","kind":"function","recordUrl":"prepareBasePrepare-drawText.html"},{"name":"calculateTextStyle","scope":"global","kind":"function","recordUrl":"prepareBasePrepare-calculateTextStyle.html"},{"name":"findText","scope":"global","kind":"function","recordUrl":"prepareBasePrepare-findText.html"},{"name":"findTextStyle","scope":"global","kind":"function","recordUrl":"prepareBasePrepare-findTextStyle.html"}],"_prepare\\canvas\\CanvasPrepare":[{"name":"CanvasPrepare","scope":"static","kind":"class","recordUrl":"preparecanvasCanvasPrepare-CanvasPrepare.html"},{"name":"uploadBaseTextures","scope":"global","kind":"function","recordUrl":"preparecanvasCanvasPrepare-uploadBaseTextures.html"}],"_prepare\\index":[{"name":"prepare","scope":"static","kind":"namespace","recordUrl":"prepareindex-prepare.html"},{"name":"prepare","scope":"static","kind":"namespace","recordUrl":"prepareindex-prepare.html"}],"_prepare\\limiters\\CountLimiter":[{"name":"CountLimiter","scope":"static","kind":"class","recordUrl":"preparelimitersCountLimiter-CountLimiter.html"}],"_prepare\\limiters\\TimeLimiter":[{"name":"TimeLimiter","scope":"static","kind":"class","recordUrl":"preparelimitersTimeLimiter-TimeLimiter.html"}],"_prepare\\webgl\\WebGLPrepare":[{"name":"WebGLPrepare","scope":"static","kind":"class","recordUrl":"preparewebglWebGLPrepare-WebGLPrepare.html"},{"name":"uploadBaseTextures","scope":"global","kind":"function","recordUrl":"preparewebglWebGLPrepare-uploadBaseTextures.html"},{"name":"uploadGraphics","scope":"global","kind":"function","recordUrl":"preparewebglWebGLPrepare-uploadGraphics.html"},{"name":"findGraphics","scope":"global","kind":"function","recordUrl":"preparewebglWebGLPrepare-findGraphics.html"}]};
+</script>
+
+        </div>
+        <div class="flex scroll-y">
+          <div class="doc-gutter">
+<h1>class: DisplacementFilter</h1>
+<hr />
+
+
+  <p>The DisplacementFilter class uses the pixel values from the specified texture<br>(called the displacement map) to perform a displacement of an object. You can<br>use this filter to apply all manor of crazy warping effects. Currently the r<br>property of the texture is used to offset the x and the g property of the texture<br>is used to offset the y.</p>
+
+
+
+
+
+
+
+
+
+
+  
+    <h4>Extends:</h4>
+    
+    <a  >GLShader</a> &rarr; <a href="coreShader-Shader.html" >Shader</a> &rarr; <a href="corerendererswebglfiltersFilter-Filter.html" >Filter</a> &rarr; DisplacementFilter
+  
+
+  
+
+  
+    <h2>Methods summary</h2>
+    <hr />
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">Public methods</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+        <tr>
+          <td>
+            public
+            
+          </td>
+          <td>
+            
+
+  <a href="#PIXI.filters.DisplacementFilterapply">apply</a>(filterManager: PIXI.FilterManager, input: PIXI.RenderTarget, output: PIXI.RenderTarget): void
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td>
+            public
+            
+          </td>
+          <td>
+            
+
+  <a href="#PIXI.filters.DisplacementFiltermap">map</a>(): void
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td>
+            public
+            
+          </td>
+          <td>
+            
+
+  <a href="#PIXI.filters.DisplacementFilterapply">apply</a>(filterManager: PIXI.FilterManager, input: PIXI.RenderTarget, output: PIXI.RenderTarget): void
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td>
+            public
+            
+          </td>
+          <td>
+            
+
+  <a href="#PIXI.filters.DisplacementFiltermap">map</a>(): void
+
+          </td>
+        </tr>
+      
+      </tbody>
+    </table>
+  
+  
+    <h2>Properties</h2>
+    <hr />
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Attribute</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+        <tr>
+          <td>vertexSrc</td>
+          <td>
+            
+              <a  >string</a>
+            
+          </td>
+          <td>public</td>
+          <td><p>The vertex shader.</p></td>
+        </tr>
+      
+        <tr>
+          <td>fragmentSrc</td>
+          <td>
+            
+              <a  >string</a>
+            
+          </td>
+          <td>public</td>
+          <td><p>The fragment shader.</p></td>
+        </tr>
+      
+        <tr>
+          <td>uniforms</td>
+          <td>
+            
+              <a  >object</a>
+            
+          </td>
+          <td>public</td>
+          <td><p>An object containing the current values of custom uniforms.</p></td>
+        </tr>
+      
+        <tr>
+          <td>padding</td>
+          <td>
+            
+              <a  >number</a>
+            
+          </td>
+          <td>public</td>
+          <td><p>The padding of the filter. Some filters require extra space to breath such as a blur.<br>Increasing this will add extra width and height to the bounds of the object that the<br>filter is applied to.</p></td>
+        </tr>
+      
+        <tr>
+          <td>resolution</td>
+          <td>
+            
+              <a  >number</a>
+            
+          </td>
+          <td>public</td>
+          <td><p>The resolution of the filter. Setting this to be lower will lower the quality but<br>increase the performance of the filter.</p></td>
+        </tr>
+      
+        <tr>
+          <td>enabled</td>
+          <td>
+            
+              <a  >boolean</a>
+            
+          </td>
+          <td>public</td>
+          <td><p>If enabled is true the filter is applied, if false it will not.</p></td>
+        </tr>
+      
+        <tr>
+          <td>autoFit</td>
+          <td>
+            
+              <a  >boolean</a>
+            
+          </td>
+          <td>public</td>
+          <td><p>If enabled, pixi will fit the filter area into boundaries for better performance.<br>Switch it off if it does not work for specific shader.</p></td>
+        </tr>
+      
+      </tbody>
+    </table>
+  
+
+  <h2>Methods</h2>
+  <hr />
+  
+    <h3 id="PIXI.filters.DisplacementFilterapply">
+  
+    <a href="filtersdisplacementDisplacementFilter-DisplacementFilter.html#PIXI.filters.DisplacementFilterapply" title="permalink" class="doc-permalink">
+      <i class="fa fa-link"></i>
+    </a>
+  
+  
+
+  <span>apply</span>(filterManager: PIXI.FilterManager, input: PIXI.RenderTarget, output: PIXI.RenderTarget): void
+
+</h3>
+
+  <div class="doc-sourcepath">
+    <a href="source-filtersdisplacementDisplacementFilter.js.html#L59">filters\displacement\DisplacementFilter.js, line 59</a>
+  </div>
+
+<p>
+  <p>Applies the filter.</p>
+</p>
+<!-- 
+  Class constructors share record with class declaration. Therefore ignore class constructors
+  examples to avoid duplication.
+-->
+
+
+  <h4>Params:</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Attribute</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr>
+          <td>filterManager</td>
+          <td></td>
+          <td></td>
+          <td><p>The manager.</p></td>
+        </tr>
+      
+        <tr>
+          <td>input</td>
+          <td></td>
+          <td></td>
+          <td><p>The input target.</p></td>
+        </tr>
+      
+        <tr>
+          <td>output</td>
+          <td></td>
+          <td></td>
+          <td><p>The output target.</p></td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+<h4>Returns:</h4>
+<p class="doc-no-margin-before">
+  void
+</p>
+
+    <br/>
+  
+    <h3 id="PIXI.filters.DisplacementFiltermap">
+  
+    <a href="filtersdisplacementDisplacementFilter-DisplacementFilter.html#PIXI.filters.DisplacementFiltermap" title="permalink" class="doc-permalink">
+      <i class="fa fa-link"></i>
+    </a>
+  
+  
+
+  <span>map</span>(): void
+
+</h3>
+
+  <div class="doc-sourcepath">
+    <a href="source-filtersdisplacementDisplacementFilter.js.html#L76">filters\displacement\DisplacementFilter.js, line 76</a>
+  </div>
+
+<p>
+  <p>The texture used for the displacement map. Must be power of 2 sized texture.</p>
+</p>
+<!-- 
+  Class constructors share record with class declaration. Therefore ignore class constructors
+  examples to avoid duplication.
+-->
+
+
+
+<h4>Returns:</h4>
+<p class="doc-no-margin-before">
+  void
+</p>
+
+    <br/>
+  
+    <h3 id="PIXI.filters.DisplacementFilterapply">
+  
+    <a href="filtersdisplacementDisplacementFilter-DisplacementFilter.html#PIXI.filters.DisplacementFilterapply" title="permalink" class="doc-permalink">
+      <i class="fa fa-link"></i>
+    </a>
+  
+  
+
+  <span>apply</span>(filterManager: PIXI.FilterManager, input: PIXI.RenderTarget, output: PIXI.RenderTarget): void
+
+</h3>
+
+  <div class="doc-sourcepath">
+    <a href="source-filtersdisplacementDisplacementFilter.js.html#L59">filters\displacement\DisplacementFilter.js, line 59</a>
+  </div>
+
+<p>
+  <p>Applies the filter.</p>
+</p>
+<!-- 
+  Class constructors share record with class declaration. Therefore ignore class constructors
+  examples to avoid duplication.
+-->
+
+
+  <h4>Params:</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Attribute</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr>
+          <td>filterManager</td>
+          <td></td>
+          <td></td>
+          <td><p>The manager.</p></td>
+        </tr>
+      
+        <tr>
+          <td>input</td>
+          <td></td>
+          <td></td>
+          <td><p>The input target.</p></td>
+        </tr>
+      
+        <tr>
+          <td>output</td>
+          <td></td>
+          <td></td>
+          <td><p>The output target.</p></td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+<h4>Returns:</h4>
+<p class="doc-no-margin-before">
+  void
+</p>
+
+    <br/>
+  
+    <h3 id="PIXI.filters.DisplacementFiltermap">
+  
+    <a href="filtersdisplacementDisplacementFilter-DisplacementFilter.html#PIXI.filters.DisplacementFiltermap" title="permalink" class="doc-permalink">
+      <i class="fa fa-link"></i>
+    </a>
+  
+  
+
+  <span>map</span>(): void
+
+</h3>
+
+  <div class="doc-sourcepath">
+    <a href="source-filtersdisplacementDisplacementFilter.js.html#L76">filters\displacement\DisplacementFilter.js, line 76</a>
+  </div>
+
+<p>
+  <p>The texture used for the displacement map. Must be power of 2 sized texture.</p>
+</p>
+<!-- 
+  Class constructors share record with class declaration. Therefore ignore class constructors
+  examples to avoid duplication.
+-->
+
+
+
+<h4>Returns:</h4>
+<p class="doc-no-margin-before">
+  void
+</p>
+
+    <br/>
+  
+
+
+<button data-spoiler-button="T000002R005603">DEBUG BUTTON NOT FOR PRODUCTION : toggle JSDoc record visibility</button>
+<pre data-spoiler="T000002R005603" style="display: none;">
+  {
+    "comment": "/**\n * The DisplacementFilter class uses the pixel values from the specified texture\n * (called the displacement map) to perform a displacement of an object. You can\n * use this filter to apply all manor of crazy warping effects. Currently the r\n * property of the texture is used to offset the x and the g property of the texture\n * is used to offset the y.\n *\n * @class\n * @extends PIXI.Filter\n * @memberof PIXI.filters\n */",
+    "meta": {
+        "range": [
+            563,
+            2562
+        ],
+        "filename": "DisplacementFilter.js",
+        "lineno": 18,
+        "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\filters\\displacement",
+        "code": {
+            "id": "astnode100060293",
+            "name": "DisplacementFilter",
+            "type": "ClassDeclaration",
+            "paramnames": [
+                "sprite",
+                "scale"
+            ]
+        }
+    },
+    "classdesc": "<p>The DisplacementFilter class uses the pixel values from the specified texture<br>(called the displacement map) to perform a displacement of an object. You can<br>use this filter to apply all manor of crazy warping effects. Currently the r<br>property of the texture is used to offset the x and the g property of the texture<br>is used to offset the y.</p>",
+    "kind": "class",
+    "augments": [
+        "PIXI.Filter"
+    ],
+    "memberof": "PIXI.filters",
+    "name": "DisplacementFilter",
+    "longname": "PIXI.filters.DisplacementFilter",
+    "scope": "static",
+    "params": [
+        {
+            "type": {
+                "names": [
+                    "PIXI.Sprite"
+                ]
+            },
+            "description": "<p>The sprite used for the displacement map. (make sure its added to the scene!)</p>",
+            "name": "sprite"
+        },
+        {
+            "type": {
+                "names": [
+                    "number"
+                ]
+            },
+            "description": "<p>The scale of the displacement</p>",
+            "name": "scale"
+        }
+    ],
+    "___id": "T000002R005603",
+    "___s": true,
+    "$methods": [
+        {
+            "comment": "/**\n     * Applies the filter.\n     *\n     * @param {PIXI.FilterManager} filterManager - The manager.\n     * @param {PIXI.RenderTarget} input - The input target.\n     * @param {PIXI.RenderTarget} output - The output target.\n     */",
+            "meta": {
+                "range": [
+                    1791,
+                    2244
+                ],
+                "filename": "DisplacementFilter.js",
+                "lineno": 59,
+                "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\filters\\displacement",
+                "code": {
+                    "id": "astnode100060401",
+                    "name": "DisplacementFilter#apply",
+                    "type": "MethodDefinition",
+                    "paramnames": [
+                        "filterManager",
+                        "input",
+                        "output"
+                    ]
+                },
+                "vars": {
+                    "": null
+                }
+            },
+            "description": "<p>Applies the filter.</p>",
+            "params": [
+                {
+                    "type": {
+                        "names": [
+                            "PIXI.FilterManager"
+                        ]
+                    },
+                    "description": "<p>The manager.</p>",
+                    "name": "filterManager"
+                },
+                {
+                    "type": {
+                        "names": [
+                            "PIXI.RenderTarget"
+                        ]
+                    },
+                    "description": "<p>The input target.</p>",
+                    "name": "input"
+                },
+                {
+                    "type": {
+                        "names": [
+                            "PIXI.RenderTarget"
+                        ]
+                    },
+                    "description": "<p>The output target.</p>",
+                    "name": "output"
+                }
+            ],
+            "name": "apply",
+            "longname": "PIXI.filters.DisplacementFilter#apply",
+            "kind": "function",
+            "memberof": "PIXI.filters.DisplacementFilter",
+            "scope": "instance",
+            "overrides": "PIXI.Filter#apply",
+            "___id": "T000002R005616",
+            "___s": true,
+            "skip": true,
+            "slug": "PIXI.filters.DisplacementFilterapply",
+            "filepath": "filters\\displacement\\DisplacementFilter.js"
+        },
+        {
+            "comment": "/**\n     * The texture used for the displacement map. Must be power of 2 sized texture.\n     *\n     * @member {PIXI.Texture}\n     */",
+            "meta": {
+                "range": [
+                    2387,
+                    2449
+                ],
+                "filename": "DisplacementFilter.js",
+                "lineno": 76,
+                "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\filters\\displacement",
+                "code": {
+                    "id": "astnode100060487",
+                    "name": "DisplacementFilter#map",
+                    "type": "MethodDefinition",
+                    "paramnames": []
+                },
+                "vars": {
+                    "": null
+                }
+            },
+            "description": "<p>The texture used for the displacement map. Must be power of 2 sized texture.</p>",
+            "kind": "member",
+            "type": {
+                "names": [
+                    "PIXI.Texture"
+                ]
+            },
+            "name": "map",
+            "longname": "PIXI.filters.DisplacementFilter#map",
+            "memberof": "PIXI.filters.DisplacementFilter",
+            "scope": "instance",
+            "params": [],
+            "___id": "T000002R005621",
+            "___s": true,
+            "skip": true,
+            "slug": "PIXI.filters.DisplacementFiltermap",
+            "filepath": "filters\\displacement\\DisplacementFilter.js"
+        },
+        {
+            "comment": "/**\n     * Applies the filter.\n     *\n     * @param {PIXI.FilterManager} filterManager - The manager.\n     * @param {PIXI.RenderTarget} input - The input target.\n     * @param {PIXI.RenderTarget} output - The output target.\n     */",
+            "meta": {
+                "range": [
+                    1791,
+                    2244
+                ],
+                "filename": "DisplacementFilter.js",
+                "lineno": 59,
+                "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\filters\\displacement",
+                "code": {
+                    "id": "astnode100135080",
+                    "name": "DisplacementFilter#apply",
+                    "type": "MethodDefinition",
+                    "paramnames": [
+                        "filterManager",
+                        "input",
+                        "output"
+                    ]
+                },
+                "vars": {
+                    "": null
+                }
+            },
+            "description": "<p>Applies the filter.</p>",
+            "params": [
+                {
+                    "type": {
+                        "names": [
+                            "PIXI.FilterManager"
+                        ]
+                    },
+                    "description": "<p>The manager.</p>",
+                    "name": "filterManager"
+                },
+                {
+                    "type": {
+                        "names": [
+                            "PIXI.RenderTarget"
+                        ]
+                    },
+                    "description": "<p>The input target.</p>",
+                    "name": "input"
+                },
+                {
+                    "type": {
+                        "names": [
+                            "PIXI.RenderTarget"
+                        ]
+                    },
+                    "description": "<p>The output target.</p>",
+                    "name": "output"
+                }
+            ],
+            "name": "apply",
+            "longname": "PIXI.filters.DisplacementFilter#apply",
+            "kind": "function",
+            "memberof": "PIXI.filters.DisplacementFilter",
+            "scope": "instance",
+            "overrides": "PIXI.Filter#apply",
+            "___id": "T000002R012550",
+            "___s": true,
+            "skip": true,
+            "slug": "PIXI.filters.DisplacementFilterapply",
+            "filepath": "filters\\displacement\\DisplacementFilter.js"
+        },
+        {
+            "comment": "/**\n     * The texture used for the displacement map. Must be power of 2 sized texture.\n     *\n     * @member {PIXI.Texture}\n     */",
+            "meta": {
+                "range": [
+                    2387,
+                    2449
+                ],
+                "filename": "DisplacementFilter.js",
+                "lineno": 76,
+                "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\filters\\displacement",
+                "code": {
+                    "id": "astnode100135166",
+                    "name": "DisplacementFilter#map",
+                    "type": "MethodDefinition",
+                    "paramnames": []
+                },
+                "vars": {
+                    "": null
+                }
+            },
+            "description": "<p>The texture used for the displacement map. Must be power of 2 sized texture.</p>",
+            "kind": "member",
+            "type": {
+                "names": [
+                    "PIXI.Texture"
+                ]
+            },
+            "name": "map",
+            "longname": "PIXI.filters.DisplacementFilter#map",
+            "memberof": "PIXI.filters.DisplacementFilter",
+            "scope": "instance",
+            "params": [],
+            "___id": "T000002R012555",
+            "___s": true,
+            "skip": true,
+            "slug": "PIXI.filters.DisplacementFiltermap",
+            "filepath": "filters\\displacement\\DisplacementFilter.js"
+        }
+    ],
+    "$attributes": [
+        {
+            "comment": "/**\n         * The vertex shader.\n         *\n         * @member {string} PIXI.Filter#vertexSrc\n         */",
+            "meta": {
+                "range": [
+                    670,
+                    776
+                ],
+                "filename": "Filter.js",
+                "lineno": 25,
+                "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                "code": {}
+            },
+            "description": "<p>The vertex shader.</p>",
+            "kind": "member",
+            "name": "vertexSrc",
+            "type": {
+                "names": [
+                    "string"
+                ]
+            },
+            "memberof": "PIXI.filters.DisplacementFilter",
+            "longname": "PIXI.filters.DisplacementFilter#vertexSrc",
+            "scope": "instance",
+            "inherits": "PIXI.Filter#vertexSrc",
+            "inherited": true,
+            "overrides": "PIXI.Filter#vertexSrc",
+            "___id": "T000002R014434",
+            "___s": true,
+            "skip": true,
+            "slug": "PIXI.filters.DisplacementFiltervertexSrc",
+            "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+        },
+        {
+            "comment": "/**\n         * The fragment shader.\n         *\n         * @member {string} PIXI.Filter#fragmentSrc\n         */",
+            "meta": {
+                "range": [
+                    849,
+                    959
+                ],
+                "filename": "Filter.js",
+                "lineno": 32,
+                "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                "code": {}
+            },
+            "description": "<p>The fragment shader.</p>",
+            "kind": "member",
+            "name": "fragmentSrc",
+            "type": {
+                "names": [
+                    "string"
+                ]
+            },
+            "memberof": "PIXI.filters.DisplacementFilter",
+            "longname": "PIXI.filters.DisplacementFilter#fragmentSrc",
+            "scope": "instance",
+            "inherits": "PIXI.Filter#fragmentSrc",
+            "inherited": true,
+            "overrides": "PIXI.Filter#fragmentSrc",
+            "___id": "T000002R014435",
+            "___s": true,
+            "skip": true,
+            "slug": "PIXI.filters.DisplacementFilterfragmentSrc",
+            "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+        },
+        {
+            "comment": "/**\n         * An object containing the current values of custom uniforms.\n         * @example <caption>Updating the value of a custom uniform</caption>\n         * filter.uniforms.time = performance.now();\n         *\n         * @member {object} PIXI.Filter#uniforms\n         */",
+            "meta": {
+                "range": [
+                    1211,
+                    1488
+                ],
+                "filename": "Filter.js",
+                "lineno": 43,
+                "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                "code": {}
+            },
+            "description": "<p>An object containing the current values of custom uniforms.</p>",
+            "examples": [
+                "<caption>Updating the value of a custom uniform</caption>\nfilter.uniforms.time = performance.now();"
+            ],
+            "kind": "member",
+            "name": "uniforms",
+            "type": {
+                "names": [
+                    "object"
+                ]
+            },
+            "memberof": "PIXI.filters.DisplacementFilter",
+            "longname": "PIXI.filters.DisplacementFilter#uniforms",
+            "scope": "instance",
+            "inherits": "PIXI.Filter#uniforms",
+            "inherited": true,
+            "overrides": "PIXI.Filter#uniforms",
+            "___id": "T000002R014436",
+            "___s": true,
+            "skip": true,
+            "slug": "PIXI.filters.DisplacementFilteruniforms",
+            "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+        },
+        {
+            "comment": "/**\n         * The padding of the filter. Some filters require extra space to breath such as a blur.\n         * Increasing this will add extra width and height to the bounds of the object that the\n         * filter is applied to.\n         *\n         * @member {number} PIXI.Filter#padding\n         */",
+            "meta": {
+                "range": [
+                    2062,
+                    2362
+                ],
+                "filename": "Filter.js",
+                "lineno": 69,
+                "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                "code": {}
+            },
+            "description": "<p>The padding of the filter. Some filters require extra space to breath such as a blur.<br>Increasing this will add extra width and height to the bounds of the object that the<br>filter is applied to.</p>",
+            "kind": "member",
+            "name": "padding",
+            "type": {
+                "names": [
+                    "number"
+                ]
+            },
+            "memberof": "PIXI.filters.DisplacementFilter",
+            "longname": "PIXI.filters.DisplacementFilter#padding",
+            "scope": "instance",
+            "inherits": "PIXI.Filter#padding",
+            "inherited": true,
+            "overrides": "PIXI.Filter#padding",
+            "___id": "T000002R014437",
+            "___s": true,
+            "skip": true,
+            "slug": "PIXI.filters.DisplacementFilterpadding",
+            "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+        },
+        {
+            "comment": "/**\n         * The resolution of the filter. Setting this to be lower will lower the quality but\n         * increase the performance of the filter.\n         *\n         * @member {number} PIXI.Filter#resolution\n         */",
+            "meta": {
+                "range": [
+                    2398,
+                    2619
+                ],
+                "filename": "Filter.js",
+                "lineno": 78,
+                "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                "code": {}
+            },
+            "description": "<p>The resolution of the filter. Setting this to be lower will lower the quality but<br>increase the performance of the filter.</p>",
+            "kind": "member",
+            "name": "resolution",
+            "type": {
+                "names": [
+                    "number"
+                ]
+            },
+            "memberof": "PIXI.filters.DisplacementFilter",
+            "longname": "PIXI.filters.DisplacementFilter#resolution",
+            "scope": "instance",
+            "inherits": "PIXI.Filter#resolution",
+            "inherited": true,
+            "overrides": "PIXI.Filter#resolution",
+            "___id": "T000002R014438",
+            "___s": true,
+            "skip": true,
+            "slug": "PIXI.filters.DisplacementFilterresolution",
+            "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+        },
+        {
+            "comment": "/**\n         * If enabled is true the filter is applied, if false it will not.\n         *\n         * @member {boolean} PIXI.Filter#enabled\n         */",
+            "meta": {
+                "range": [
+                    2676,
+                    2826
+                ],
+                "filename": "Filter.js",
+                "lineno": 86,
+                "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                "code": {}
+            },
+            "description": "<p>If enabled is true the filter is applied, if false it will not.</p>",
+            "kind": "member",
+            "name": "enabled",
+            "type": {
+                "names": [
+                    "boolean"
+                ]
+            },
+            "memberof": "PIXI.filters.DisplacementFilter",
+            "longname": "PIXI.filters.DisplacementFilter#enabled",
+            "scope": "instance",
+            "inherits": "PIXI.Filter#enabled",
+            "inherited": true,
+            "overrides": "PIXI.Filter#enabled",
+            "___id": "T000002R014439",
+            "___s": true,
+            "skip": true,
+            "slug": "PIXI.filters.DisplacementFilterenabled",
+            "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+        },
+        {
+            "comment": "/**\n         * If enabled, pixi will fit the filter area into boundaries for better performance.\n         * Switch it off if it does not work for specific shader.\n         *\n         * @member {boolean} PIXI.Filter#autoFit\n         */",
+            "meta": {
+                "range": [
+                    2865,
+                    3099
+                ],
+                "filename": "Filter.js",
+                "lineno": 93,
+                "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                "code": {}
+            },
+            "description": "<p>If enabled, pixi will fit the filter area into boundaries for better performance.<br>Switch it off if it does not work for specific shader.</p>",
+            "kind": "member",
+            "name": "autoFit",
+            "type": {
+                "names": [
+                    "boolean"
+                ]
+            },
+            "memberof": "PIXI.filters.DisplacementFilter",
+            "longname": "PIXI.filters.DisplacementFilter#autoFit",
+            "scope": "instance",
+            "inherits": "PIXI.Filter#autoFit",
+            "inherited": true,
+            "overrides": "PIXI.Filter#autoFit",
+            "___id": "T000002R014440",
+            "___s": true,
+            "skip": true,
+            "slug": "PIXI.filters.DisplacementFilterautoFit",
+            "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+        }
+    ],
+    "$staticmethods": [],
+    "$staticproperties": [],
+    "$augments": [
+        {
+            "comment": "/**\n * @class\n * @memberof PIXI\n * @extends PIXI.Shader\n */",
+            "meta": {
+                "range": [
+                    342,
+                    5863
+                ],
+                "filename": "Filter.js",
+                "lineno": 16,
+                "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                "code": {
+                    "id": "astnode100023444",
+                    "name": "Filter",
+                    "type": "ClassDeclaration",
+                    "paramnames": [
+                        "vertexSrc",
+                        "fragmentSrc",
+                        "uniforms"
+                    ]
+                }
+            },
+            "kind": "class",
+            "memberof": "PIXI",
+            "augments": [
+                "PIXI.Shader"
+            ],
+            "name": "Filter",
+            "longname": "PIXI.Filter",
+            "scope": "static",
+            "params": [
+                {
+                    "type": {
+                        "names": [
+                            "string"
+                        ]
+                    },
+                    "optional": true,
+                    "description": "<p>The source of the vertex shader.</p>",
+                    "name": "vertexSrc"
+                },
+                {
+                    "type": {
+                        "names": [
+                            "string"
+                        ]
+                    },
+                    "optional": true,
+                    "description": "<p>The source of the fragment shader.</p>",
+                    "name": "fragmentSrc"
+                },
+                {
+                    "type": {
+                        "names": [
+                            "object"
+                        ]
+                    },
+                    "optional": true,
+                    "description": "<p>Custom uniforms to use to augment the built-in ones.</p>",
+                    "name": "uniforms"
+                }
+            ],
+            "___id": "T000002R002229",
+            "___s": true,
+            "$methods": [
+                {
+                    "comment": "/**\n     * Applies the filter\n     *\n     * @param {PIXI.FilterManager} filterManager - The renderer to retrieve the filter from\n     * @param {PIXI.RenderTarget} input - The input render target.\n     * @param {PIXI.RenderTarget} output - The target to output to.\n     * @param {boolean} clear - Should the output be cleared before rendering to it\n     * @param {object} [currentState] - It's current state of filter.\n     *        There are some useful properties in the currentState :\n     *        target, filters, sourceFrame, destinationFrame, renderTarget, resolution\n     */",
+                    "meta": {
+                        "range": [
+                            3726,
+                            4091
+                        ],
+                        "filename": "Filter.js",
+                        "lineno": 113,
+                        "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                        "code": {
+                            "id": "astnode100023597",
+                            "name": "Filter#apply",
+                            "type": "MethodDefinition",
+                            "paramnames": [
+                                "filterManager",
+                                "input",
+                                "output",
+                                "clear",
+                                "currentState"
+                            ]
+                        },
+                        "vars": {
+                            "": null
+                        }
+                    },
+                    "description": "<p>Applies the filter</p>",
+                    "params": [
+                        {
+                            "type": {
+                                "names": [
+                                    "PIXI.FilterManager"
+                                ]
+                            },
+                            "description": "<p>The renderer to retrieve the filter from</p>",
+                            "name": "filterManager"
+                        },
+                        {
+                            "type": {
+                                "names": [
+                                    "PIXI.RenderTarget"
+                                ]
+                            },
+                            "description": "<p>The input render target.</p>",
+                            "name": "input"
+                        },
+                        {
+                            "type": {
+                                "names": [
+                                    "PIXI.RenderTarget"
+                                ]
+                            },
+                            "description": "<p>The target to output to.</p>",
+                            "name": "output"
+                        },
+                        {
+                            "type": {
+                                "names": [
+                                    "boolean"
+                                ]
+                            },
+                            "description": "<p>Should the output be cleared before rendering to it</p>",
+                            "name": "clear"
+                        },
+                        {
+                            "type": {
+                                "names": [
+                                    "object"
+                                ]
+                            },
+                            "optional": true,
+                            "description": "<p>It's current state of filter.<br>       There are some useful properties in the currentState :<br>       target, filters, sourceFrame, destinationFrame, renderTarget, resolution</p>",
+                            "name": "currentState"
+                        }
+                    ],
+                    "name": "apply",
+                    "longname": "PIXI.Filter#apply",
+                    "kind": "function",
+                    "memberof": "PIXI.Filter",
+                    "scope": "instance",
+                    "___id": "T000002R002252",
+                    "___s": true,
+                    "skip": true,
+                    "slug": "PIXI.Filterapply",
+                    "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+                },
+                {
+                    "comment": "/**\n     * The default vertex shader source\n     *\n     * @static\n     * @constant\n     */",
+                    "meta": {
+                        "range": [
+                            4192,
+                            4822
+                        ],
+                        "filename": "Filter.js",
+                        "lineno": 131,
+                        "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                        "code": {
+                            "id": "astnode100023615",
+                            "name": "Filter.defaultVertexSrc",
+                            "type": "MethodDefinition",
+                            "paramnames": []
+                        },
+                        "vars": {
+                            "": null
+                        }
+                    },
+                    "description": "<p>The default vertex shader source</p>",
+                    "scope": "static",
+                    "kind": "constant",
+                    "name": "defaultVertexSrc",
+                    "longname": "PIXI.Filter.defaultVertexSrc",
+                    "memberof": "PIXI.Filter",
+                    "params": [],
+                    "___id": "T000002R002253",
+                    "___s": true,
+                    "skip": true,
+                    "slug": "PIXI.Filter.defaultVertexSrc",
+                    "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+                },
+                {
+                    "comment": "/**\n     * The default fragment shader source\n     *\n     * @static\n     * @constant\n     */",
+                    "meta": {
+                        "range": [
+                            4925,
+                            5861
+                        ],
+                        "filename": "Filter.js",
+                        "lineno": 157,
+                        "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                        "code": {
+                            "id": "astnode100023636",
+                            "name": "Filter.defaultFragmentSrc",
+                            "type": "MethodDefinition",
+                            "paramnames": []
+                        },
+                        "vars": {
+                            "": null
+                        }
+                    },
+                    "description": "<p>The default fragment shader source</p>",
+                    "scope": "static",
+                    "kind": "constant",
+                    "name": "defaultFragmentSrc",
+                    "longname": "PIXI.Filter.defaultFragmentSrc",
+                    "memberof": "PIXI.Filter",
+                    "params": [],
+                    "___id": "T000002R002254",
+                    "___s": true,
+                    "skip": true,
+                    "slug": "PIXI.Filter.defaultFragmentSrc",
+                    "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+                },
+                {
+                    "comment": "/**\n     * Applies the filter\n     *\n     * @param {PIXI.FilterManager} filterManager - The renderer to retrieve the filter from\n     * @param {PIXI.RenderTarget} input - The input render target.\n     * @param {PIXI.RenderTarget} output - The target to output to.\n     * @param {boolean} clear - Should the output be cleared before rendering to it\n     * @param {object} [currentState] - It's current state of filter.\n     *        There are some useful properties in the currentState :\n     *        target, filters, sourceFrame, destinationFrame, renderTarget, resolution\n     */",
+                    "meta": {
+                        "range": [
+                            3726,
+                            4091
+                        ],
+                        "filename": "Filter.js",
+                        "lineno": 113,
+                        "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                        "code": {
+                            "id": "astnode100098276",
+                            "name": "Filter#apply",
+                            "type": "MethodDefinition",
+                            "paramnames": [
+                                "filterManager",
+                                "input",
+                                "output",
+                                "clear",
+                                "currentState"
+                            ]
+                        },
+                        "vars": {
+                            "": null
+                        }
+                    },
+                    "description": "<p>Applies the filter</p>",
+                    "params": [
+                        {
+                            "type": {
+                                "names": [
+                                    "PIXI.FilterManager"
+                                ]
+                            },
+                            "description": "<p>The renderer to retrieve the filter from</p>",
+                            "name": "filterManager"
+                        },
+                        {
+                            "type": {
+                                "names": [
+                                    "PIXI.RenderTarget"
+                                ]
+                            },
+                            "description": "<p>The input render target.</p>",
+                            "name": "input"
+                        },
+                        {
+                            "type": {
+                                "names": [
+                                    "PIXI.RenderTarget"
+                                ]
+                            },
+                            "description": "<p>The target to output to.</p>",
+                            "name": "output"
+                        },
+                        {
+                            "type": {
+                                "names": [
+                                    "boolean"
+                                ]
+                            },
+                            "description": "<p>Should the output be cleared before rendering to it</p>",
+                            "name": "clear"
+                        },
+                        {
+                            "type": {
+                                "names": [
+                                    "object"
+                                ]
+                            },
+                            "optional": true,
+                            "description": "<p>It's current state of filter.<br>       There are some useful properties in the currentState :<br>       target, filters, sourceFrame, destinationFrame, renderTarget, resolution</p>",
+                            "name": "currentState"
+                        }
+                    ],
+                    "name": "apply",
+                    "longname": "PIXI.Filter#apply",
+                    "kind": "function",
+                    "memberof": "PIXI.Filter",
+                    "scope": "instance",
+                    "___id": "T000002R009186",
+                    "___s": true,
+                    "skip": true,
+                    "slug": "PIXI.Filterapply",
+                    "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+                },
+                {
+                    "comment": "/**\n     * The default vertex shader source\n     *\n     * @static\n     * @constant\n     */",
+                    "meta": {
+                        "range": [
+                            4192,
+                            4822
+                        ],
+                        "filename": "Filter.js",
+                        "lineno": 131,
+                        "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                        "code": {
+                            "id": "astnode100098294",
+                            "name": "Filter.defaultVertexSrc",
+                            "type": "MethodDefinition",
+                            "paramnames": []
+                        },
+                        "vars": {
+                            "": null
+                        }
+                    },
+                    "description": "<p>The default vertex shader source</p>",
+                    "scope": "static",
+                    "kind": "constant",
+                    "name": "defaultVertexSrc",
+                    "longname": "PIXI.Filter.defaultVertexSrc",
+                    "memberof": "PIXI.Filter",
+                    "params": [],
+                    "___id": "T000002R009187",
+                    "___s": true,
+                    "skip": true,
+                    "slug": "PIXI.Filter.defaultVertexSrc",
+                    "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+                },
+                {
+                    "comment": "/**\n     * The default fragment shader source\n     *\n     * @static\n     * @constant\n     */",
+                    "meta": {
+                        "range": [
+                            4925,
+                            5861
+                        ],
+                        "filename": "Filter.js",
+                        "lineno": 157,
+                        "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                        "code": {
+                            "id": "astnode100098315",
+                            "name": "Filter.defaultFragmentSrc",
+                            "type": "MethodDefinition",
+                            "paramnames": []
+                        },
+                        "vars": {
+                            "": null
+                        }
+                    },
+                    "description": "<p>The default fragment shader source</p>",
+                    "scope": "static",
+                    "kind": "constant",
+                    "name": "defaultFragmentSrc",
+                    "longname": "PIXI.Filter.defaultFragmentSrc",
+                    "memberof": "PIXI.Filter",
+                    "params": [],
+                    "___id": "T000002R009188",
+                    "___s": true,
+                    "skip": true,
+                    "slug": "PIXI.Filter.defaultFragmentSrc",
+                    "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+                }
+            ],
+            "$attributes": [
+                {
+                    "comment": "/**\n         * The vertex shader.\n         *\n         * @member {string} PIXI.Filter#vertexSrc\n         */",
+                    "meta": {
+                        "range": [
+                            670,
+                            776
+                        ],
+                        "filename": "Filter.js",
+                        "lineno": 25,
+                        "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                        "code": {}
+                    },
+                    "description": "<p>The vertex shader.</p>",
+                    "kind": "member",
+                    "name": "vertexSrc",
+                    "type": {
+                        "names": [
+                            "string"
+                        ]
+                    },
+                    "memberof": "PIXI.Filter",
+                    "longname": "PIXI.Filter#vertexSrc",
+                    "scope": "instance",
+                    "___id": "T000002R002231",
+                    "___s": true,
+                    "skip": true,
+                    "slug": "PIXI.FiltervertexSrc",
+                    "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+                },
+                {
+                    "comment": "/**\n         * The fragment shader.\n         *\n         * @member {string} PIXI.Filter#fragmentSrc\n         */",
+                    "meta": {
+                        "range": [
+                            849,
+                            959
+                        ],
+                        "filename": "Filter.js",
+                        "lineno": 32,
+                        "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                        "code": {}
+                    },
+                    "description": "<p>The fragment shader.</p>",
+                    "kind": "member",
+                    "name": "fragmentSrc",
+                    "type": {
+                        "names": [
+                            "string"
+                        ]
+                    },
+                    "memberof": "PIXI.Filter",
+                    "longname": "PIXI.Filter#fragmentSrc",
+                    "scope": "instance",
+                    "___id": "T000002R002233",
+                    "___s": true,
+                    "skip": true,
+                    "slug": "PIXI.FilterfragmentSrc",
+                    "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+                },
+                {
+                    "comment": "/**\n         * An object containing the current values of custom uniforms.\n         * @example <caption>Updating the value of a custom uniform</caption>\n         * filter.uniforms.time = performance.now();\n         *\n         * @member {object} PIXI.Filter#uniforms\n         */",
+                    "meta": {
+                        "range": [
+                            1211,
+                            1488
+                        ],
+                        "filename": "Filter.js",
+                        "lineno": 43,
+                        "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                        "code": {}
+                    },
+                    "description": "<p>An object containing the current values of custom uniforms.</p>",
+                    "examples": [
+                        "<caption>Updating the value of a custom uniform</caption>\nfilter.uniforms.time = performance.now();"
+                    ],
+                    "kind": "member",
+                    "name": "uniforms",
+                    "type": {
+                        "names": [
+                            "object"
+                        ]
+                    },
+                    "memberof": "PIXI.Filter",
+                    "longname": "PIXI.Filter#uniforms",
+                    "scope": "instance",
+                    "___id": "T000002R002237",
+                    "___s": true,
+                    "skip": true,
+                    "slug": "PIXI.Filteruniforms",
+                    "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+                },
+                {
+                    "comment": "/**\n         * The padding of the filter. Some filters require extra space to breath such as a blur.\n         * Increasing this will add extra width and height to the bounds of the object that the\n         * filter is applied to.\n         *\n         * @member {number} PIXI.Filter#padding\n         */",
+                    "meta": {
+                        "range": [
+                            2062,
+                            2362
+                        ],
+                        "filename": "Filter.js",
+                        "lineno": 69,
+                        "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                        "code": {}
+                    },
+                    "description": "<p>The padding of the filter. Some filters require extra space to breath such as a blur.<br>Increasing this will add extra width and height to the bounds of the object that the<br>filter is applied to.</p>",
+                    "kind": "member",
+                    "name": "padding",
+                    "type": {
+                        "names": [
+                            "number"
+                        ]
+                    },
+                    "memberof": "PIXI.Filter",
+                    "longname": "PIXI.Filter#padding",
+                    "scope": "instance",
+                    "___id": "T000002R002244",
+                    "___s": true,
+                    "skip": true,
+                    "slug": "PIXI.Filterpadding",
+                    "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+                },
+                {
+                    "comment": "/**\n         * The resolution of the filter. Setting this to be lower will lower the quality but\n         * increase the performance of the filter.\n         *\n         * @member {number} PIXI.Filter#resolution\n         */",
+                    "meta": {
+                        "range": [
+                            2398,
+                            2619
+                        ],
+                        "filename": "Filter.js",
+                        "lineno": 78,
+                        "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                        "code": {}
+                    },
+                    "description": "<p>The resolution of the filter. Setting this to be lower will lower the quality but<br>increase the performance of the filter.</p>",
+                    "kind": "member",
+                    "name": "resolution",
+                    "type": {
+                        "names": [
+                            "number"
+                        ]
+                    },
+                    "memberof": "PIXI.Filter",
+                    "longname": "PIXI.Filter#resolution",
+                    "scope": "instance",
+                    "___id": "T000002R002246",
+                    "___s": true,
+                    "skip": true,
+                    "slug": "PIXI.Filterresolution",
+                    "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+                },
+                {
+                    "comment": "/**\n         * If enabled is true the filter is applied, if false it will not.\n         *\n         * @member {boolean} PIXI.Filter#enabled\n         */",
+                    "meta": {
+                        "range": [
+                            2676,
+                            2826
+                        ],
+                        "filename": "Filter.js",
+                        "lineno": 86,
+                        "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                        "code": {}
+                    },
+                    "description": "<p>If enabled is true the filter is applied, if false it will not.</p>",
+                    "kind": "member",
+                    "name": "enabled",
+                    "type": {
+                        "names": [
+                            "boolean"
+                        ]
+                    },
+                    "memberof": "PIXI.Filter",
+                    "longname": "PIXI.Filter#enabled",
+                    "scope": "instance",
+                    "___id": "T000002R002248",
+                    "___s": true,
+                    "skip": true,
+                    "slug": "PIXI.Filterenabled",
+                    "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+                },
+                {
+                    "comment": "/**\n         * If enabled, pixi will fit the filter area into boundaries for better performance.\n         * Switch it off if it does not work for specific shader.\n         *\n         * @member {boolean} PIXI.Filter#autoFit\n         */",
+                    "meta": {
+                        "range": [
+                            2865,
+                            3099
+                        ],
+                        "filename": "Filter.js",
+                        "lineno": 93,
+                        "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                        "code": {}
+                    },
+                    "description": "<p>If enabled, pixi will fit the filter area into boundaries for better performance.<br>Switch it off if it does not work for specific shader.</p>",
+                    "kind": "member",
+                    "name": "autoFit",
+                    "type": {
+                        "names": [
+                            "boolean"
+                        ]
+                    },
+                    "memberof": "PIXI.Filter",
+                    "longname": "PIXI.Filter#autoFit",
+                    "scope": "instance",
+                    "___id": "T000002R002250",
+                    "___s": true,
+                    "skip": true,
+                    "slug": "PIXI.FilterautoFit",
+                    "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+                },
+                {
+                    "comment": "/**\n         * The vertex shader.\n         *\n         * @member {string} PIXI.Filter#vertexSrc\n         */",
+                    "meta": {
+                        "range": [
+                            670,
+                            776
+                        ],
+                        "filename": "Filter.js",
+                        "lineno": 25,
+                        "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                        "code": {}
+                    },
+                    "description": "<p>The vertex shader.</p>",
+                    "kind": "member",
+                    "name": "vertexSrc",
+                    "type": {
+                        "names": [
+                            "string"
+                        ]
+                    },
+                    "memberof": "PIXI.Filter",
+                    "longname": "PIXI.Filter#vertexSrc",
+                    "scope": "instance",
+                    "___id": "T000002R009165",
+                    "___s": true,
+                    "skip": true,
+                    "slug": "PIXI.FiltervertexSrc",
+                    "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+                },
+                {
+                    "comment": "/**\n         * The fragment shader.\n         *\n         * @member {string} PIXI.Filter#fragmentSrc\n         */",
+                    "meta": {
+                        "range": [
+                            849,
+                            959
+                        ],
+                        "filename": "Filter.js",
+                        "lineno": 32,
+                        "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                        "code": {}
+                    },
+                    "description": "<p>The fragment shader.</p>",
+                    "kind": "member",
+                    "name": "fragmentSrc",
+                    "type": {
+                        "names": [
+                            "string"
+                        ]
+                    },
+                    "memberof": "PIXI.Filter",
+                    "longname": "PIXI.Filter#fragmentSrc",
+                    "scope": "instance",
+                    "___id": "T000002R009167",
+                    "___s": true,
+                    "skip": true,
+                    "slug": "PIXI.FilterfragmentSrc",
+                    "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+                },
+                {
+                    "comment": "/**\n         * An object containing the current values of custom uniforms.\n         * @example <caption>Updating the value of a custom uniform</caption>\n         * filter.uniforms.time = performance.now();\n         *\n         * @member {object} PIXI.Filter#uniforms\n         */",
+                    "meta": {
+                        "range": [
+                            1211,
+                            1488
+                        ],
+                        "filename": "Filter.js",
+                        "lineno": 43,
+                        "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                        "code": {}
+                    },
+                    "description": "<p>An object containing the current values of custom uniforms.</p>",
+                    "examples": [
+                        "<caption>Updating the value of a custom uniform</caption>\nfilter.uniforms.time = performance.now();"
+                    ],
+                    "kind": "member",
+                    "name": "uniforms",
+                    "type": {
+                        "names": [
+                            "object"
+                        ]
+                    },
+                    "memberof": "PIXI.Filter",
+                    "longname": "PIXI.Filter#uniforms",
+                    "scope": "instance",
+                    "___id": "T000002R009171",
+                    "___s": true,
+                    "skip": true,
+                    "slug": "PIXI.Filteruniforms",
+                    "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+                },
+                {
+                    "comment": "/**\n         * The padding of the filter. Some filters require extra space to breath such as a blur.\n         * Increasing this will add extra width and height to the bounds of the object that the\n         * filter is applied to.\n         *\n         * @member {number} PIXI.Filter#padding\n         */",
+                    "meta": {
+                        "range": [
+                            2062,
+                            2362
+                        ],
+                        "filename": "Filter.js",
+                        "lineno": 69,
+                        "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                        "code": {}
+                    },
+                    "description": "<p>The padding of the filter. Some filters require extra space to breath such as a blur.<br>Increasing this will add extra width and height to the bounds of the object that the<br>filter is applied to.</p>",
+                    "kind": "member",
+                    "name": "padding",
+                    "type": {
+                        "names": [
+                            "number"
+                        ]
+                    },
+                    "memberof": "PIXI.Filter",
+                    "longname": "PIXI.Filter#padding",
+                    "scope": "instance",
+                    "___id": "T000002R009178",
+                    "___s": true,
+                    "skip": true,
+                    "slug": "PIXI.Filterpadding",
+                    "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+                },
+                {
+                    "comment": "/**\n         * The resolution of the filter. Setting this to be lower will lower the quality but\n         * increase the performance of the filter.\n         *\n         * @member {number} PIXI.Filter#resolution\n         */",
+                    "meta": {
+                        "range": [
+                            2398,
+                            2619
+                        ],
+                        "filename": "Filter.js",
+                        "lineno": 78,
+                        "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                        "code": {}
+                    },
+                    "description": "<p>The resolution of the filter. Setting this to be lower will lower the quality but<br>increase the performance of the filter.</p>",
+                    "kind": "member",
+                    "name": "resolution",
+                    "type": {
+                        "names": [
+                            "number"
+                        ]
+                    },
+                    "memberof": "PIXI.Filter",
+                    "longname": "PIXI.Filter#resolution",
+                    "scope": "instance",
+                    "___id": "T000002R009180",
+                    "___s": true,
+                    "skip": true,
+                    "slug": "PIXI.Filterresolution",
+                    "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+                },
+                {
+                    "comment": "/**\n         * If enabled is true the filter is applied, if false it will not.\n         *\n         * @member {boolean} PIXI.Filter#enabled\n         */",
+                    "meta": {
+                        "range": [
+                            2676,
+                            2826
+                        ],
+                        "filename": "Filter.js",
+                        "lineno": 86,
+                        "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                        "code": {}
+                    },
+                    "description": "<p>If enabled is true the filter is applied, if false it will not.</p>",
+                    "kind": "member",
+                    "name": "enabled",
+                    "type": {
+                        "names": [
+                            "boolean"
+                        ]
+                    },
+                    "memberof": "PIXI.Filter",
+                    "longname": "PIXI.Filter#enabled",
+                    "scope": "instance",
+                    "___id": "T000002R009182",
+                    "___s": true,
+                    "skip": true,
+                    "slug": "PIXI.Filterenabled",
+                    "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+                },
+                {
+                    "comment": "/**\n         * If enabled, pixi will fit the filter area into boundaries for better performance.\n         * Switch it off if it does not work for specific shader.\n         *\n         * @member {boolean} PIXI.Filter#autoFit\n         */",
+                    "meta": {
+                        "range": [
+                            2865,
+                            3099
+                        ],
+                        "filename": "Filter.js",
+                        "lineno": 93,
+                        "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core\\renderers\\webgl\\filters",
+                        "code": {}
+                    },
+                    "description": "<p>If enabled, pixi will fit the filter area into boundaries for better performance.<br>Switch it off if it does not work for specific shader.</p>",
+                    "kind": "member",
+                    "name": "autoFit",
+                    "type": {
+                        "names": [
+                            "boolean"
+                        ]
+                    },
+                    "memberof": "PIXI.Filter",
+                    "longname": "PIXI.Filter#autoFit",
+                    "scope": "instance",
+                    "___id": "T000002R009184",
+                    "___s": true,
+                    "skip": true,
+                    "slug": "PIXI.FilterautoFit",
+                    "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+                }
+            ],
+            "$staticmethods": [],
+            "$staticproperties": [],
+            "$augments": [
+                {
+                    "comment": "/**\n * Wrapper class, webGL Shader for Pixi.\n * Adds precision string if vertexSrc or fragmentSrc have no mention of it.\n *\n * @class\n * @extends GLShader\n * @memberof PIXI\n */",
+                    "meta": {
+                        "range": [
+                            679,
+                            1203
+                        ],
+                        "filename": "Shader.js",
+                        "lineno": 35,
+                        "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\examples\\pixi.js\\pixi.js-repo\\src\\core",
+                        "code": {
+                            "id": "astnode100032185",
+                            "name": "Shader",
+                            "type": "ClassDeclaration",
+                            "paramnames": [
+                                "gl",
+                                "vertexSrc",
+                                "fragmentSrc"
+                            ]
+                        }
+                    },
+                    "classdesc": "<p>Wrapper class, webGL Shader for Pixi.<br>Adds precision string if vertexSrc or fragmentSrc have no mention of it.</p>",
+                    "kind": "class",
+                    "augments": [
+                        "GLShader"
+                    ],
+                    "memberof": "PIXI",
+                    "name": "Shader",
+                    "longname": "PIXI.Shader",
+                    "scope": "static",
+                    "params": [
+                        {
+                            "type": {
+                                "names": [
+                                    "WebGLRenderingContext"
+                                ]
+                            },
+                            "description": "<p>The current WebGL rendering context</p>",
+                            "name": "gl"
+                        },
+                        {
+                            "type": {
+                                "names": [
+                                    "string",
+                                    "Array.<string>"
+                                ]
+                            },
+                            "description": "<p>The vertex shader source as an array of strings.</p>",
+                            "name": "vertexSrc"
+                        },
+                        {
+                            "type": {
+                                "names": [
+                                    "string",
+                                    "Array.<string>"
+                                ]
+                            },
+                            "description": "<p>The fragment shader source as an array of strings.</p>",
+                            "name": "fragmentSrc"
+                        }
+                    ],
+                    "___id": "T000002R002944",
+                    "___s": true,
+                    "$methods": [],
+                    "$attributes": [],
+                    "$staticmethods": [],
+                    "$staticproperties": [],
+                    "$augments": [
+                        {
+                            "name": "GLShader"
+                        }
+                    ],
+                    "$augmentedBy": [
+                        {
+                            "name": "PrimitiveShader"
+                        },
+                        {
+                            "name": "Filter"
+                        },
+                        {
+                            "name": "ParticleShader"
+                        },
+                        {
+                            "name": "PrimitiveShader"
+                        },
+                        {
+                            "name": "Filter"
+                        },
+                        {
+                            "name": "ParticleShader"
+                        }
+                    ],
+                    "filepath": "core\\Shader.js"
+                }
+            ],
+            "$augmentedBy": [
+                {
+                    "name": "SpriteMaskFilter"
+                },
+                {
+                    "name": "BlurFilter"
+                },
+                {
+                    "name": "BlurXFilter"
+                },
+                {
+                    "name": "BlurYFilter"
+                },
+                {
+                    "name": "ColorMatrixFilter"
+                },
+                {
+                    "name": "DisplacementFilter"
+                },
+                {
+                    "name": "FXAAFilter"
+                },
+                {
+                    "name": "NoiseFilter"
+                },
+                {
+                    "name": "VoidFilter"
+                },
+                {
+                    "name": "SpriteMaskFilter"
+                },
+                {
+                    "name": "BlurFilter"
+                },
+                {
+                    "name": "BlurXFilter"
+                },
+                {
+                    "name": "BlurYFilter"
+                },
+                {
+                    "name": "ColorMatrixFilter"
+                },
+                {
+                    "name": "DisplacementFilter"
+                },
+                {
+                    "name": "FXAAFilter"
+                },
+                {
+                    "name": "NoiseFilter"
+                },
+                {
+                    "name": "VoidFilter"
+                }
+            ],
+            "filepath": "core\\renderers\\webgl\\filters\\Filter.js"
+        }
+    ],
+    "$augmentedBy": [],
+    "filepath": "filters\\displacement\\DisplacementFilter.js"
+}
+</pre>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+    <script>
+      // syntax highlight code
+      document.querySelectorAll('pre code').forEach(el => hljs.highlightBlock(el));
+      
+      // spoiler code
+      function toggle(element) {
+        if (element.style.display === 'block') {
+          element.style.display = 'none';
+        } else {
+          element.style.display = 'block';
+        }
+      }
+
+      document.querySelectorAll('[data-spoiler-button]').forEach(button => {
+        const spoilElementId = button.getAttribute('data-spoiler-button');
+        const spoilElement = document.querySelector(`[data-spoiler="${spoilElementId}"]`);
+
+        if (spoilElement) {
+          button.addEventListener('click', () => toggle(spoilElement));
+        }
+      });
+
+      // toggle menu mobile nav code
+      const menu = document.getElementById('menu');
+      const toggleMenuBtn = document.getElementById('toggle-menu');
+      const menuOverlay = document.getElementById('menu-overlay');
+
+      function openMenu() {
+        menu.className += ' open';
+        menuOverlay.style.display = 'block';
+        setTimeout(() => menuOverlay.className += ' open', 1);
+      }
+
+      function closeMenu() {        
+        menu.className = menu.className.replace('open', '');
+        menuOverlay.className = menuOverlay.className.replace('open', '');
+        setTimeout(() => menuOverlay.style.display = 'none', 300);
+      }
+
+      function toggleMenu() {
+        if (menu.className.indexOf('open') !== -1) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      }
+
+      toggleMenuBtn.addEventListener('click', toggleMenu);
+      menuOverlay.addEventListener('click', closeMenu);
+
+      // search menu
+      console.log(__MENUDATA);
+      const leftpane = document.getElementById('leftpane');
+      const searchField = document.getElementById('search');
+      const searchResults = document.getElementById('search-results');
+      // fix menu width for search
+      leftpane.style.width = `${leftpane.offsetWidth}px`;
+
+      function renderMenu(results) {
+        let html = '';
+
+        Object.keys(results).forEach((menupath) => {
+          html += `<div class="doc-menupath">${menupath.slice(1, menupath.length)}</div>`;
+          html += '<ul class="doc-menu">';
+          html += results[menupath].map(symbol => `<li>
+            <span title="${symbol.kind}" class="letter-icon letter-icon-${symbol.kind}">${symbol.kind[0]}</span>
+            <a href="${symbol.recordUrl}">${symbol.name}</a>
+          </li>`).join('');
+          html += '</ul>';
+        });
+
+        if (html === '') {
+          html = '<p>No results.</p>';
+        }
+
+        searchResults.innerHTML = html;
+      }
+
+      searchField.addEventListener('keyup', (event) => {
+        const searchStr = event.target.value.toLowerCase();
+
+        const results = {};
+
+        Object.keys(__MENUDATA).forEach((menupath) => {
+          const matches = [];
+
+          __MENUDATA[menupath].forEach((symbol) => {
+            if (symbol.name.toLowerCase().indexOf(searchStr) !== -1) {
+              matches.push(symbol);
+            }
+          });
+
+          if (matches.length) {
+            results[menupath] = matches;
+          }
+        });
+
+        renderMenu(results);
+      });
+    </script>
+  </body>
+</html>

@@ -8,6 +8,7 @@
     
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600,700|Source+Sans+Pro:400,700" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/default.min.css">
     <link href="style.css" rel="stylesheet">
   </head>
   <body>
@@ -20,33 +21,52 @@
         <a href="index.html">Home</a>
       </header>
       <div class="row flex">
-        <div class="scroll-y nav-menu" id="menu">
-          <div class="doc-gutter">
-  
-  <div class="doc-menupath">publish</div>
-  <ul class="doc-menu">
+        <div class="nav-menu" id="menu">
+          <div class="column max-height-100" id="leftpane">
+  <div class="doc-gutter doc-search-box">
+    <input type="text" id="search" class="doc-search-input" placeholder="Search documentation" />
+  </div>
+  <div class="doc-menu-wrapper doc-gutter flex scroll-y" id="search-results">
     
-      <li>
-        <span title="module" class="letter-icon letter-icon-module">
-          M
-        </span>
-        &nbsp;
-        <a href="publish-publish.html">publish</a>
-      </li>
+    <div class="doc-menupath">publish</div>
+    <ul class="doc-menu">
+      
+        <li>
+          <span title="module" class="letter-icon letter-icon-module">
+            M
+          </span>
+          &nbsp;
+          <a href="publish-publish.html">publish</a>
+        </li>
+      
+    </ul>
     
-  </ul>
-  
+  </div>
 
 </div>
+<script>
+  // define a global JS client containing menu data object for search
+  
+  // global containing menu data
+  window.__MENUDATA = {"_publish":[{"name":"publish","kind":"module","recordUrl":"publish-publish.html"}]};
+</script>
 
         </div>
         <div class="flex scroll-y">
-          <div class="doc-gutter"><h1>JSDoc template Argon</h1><p>This website will soon host <a href="https://github.com/Oza94/jsdoc-template-argon">jsodc-template-argon</a> template examples.</p>
+          <div class="doc-gutter"><h1>JSDoc template Argon</h1><p>This site host some <a href="https://github.com/Oza94/jsdoc-template-argon">jsodc-template-argon</a> demos :</p>
+<ul>
+<li><a href="example/lodash">lodash</a></li>
+<li><a href="example/pixi.js">pixi.js</a></li>
+</ul>
 <p>This site was built with Argon template :)</p></div>
         </div>
       </div>
     </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
     <script>
+      // syntax highlight code
+      document.querySelectorAll('pre code').forEach(el => hljs.highlightBlock(el));
+      
       // spoiler code
       function toggle(element) {
         if (element.style.display === 'block') {
@@ -92,6 +112,56 @@
 
       toggleMenuBtn.addEventListener('click', toggleMenu);
       menuOverlay.addEventListener('click', closeMenu);
+
+      // search menu
+      console.log(__MENUDATA);
+      const leftpane = document.getElementById('leftpane');
+      const searchField = document.getElementById('search');
+      const searchResults = document.getElementById('search-results');
+      // fix menu width for search
+      leftpane.style.width = `${leftpane.offsetWidth}px`;
+
+      function renderMenu(results) {
+        let html = '';
+
+        Object.keys(results).forEach((menupath) => {
+          html += `<div class="doc-menupath">${menupath.slice(1, menupath.length)}</div>`;
+          html += '<ul class="doc-menu">';
+          html += results[menupath].map(symbol => `<li>
+            <span title="${symbol.kind}" class="letter-icon letter-icon-${symbol.kind}">${symbol.kind[0]}</span>
+            <a href="${symbol.recordUrl}">${symbol.name}</a>
+          </li>`).join('');
+          html += '</ul>';
+        });
+
+        if (html === '') {
+          html = '<p>No results.</p>';
+        }
+
+        searchResults.innerHTML = html;
+      }
+
+      searchField.addEventListener('keyup', (event) => {
+        const searchStr = event.target.value.toLowerCase();
+
+        const results = {};
+
+        Object.keys(__MENUDATA).forEach((menupath) => {
+          const matches = [];
+
+          __MENUDATA[menupath].forEach((symbol) => {
+            if (symbol.name.toLowerCase().indexOf(searchStr) !== -1) {
+              matches.push(symbol);
+            }
+          });
+
+          if (matches.length) {
+            results[menupath] = matches;
+          }
+        });
+
+        renderMenu(results);
+      });
     </script>
   </body>
 </html>

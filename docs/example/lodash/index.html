@@ -8,6 +8,7 @@
     
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600,700|Source+Sans+Pro:400,700" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/default.min.css">
     <link href="style.css" rel="stylesheet">
   </head>
   <body>
@@ -3815,11 +3816,17 @@
 
         </div>
         <div class="flex scroll-y">
-          <div class="doc-gutter"><h1>Please note</h1><p>This is not an official lodash documentation but a demo of <a href="https://github.com/Oza94/jsdoc-template-argon">jsodc-template-argon</a>, a template for JSDoc3.</p>
+          <div class="doc-gutter"><h1>jsdoc-template-argon lodash demo</h1><p><strong>Please note</strong> this is not an official lodash documentation but a demo of <a href="https://github.com/Oza94/jsdoc-template-argon">jsodc-template-argon</a>, a template for JSDoc3.</p>
 <p>How to generate this website :</p>
 <pre class="prettyprint source"><code># clone lodash and &quot;cd&quot; into folder
 npm i jsdoc-template-argon
-jsdoc . -t node_modules/jsdoc-template-argon -d docs -R README.md</code></pre><h1>lodash v4.17.4</h1><p><a href="https://lodash.com/">Site</a> |
+jsdoc . -t node_modules/jsdoc-template-argon -d docs -R README.md -c.jsdoc.json</code></pre><p>Configuration file used (<code>.jsdoc.json</code>) :</p>
+<pre class="prettyprint source lang-json"><code>{
+  &quot;plugins&quot;: [
+    &quot;plugins/markdown&quot;
+  ]
+}</code></pre><p>Find the original lodash README below.</p>
+<h1>lodash v4.17.4</h1><p><a href="https://lodash.com/">Site</a> |
 <a href="https://lodash.com/docs">Docs</a> |
 <a href="https://github.com/lodash/lodash/wiki/FP-Guide">FP Guide</a> |
 <a href="https://github.com/lodash/lodash/blob/master/.github/CONTRIBUTING.md">Contributing</a> |
@@ -3874,7 +3881,11 @@ numbers, objects, strings, etc. Lodash’s modular methods are great for:</p>
         </div>
       </div>
     </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
     <script>
+      // syntax highlight code
+      document.querySelectorAll('pre code').forEach(el => hljs.highlightBlock(el));
+      
       // spoiler code
       function toggle(element) {
         if (element.style.display === 'block') {
