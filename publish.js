@@ -70,8 +70,14 @@ exports.publish = function(data, opts) {
   const menuData = {};
   const pages = [];
 
+  // store list of classes declared with "unique identifier" generated from name,
+  // filename and lineno.
+  const declaredClasses = new Set();
+
   // @todo move this thing in a "outputTaffy" debug template
   fs.outputFileAsync('./taffydata.json', data().stringify()).then(() => logger.log('output done'));
+
+  data({ name: 'AccessibilityManager' }).each(record => console.log(record));
 
   // find modules members
   data({ kind: 'module' }).each((module) => {
@@ -158,6 +164,7 @@ exports.publish = function(data, opts) {
 
   logger.log('================');
   let sourceFiles = [];
+
   data().each((record) => {
 
     if (!record.meta) {
@@ -180,7 +187,18 @@ exports.publish = function(data, opts) {
     const filepath2 = path.join(relpath, filename);
     record.filepath = filepath2;
 
-    logger.log(name, '(', fullpath, '-', lineno, ')', kind, scope);
+    //logger.log(name, '(', fullpath, '-', lineno, ')', kind, scope);
+    if (kind === 'class' || kind === 'function') {
+      // check this is not a duplicate record
+      const classUniqueKey = `${record.londname}:${fullpath}:${lineno}`;
+      
+      if (declaredClasses.has(classUniqueKey)) {
+        logger.warn('Dropping duplicate record ', record.longname);
+        return;
+      } else {
+        declaredClasses.add(classUniqueKey);
+      }
+    }
 
     if (!menuData[menukey]) {
       menuData[menukey] = [];
@@ -200,7 +218,7 @@ exports.publish = function(data, opts) {
       if (klassRecord) {
         record.skip = true;
       } else {
-        logger.warn('member will not show up in documentation');
+        // logger.warn('member will not show up in documentation');
       }
     } else if (record.scope === 'instance' && record.memberof) {
       // attribute
@@ -209,7 +227,7 @@ exports.publish = function(data, opts) {
       if (klassRecord) {
         record.skip = true;
       } else {
-        logger.warn('member attribute will not show up in documentation');
+        // logger.warn('member attribute will not show up in documentation');
       }
     }
 
