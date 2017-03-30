@@ -1,14 +1,26 @@
-# Please note
+# jsdoc-template-argon lodash demo
 
-This is not an official lodash documentation but a demo of [jsodc-template-argon](https://github.com/Oza94/jsdoc-template-argon), a template for JSDoc3.
+**Please note** this is not an official lodash documentation but a demo of [jsodc-template-argon](https://github.com/Oza94/jsdoc-template-argon), a template for JSDoc3.
 
 How to generate this website :
 
 ```
 # clone lodash and "cd" into folder
 npm i jsdoc-template-argon
-jsdoc . -t node_modules/jsdoc-template-argon -d docs -R README.md
+jsdoc . -t node_modules/jsdoc-template-argon -d docs -R README.md -c.jsdoc.json
 ```
+
+Configuration file used (`.jsdoc.json`) :
+
+```json
+{
+  "plugins": [
+    "plugins/markdown"
+  ]
+}
+```
+
+Find the original lodash README below.
 
 # lodash v4.17.4
 

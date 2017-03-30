@@ -6,6 +6,7 @@
   "scripts": {
     "lint": "eslint publish.js src/",
     "example:lodash": "jsdoc examples/lodash/lodash-repo -t . -d docs/example/lodash -R examples/lodash/README.md",
+    "example:pixi": "jsdoc examples/pixi.js/pixi.js-repo/src -t ./../../ -d docs/example/pixi.js -R examples/pixi.js/README.md -c examples/pixi.js/.jsdoc.json",
     "docs": "jsdoc . -t . -d docs -R docs-static/README.md"
   },
   "repository": {

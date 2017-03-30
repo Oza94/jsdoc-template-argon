@@ -1,3 +1,6 @@
 [submodule "examples/lodash/lodash-repo"]
 	path = examples/lodash/lodash-repo
 	url = https://github.com/lodash/lodash.git
+[submodule "examples/pixi.js/pixi.js-repo"]
+	path = examples/pixi.js/pixi.js-repo
+	url = https://github.com/pixijs/pixi.js.git
