@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-      <title>Home - undefined</title>
+      <title>source: \src\helpers\link.js - undefined</title>
     
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600,700|Source+Sans+Pro:400,700" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -79,12 +79,83 @@
 
         </div>
         <div class="flex scroll-y">
-          <div class="doc-gutter"><h1>JSDoc template Argon</h1><p>This site host some <a href="https://github.com/Oza94/jsdoc-template-argon">jsodc-template-argon</a> demos :</p>
-<ul>
-<li><a href="example/lodash">lodash</a></li>
-<li><a href="example/pixi.js">pixi.js</a></li>
-</ul>
-<p>This site was built with Argon template :)</p></div>
+          <div class="doc-gutter">
+  <h1>Source: \src\helpers\link.js</h1>
+  <hr />
+  <pre>
+    <code>const slugify = require('slugify');
+const MDN_URL = 'https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/%symbol%';
+const identifier = /^[a-z_$][a-z0-9_$]*$/i;
+
+const NATIVE_TYPES = ['String', 'Number', 'Boolean', 'Map', 'Set', 'Object'];
+
+/**
+ * Help building documentation links
+ * @name LinkHelper
+ */
+module.exports = class LinkHelper {
+  /**
+   * Create a new LinkHelper
+   * @return {void}
+   */
+  constructor() {
+    /**
+     * Map each type (either native or user-defined) to an URL
+     * @type {Object}
+     */
+    this.typesTpl = {
+      String: MDN_URL,
+      Number: MDN_URL,
+      Boolean: MDN_URL,
+      Map: MDN_URL,
+      Object: MDN_URL,
+    };
+  }
+  /**
+   * Format return type data into HTML String.
+   * @param  {JSDocReturns} returnsData The `returns` property of a JSDocRecord
+   * @return {String}                   A formatted HTML string that represents types returned
+   */
+  formatReturns(returnsData) {
+    if (!returnsData) return 'void';
+
+    return returnsData.map(typeData =>
+      this.type(typeData.type.names.join(', '))
+    ).join(', ');
+  }
+  registerType(type, url) {
+    this.typesTpl[type] = url;
+  }
+  source(record) {
+    const url = `source-${slugify(record.filepath)}.html#L${record.meta.lineno}`;
+    return `<a href="${url}">${record.filepath}, line ${record.meta.lineno}</a>`;
+  }
+  type(complexStrType) {
+    return complexStrType.split(/(\.<|>|,\s?)/)
+      .map(token => (identifier.test(token) ? this.singleType(token) : token))
+      .join('');
+  }
+  singleType(strType) {
+    const typeLinkTpl = this.typesTpl[strType];
+    let href = '';
+    let target = '';
+    let content = strType;
+
+    if (typeLinkTpl) {
+      href = `href="${typeLinkTpl.replace('%symbol%', strType)}"`;
+
+      if (NATIVE_TYPES.indexOf(strType) !== -1) {
+        target = 'target="_blank"';
+      }
+    }
+
+    return `<a ${href} ${target}>${content}</a>`;
+  }
+};
+</code>
+  </pre>
+</div>
+
         </div>
       </div>
     </div>

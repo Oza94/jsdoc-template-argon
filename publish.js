@@ -177,7 +177,8 @@ exports.publish = function(data, opts) {
 
     const { name, kind, scope } = record;
     const { filename, path: filepath, lineno } = record.meta;
-    const relpath = filepath.replace(srcpath, '').slice(1, filepath.length - srcpath.length);
+    console.log(filepath, srcpath);
+    const relpath = filepath !== srcpath ? filepath.replace(srcpath, '').slice(1, filepath.length - srcpath.length) : '';
     const fullpath = path.join(relpath, filename);
     const modulepath = relpath;
     const menupath = tplConf.referencePaths !== 'folder' ? fullpath.replace('.js', '') : modulepath;
@@ -187,7 +188,7 @@ exports.publish = function(data, opts) {
     const filepath2 = path.join(relpath, filename);
     record.filepath = filepath2;
 
-    //logger.log(name, '(', fullpath, '-', lineno, ')', kind, scope);
+    logger.log(name, '(', fullpath, '-', lineno, ')', kind, scope);
     if (kind === 'class' || kind === 'function') {
       // check this is not a duplicate record
       const classUniqueKey = `${record.londname}:${fullpath}:${lineno}`;
@@ -202,10 +203,6 @@ exports.publish = function(data, opts) {
 
     if (!menuData[menukey]) {
       menuData[menukey] = [];
-    }
-
-    if (name === 'applyBlueprint') {
-      logger.log(record);
     }
 
     let klassRecord = null;

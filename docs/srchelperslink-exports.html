@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-      <title>module:publish - undefined</title>
+      <title>module.exports - undefined</title>
     
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600,700|Source+Sans+Pro:400,700" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -80,7 +80,7 @@
         </div>
         <div class="flex scroll-y">
           <div class="doc-gutter">
-<h1>module: publish</h1>
+<h1>class: exports</h1>
 <hr />
 
 
@@ -91,51 +91,131 @@
 
 
 
+
+
   
-    <h2>Functions summary</h2>
+
+  
+
+  
+    <h2>Methods summary</h2>
     <hr />
-    
-<table>
-  
-  <tbody>
-  
-    <tr>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">Public methods</th>
+        </tr>
+      </thead>
+      <tbody>
       
-      <td>
-        
+        <tr>
+          <td>
+            public
+            static
+          </td>
+          <td>
+            
 
-  <a href="#undefined">publish</a>(data: <a  >TAFFY</a>, opts: <a  >object</a>): void
+  <a href="#constructor">constructor</a>(): <a  >void</a>
 
-      </td>
-    </tr>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>
+            public
+            
+          </td>
+          <td>
+            
+
+  <a href="#module.exportsformatReturns">formatReturns</a>(returnsData: <a  >JSDocReturns</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a>
+
+          </td>
+        </tr>
+      
+      </tbody>
+    </table>
   
-  </tbody>
-</table>
-
   
-
-  
-    <h2>Functions</h2>
+    <h2>Properties</h2>
     <hr />
-    
-      <h3 id="">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Attribute</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+        <tr>
+          <td>typesTpl</td>
+          <td>
+            
+              <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank">Object</a>
+            
+          </td>
+          <td>public</td>
+          <td><p>Map each type (either native or user-defined) to an URL</p></td>
+        </tr>
+      
+      </tbody>
+    </table>
   
-    <a href="publish-publish.html#undefined" title="permalink" class="doc-permalink">
+
+  <h2>Methods</h2>
+  <hr />
+  
+    <h3 id="constructor">
+  
+    <a href="srchelperslink-exports.html#constructor" title="permalink" class="doc-permalink">
       <i class="fa fa-link"></i>
     </a>
   
   
 
-  <span>publish</span>(data: <a  >TAFFY</a>, opts: <a  >object</a>): void
+  <span>constructor</span>(): <a  >void</a>
+
+</h3>
+
+<p>
+  <p>Create a new LinkHelper</p>
+</p>
+<!-- 
+  Class constructors share record with class declaration. Therefore ignore class constructors
+  examples to avoid duplication.
+-->
+
+
+
+<h4>Returns:</h4>
+<p class="doc-no-margin-before">
+  <a  >void</a>
+</p>
+
+    <br/>
+  
+    <h3 id="module.exportsformatReturns">
+  
+    <a href="srchelperslink-exports.html#module.exportsformatReturns" title="permalink" class="doc-permalink">
+      <i class="fa fa-link"></i>
+    </a>
+  
+  
+
+  <span>formatReturns</span>(returnsData: <a  >JSDocReturns</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a>
 
 </h3>
 
   <div class="doc-sourcepath">
-    <a href="source-publish.js.html#L60">publish.js, line 60</a>
+    <a href="source-srchelperslink.js.html#L34">src\helpers\link.js, line 34</a>
   </div>
 
 <p>
-  <p>Generate documentation output.</p>
+  <p>Format return type data into HTML String.</p>
 </p>
 <!-- 
   Class constructors share record with class declaration. Therefore ignore class constructors
@@ -156,17 +236,10 @@
     <tbody>
       
         <tr>
-          <td>data</td>
+          <td>returnsData</td>
           <td></td>
           <td></td>
-          <td><p>A TaffyDB collection representing<br>                      all the symbols documented in your code.</p></td>
-        </tr>
-      
-        <tr>
-          <td>opts</td>
-          <td></td>
-          <td></td>
-          <td><p>An object with options information.</p></td>
+          <td><p>The <code>returns</code> property of a JSDocRecord</p></td>
         </tr>
       
     </tbody>
@@ -175,144 +248,199 @@
 
 <h4>Returns:</h4>
 <p class="doc-no-margin-before">
-  void
+  <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a>
 </p>
 
-      <br/>
-    
+    <br/>
   
 
 
-
-
-<button data-spoiler-button="T000002R000002">DEBUG BUTTON NOT FOR PRODUCTION : toggle JSDoc record visibility</button>
-<pre data-spoiler="T000002R000002" style="display: none;">
+<button data-spoiler-button="T000002R000120">DEBUG BUTTON NOT FOR PRODUCTION : toggle JSDoc record visibility</button>
+<pre data-spoiler="T000002R000120" style="display: none;">
   {
-    "comment": "/** @module publish */",
+    "comment": "/**\n   * Create a new LinkHelper\n   * @return {void}\n   */",
     "meta": {
         "range": [
-            0,
-            22
+            427,
+            689
         ],
-        "filename": "publish.js",
-        "lineno": 1,
-        "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template",
-        "code": {}
+        "filename": "link.js",
+        "lineno": 16,
+        "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\src\\helpers",
+        "code": {
+            "id": "astnode100001334",
+            "name": "module.exports",
+            "type": "MethodDefinition",
+            "paramnames": []
+        },
+        "vars": {
+            "": null
+        }
     },
-    "kind": "module",
-    "name": "publish",
-    "longname": "module:publish",
-    "___id": "T000002R000002",
-    "___s": true,
-    "$functions": [
+    "description": "<p>Create a new LinkHelper</p>",
+    "returns": [
         {
-            "comment": "/**\n * Generate documentation output.\n *\n * @param {TAFFY} data - A TaffyDB collection representing\n *                       all the symbols documented in your code.\n * @param {object} opts - An object with options information.\n */",
+            "type": {
+                "names": [
+                    "void"
+                ]
+            }
+        }
+    ],
+    "name": "exports",
+    "longname": "module.exports",
+    "kind": "class",
+    "memberof": "module",
+    "scope": "static",
+    "params": [],
+    "___id": "T000002R000120",
+    "___s": true,
+    "$methods": [
+        {
+            "comment": "/**\n   * Create a new LinkHelper\n   * @return {void}\n   */",
             "meta": {
                 "range": [
-                    1579,
-                    8933
+                    427,
+                    689
                 ],
-                "filename": "publish.js",
-                "lineno": 60,
-                "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template",
+                "filename": "link.js",
+                "lineno": 16,
+                "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\src\\helpers",
                 "code": {
-                    "id": "astnode100000198",
-                    "name": "exports.publish",
-                    "type": "FunctionExpression",
+                    "id": "astnode100001334",
+                    "name": "module.exports",
+                    "type": "MethodDefinition",
+                    "paramnames": []
+                },
+                "vars": {
+                    "": null
+                }
+            },
+            "description": "<p>Create a new LinkHelper</p>",
+            "returns": [
+                {
+                    "type": {
+                        "names": [
+                            "void"
+                        ]
+                    }
+                }
+            ],
+            "name": "constructor",
+            "longname": "module.exports",
+            "kind": "class",
+            "memberof": "module",
+            "scope": "static",
+            "params": [],
+            "___id": "T000002R000120",
+            "___s": true,
+            "$methods": [],
+            "$attributes": [],
+            "$staticmethods": [],
+            "$staticproperties": [],
+            "$augments": [],
+            "$augmentedBy": [],
+            "classConstructor": true,
+            "slug": "constructor"
+        },
+        {
+            "comment": "/**\n   * Format return type data into HTML String.\n   * @param  {JSDocReturns} returnsData The `returns` property of a JSDocRecord\n   * @return {String}                   A formatted HTML string that represents types returned\n   */",
+            "meta": {
+                "range": [
+                    926,
+                    1101
+                ],
+                "filename": "link.js",
+                "lineno": 34,
+                "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\src\\helpers",
+                "code": {
+                    "id": "astnode100001354",
+                    "name": "module.exports#formatReturns",
+                    "type": "MethodDefinition",
                     "paramnames": [
-                        "data",
-                        "opts"
+                        "returnsData"
                     ]
                 },
                 "vars": {
-                    "conf": "module:publish.publish~conf",
-                    "pkg": "module:publish.publish~pkg",
-                    "tplConf": "module:publish.publish~tplConf",
-                    "outpath": "module:publish.publish~outpath",
-                    "srcpath": "module:publish.publish~srcpath",
-                    "menuData": "module:publish.publish~menuData",
-                    "pages": "module:publish.publish~pages",
-                    "declaredClasses": "module:publish.publish~declaredClasses",
-                    "": null,
-                    "sourceFiles": "module:publish.publish~sourceFiles",
-                    "_menuhtml": "module:publish.publish~_menuhtml",
-                    "menuWrapper": "module:publish.publish~menuWrapper"
+                    "": null
                 }
             },
-            "description": "<p>Generate documentation output.</p>",
+            "description": "<p>Format return type data into HTML String.</p>",
             "params": [
                 {
                     "type": {
                         "names": [
-                            "TAFFY"
+                            "JSDocReturns"
                         ]
                     },
-                    "description": "<p>A TaffyDB collection representing<br>                      all the symbols documented in your code.</p>",
-                    "name": "data"
-                },
+                    "description": "<p>The <code>returns</code> property of a JSDocRecord</p>",
+                    "name": "returnsData"
+                }
+            ],
+            "returns": [
                 {
                     "type": {
                         "names": [
-                            "object"
+                            "String"
                         ]
                     },
-                    "description": "<p>An object with options information.</p>",
-                    "name": "opts"
+                    "description": "<p>A formatted HTML string that represents types returned</p>"
                 }
             ],
-            "name": "publish",
-            "longname": "module:publish.publish",
+            "name": "formatReturns",
+            "longname": "module.exports#formatReturns",
             "kind": "function",
-            "memberof": "module:publish",
-            "scope": "static",
-            "___id": "T000002R000020",
+            "memberof": "module.exports",
+            "scope": "instance",
+            "___id": "T000002R000127",
             "___s": true,
             "skip": true,
-            "filepath": "publish.js"
+            "slug": "module.exportsformatReturns",
+            "filepath": "src\\helpers\\link.js"
         }
     ],
-    "$typedefs": [],
-    "$constants": [
+    "$attributes": [
         {
-            "comment": "/**\n * A custom logger.\n * @todo replace console calls with Function.prototype when options.debug === false\n * @type {Object}\n */",
+            "comment": "/**\n     * Map each type (either native or user-defined) to an URL\n     * @type {Object}\n     */",
             "meta": {
                 "range": [
-                    431,
-                    654
+                    548,
+                    684
                 ],
-                "filename": "publish.js",
-                "lineno": 19,
-                "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template",
+                "filename": "link.js",
+                "lineno": 21,
+                "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\src\\helpers",
                 "code": {
-                    "id": "astnode100000045",
-                    "name": "logger",
+                    "id": "astnode100001339",
+                    "name": "this.typesTpl",
                     "type": "ObjectExpression",
-                    "value": "{\"log\":\"\",\"info\":\"\",\"warn\":\"\",\"error\":\"\"}"
+                    "value": "{\"String\":\"\",\"Number\":\"\",\"Boolean\":\"\",\"Map\":\"\",\"Object\":\"\"}",
+                    "paramnames": []
                 }
             },
-            "description": "<p>A custom logger.</p>",
-            "todo": [
-                "replace console calls with Function.prototype when options.debug === false"
-            ],
+            "description": "<p>Map each type (either native or user-defined) to an URL</p>",
             "type": {
                 "names": [
                     "Object"
                 ]
             },
-            "name": "logger",
-            "longname": "module:publish~logger",
-            "kind": "constant",
-            "scope": "inner",
-            "memberof": "module:publish",
-            "___id": "T000002R000011",
+            "name": "typesTpl",
+            "longname": "module.exports#typesTpl",
+            "kind": "member",
+            "memberof": "module.exports",
+            "scope": "instance",
+            "___id": "T000002R000121",
             "___s": true,
             "skip": true,
-            "filepath": "publish.js"
+            "slug": "module.exportstypesTpl",
+            "filepath": "src\\helpers\\link.js"
         }
     ],
-    "$classes": [],
-    "$other": [],
-    "filepath": "publish.js"
+    "$staticmethods": [],
+    "$staticproperties": [],
+    "$augments": [],
+    "$augmentedBy": [],
+    "filepath": "src\\helpers\\link.js"
 }
 </pre>
 </div>

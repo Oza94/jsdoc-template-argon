@@ -4,8 +4,20 @@ const identifier = /^[a-z_$][a-z0-9_$]*$/i;
 
 const NATIVE_TYPES = ['String', 'Number', 'Boolean', 'Map', 'Set', 'Object'];
 
+/**
+ * Help building documentation links
+ * @name LinkHelper
+ */
 module.exports = class LinkHelper {
+  /**
+   * Create a new LinkHelper
+   * @return {void}
+   */
   constructor() {
+    /**
+     * Map each type (either native or user-defined) to an URL
+     * @type {Object}
+     */
     this.typesTpl = {
       String: MDN_URL,
       Number: MDN_URL,
@@ -14,6 +26,11 @@ module.exports = class LinkHelper {
       Object: MDN_URL,
     };
   }
+  /**
+   * Format return type data into HTML String.
+   * @param  {JSDocReturns} returnsData The `returns` property of a JSDocRecord
+   * @return {String}                   A formatted HTML string that represents types returned
+   */
   formatReturns(returnsData) {
     if (!returnsData) return 'void';
 
