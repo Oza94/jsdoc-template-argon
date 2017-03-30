@@ -25,7 +25,7 @@
 -->
 <% if (!func.classConstructor && func.examples && func.examples.length) { %>
   <h4>Example(s):</h4>
-  <%- func.examples.map(example => `<pre>${example}</pre>`) %>
+  <%- func.examples.map(example => `<pre><code>${example}</code></pre>`) %>
 <% } %>
 <% if (func.params && func.params.length) { %>
   <h4>Params:</h4>
