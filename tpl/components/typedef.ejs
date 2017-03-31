@@ -1,0 +1,31 @@
+<h3 id="<%= typedef.name %>">
+  <%= typedef.name %>: <%- helpers.link.type(typedef.type.names.join(', ')); %>
+</h3>
+
+<% if (typedef.description) { %> 
+  <p><%- typedef.description %></p>
+<% } %>
+
+<% if (typedef.properties) { %>
+  <h4>Properties</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Attribute</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% typedef.properties.forEach(prop => { %>
+        <tr>
+          <td class="doc-code-identifier"><%= prop.name %></td>
+          <td><%- helpers.link.type(prop.type.names.join(', ')) %></td>
+          <td class="doc-code-literal"><%- prop.optional ? 'optional' : '' %></td>
+          <td><%- prop.description %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+<% } %>

@@ -8,7 +8,7 @@ const bluebird = require('bluebird');
 const LinkHelper = require('./src/helpers/link');
 
 const helpers = {
-  link: new LinkHelper(),
+  link: null,
 };
 
 /**
@@ -63,6 +63,7 @@ exports.publish = function(data, opts) {
     name: conf ? conf.title : 'documentation',
   };
   const tplConf = conf && conf.template ? conf.template : {};
+  helpers.link = new LinkHelper(tplConf);
   const outpath = path.resolve(process.cwd(), opts.destination || 'docs');
   // @todo handle multiple entries
   const srcpath = path.resolve(process.cwd(), opts._[0]);
@@ -75,7 +76,7 @@ exports.publish = function(data, opts) {
   const declaredClasses = new Set();
 
   // @todo move this thing in a "outputTaffy" debug template
-  fs.outputFileAsync('./taffydata.json', data().stringify()).then(() => logger.log('output done'));
+  // fs.outputFileAsync('./taffydata.json', data().stringify()).then(() => logger.log('output done'));
 
   data({ name: 'AccessibilityManager' }).each(record => console.log(record));
 
@@ -245,8 +246,25 @@ exports.publish = function(data, opts) {
         name: name,
         kind: kind,
         record: record,
+        tplConf: tplConf,
         recordUrl: recordUrl,
       });
+      record.url = recordUrl;
+    }
+  });
+
+  // build record links
+  data({ kind: 'typedef', skip: true }).each((record) => {
+    const moduleRecord = data({ longname: record.memberof }).first();
+
+    if (moduleRecord) {
+      const url = `${moduleRecord.url}#${record.name}`;
+      helpers.link.registerType(record.name, url);
+      helpers.link.registerType(record.longname.replace(/^module\:/, ''), url);
+
+      record.url = url;
+      console.log('REGISTER', record.name);
+      console.log('REGISTER', record.longname);
     }
   });
 
@@ -255,6 +273,7 @@ exports.publish = function(data, opts) {
     menu: _menuhtml,
     title: `${pageTitle || 'Doclet'} - ${pkg.name}`,
     content: html,
+    tplConf: tplConf,
   });
 
   renderTemplate('tpl/menu/menu.ejs', { menuData: menuData })
@@ -267,6 +286,7 @@ exports.publish = function(data, opts) {
       menu: html,
       title: `Home - ${pkg.name}`,
       content: `<div class="doc-gutter">${opts.readme}</div>`,
+      tplConf: tplConf,
     }))
     .then(html => fs.outputFileAsync(path.resolve(outpath, 'index.html'), html))
     .then(() => bluebird.map(pages, page => createRecordPage(outpath, page, menuWrapper)))
@@ -281,6 +301,7 @@ exports.publish = function(data, opts) {
           menu: _menuhtml,
           title: `source: ${relpath} - ${pkg.name}`,
           content: html,
+          tplConf: tplConf,
         }))
         .then(html =>
           fs.outputFileAsync(path.resolve(outpath, `source-${slugify(relpath)}.html`), html)

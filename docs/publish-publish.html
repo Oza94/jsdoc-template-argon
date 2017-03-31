@@ -19,6 +19,13 @@
           <i class="fa fa-bars"></i>
         </button>
         <a href="index.html">Home</a>
+
+        
+          <div class="flex"></div>
+          <a href="https://github.com/Oza94/jsdoc-template-argon" class="doc-repository-link" target="_blank" title="Open repository">
+            <i class="fa fa-github"></i>
+          </a>
+        
       </header>
       <div class="row flex">
         <div class="nav-menu" id="menu">
@@ -49,7 +56,7 @@
             C
           </span>
           &nbsp;
-          <a href="srchelperslink-exports.html">exports</a>
+          <a href="srchelperslink-LinkHelper.html">LinkHelper</a>
         </li>
       
     </ul>
@@ -74,7 +81,7 @@
   // define a global JS client containing menu data object for search
   
   // global containing menu data
-  window.__MENUDATA = {"_publish":[{"name":"publish","kind":"module","recordUrl":"publish-publish.html"}],"_src\\helpers\\link":[{"name":"exports","scope":"static","kind":"class","recordUrl":"srchelperslink-exports.html"}],"_src\\typedef\\jsdoc":[{"name":"JSDocTypedefs","kind":"module","recordUrl":"srctypedefjsdoc-JSDocTypedefs.html"}]};
+  window.__MENUDATA = {"_publish":[{"name":"publish","kind":"module","recordUrl":"publish-publish.html"}],"_src\\helpers\\link":[{"name":"LinkHelper","scope":"global","kind":"class","recordUrl":"srchelperslink-LinkHelper.html"}],"_src\\typedef\\jsdoc":[{"name":"JSDocTypedefs","kind":"module","recordUrl":"srctypedefjsdoc-JSDocTypedefs.html"}]};
 </script>
 
         </div>
@@ -104,13 +111,15 @@
       <td>
         
 
-  <a href="#undefined">publish</a>(data: <a  >TAFFY</a>, opts: <a  >object</a>): void
+  <a href="#undefined">publish</a>(data: <a  >TAFFY</a>, opts: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/object" >object</a>): void
 
       </td>
     </tr>
   
   </tbody>
 </table>
+
+  
 
   
 
@@ -126,7 +135,7 @@
   
   
 
-  <span>publish</span>(data: <a  >TAFFY</a>, opts: <a  >object</a>): void
+  <span>publish</span>(data: <a  >TAFFY</a>, opts: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/object" >object</a>): void
 
 </h3>
 
@@ -185,137 +194,7 @@
 
 
 
-<button data-spoiler-button="T000002R000002">DEBUG BUTTON NOT FOR PRODUCTION : toggle JSDoc record visibility</button>
-<pre data-spoiler="T000002R000002" style="display: none;">
-  {
-    "comment": "/** @module publish */",
-    "meta": {
-        "range": [
-            0,
-            22
-        ],
-        "filename": "publish.js",
-        "lineno": 1,
-        "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template",
-        "code": {}
-    },
-    "kind": "module",
-    "name": "publish",
-    "longname": "module:publish",
-    "___id": "T000002R000002",
-    "___s": true,
-    "$functions": [
-        {
-            "comment": "/**\n * Generate documentation output.\n *\n * @param {TAFFY} data - A TaffyDB collection representing\n *                       all the symbols documented in your code.\n * @param {object} opts - An object with options information.\n */",
-            "meta": {
-                "range": [
-                    1579,
-                    8933
-                ],
-                "filename": "publish.js",
-                "lineno": 60,
-                "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template",
-                "code": {
-                    "id": "astnode100000198",
-                    "name": "exports.publish",
-                    "type": "FunctionExpression",
-                    "paramnames": [
-                        "data",
-                        "opts"
-                    ]
-                },
-                "vars": {
-                    "conf": "module:publish.publish~conf",
-                    "pkg": "module:publish.publish~pkg",
-                    "tplConf": "module:publish.publish~tplConf",
-                    "outpath": "module:publish.publish~outpath",
-                    "srcpath": "module:publish.publish~srcpath",
-                    "menuData": "module:publish.publish~menuData",
-                    "pages": "module:publish.publish~pages",
-                    "declaredClasses": "module:publish.publish~declaredClasses",
-                    "": null,
-                    "sourceFiles": "module:publish.publish~sourceFiles",
-                    "_menuhtml": "module:publish.publish~_menuhtml",
-                    "menuWrapper": "module:publish.publish~menuWrapper"
-                }
-            },
-            "description": "<p>Generate documentation output.</p>",
-            "params": [
-                {
-                    "type": {
-                        "names": [
-                            "TAFFY"
-                        ]
-                    },
-                    "description": "<p>A TaffyDB collection representing<br>                      all the symbols documented in your code.</p>",
-                    "name": "data"
-                },
-                {
-                    "type": {
-                        "names": [
-                            "object"
-                        ]
-                    },
-                    "description": "<p>An object with options information.</p>",
-                    "name": "opts"
-                }
-            ],
-            "name": "publish",
-            "longname": "module:publish.publish",
-            "kind": "function",
-            "memberof": "module:publish",
-            "scope": "static",
-            "___id": "T000002R000020",
-            "___s": true,
-            "skip": true,
-            "filepath": "publish.js"
-        }
-    ],
-    "$typedefs": [],
-    "$constants": [
-        {
-            "comment": "/**\n * A custom logger.\n * @todo replace console calls with Function.prototype when options.debug === false\n * @type {Object}\n */",
-            "meta": {
-                "range": [
-                    431,
-                    654
-                ],
-                "filename": "publish.js",
-                "lineno": 19,
-                "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template",
-                "code": {
-                    "id": "astnode100000045",
-                    "name": "logger",
-                    "type": "ObjectExpression",
-                    "value": "{\"log\":\"\",\"info\":\"\",\"warn\":\"\",\"error\":\"\"}"
-                }
-            },
-            "description": "<p>A custom logger.</p>",
-            "todo": [
-                "replace console calls with Function.prototype when options.debug === false"
-            ],
-            "type": {
-                "names": [
-                    "Object"
-                ]
-            },
-            "name": "logger",
-            "longname": "module:publish~logger",
-            "kind": "constant",
-            "scope": "inner",
-            "memberof": "module:publish",
-            "___id": "T000002R000011",
-            "___s": true,
-            "skip": true,
-            "filepath": "publish.js"
-        }
-    ],
-    "$classes": [],
-    "$other": [],
-    "filepath": "publish.js"
-}
-</pre>
-</div>
+
 
         </div>
       </div>

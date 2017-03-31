@@ -54,6 +54,21 @@
     %>
   <% } %>
 
+  <% if (record.$typedefs && record.$typedefs.length) { %>
+    <h2>Typedefs</h2>
+    <hr />
+    <% record.$typedefs.forEach(typedef => { %>
+      <%-
+        include('../components/typedef', {
+          typedef: typedef,
+          helpers: helpers,
+          permalink: recordUrl + '#' + typedef.slug,
+        });
+      %>
+      <br/>
+    <% }); %>
+  <% } %>
+
   <% if (record.$functions && record.$functions.length) { %>
     <h2>Functions</h2>
     <hr />
@@ -174,8 +189,9 @@
   <% }); %>
 <% } %>
 
-<button data-spoiler-button="<%= record.___id %>">DEBUG BUTTON NOT FOR PRODUCTION : toggle JSDoc record visibility</button>
-<pre data-spoiler="<%= record.___id %>" style="display: none;">
-  <%- JSON.stringify(record, null, 4) %>
-</pre>
-</div>
+<% if (tplConf.debug) { %> 
+  <button data-spoiler-button="<%= record.___id %>">DEBUG BUTTON NOT FOR PRODUCTION : toggle JSDoc record visibility</button>
+  <pre data-spoiler="<%= record.___id %>" style="display: none;">
+    <code><%= JSON.stringify(record, null, 4) %></code>
+  </pre>
+<% } %>

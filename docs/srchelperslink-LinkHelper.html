@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-      <title>source: \src\helpers\link.js - undefined</title>
+      <title>LinkHelper - undefined</title>
     
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600,700|Source+Sans+Pro:400,700" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -87,110 +87,206 @@
         </div>
         <div class="flex scroll-y">
           <div class="doc-gutter">
-  <h1>Source: \src\helpers\link.js</h1>
+<h1>class: LinkHelper</h1>
+<hr />
+
+
+  <p>Help building documentation links</p>
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+    <h2>Methods summary</h2>
+    <hr />
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">Public methods</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+        <tr>
+          <td>
+            public
+            
+          </td>
+          <td>
+            
+
+  <a href="#constructor">constructor</a>(conf: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank">Object</a>): void
+
+          </td>
+        </tr>
+      
+        <tr>
+          <td>
+            public
+            
+          </td>
+          <td>
+            
+
+  <a href="#LinkHelperformatReturns">formatReturns</a>(returnsData: <a href="srctypedefjsdoc-JSDocTypedefs.html#JSDocReturns" >JSDocReturns</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a>
+
+          </td>
+        </tr>
+      
+      </tbody>
+    </table>
+  
+  
+    <h2>Properties</h2>
+    <hr />
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Attribute</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+        <tr>
+          <td>typesTpl</td>
+          <td>
+            
+              <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank">Object</a>
+            
+          </td>
+          <td>public</td>
+          <td><p>Map each type (either native or user-defined) to an URL</p></td>
+        </tr>
+      
+      </tbody>
+    </table>
+  
+
+  <h2>Methods</h2>
   <hr />
-  <pre>
-    <code>const slugify = require('slugify');
-const MDN_URL = 'https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/%symbol%';
-const identifier = /^[a-z_$][a-z0-9_$]*$/i;
+  
+    <h3 id="constructor">
+  
+    <a href="srchelperslink-LinkHelper.html#constructor" title="permalink" class="doc-permalink">
+      <i class="fa fa-link"></i>
+    </a>
+  
+  
 
-const NATIVE_TYPES = ['String', 'Number', 'Boolean', 'Map', 'Set', 'Object', 'Array'];
+  <span>constructor</span>(conf: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank">Object</a>): void
 
-function escapeHtml(unsafe) {
-  return unsafe
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
- }
+</h3>
 
-/**
- * Help building documentation links
- */
-class LinkHelper {
-  /**
-   * Create a new LinkHelper
-   * @param {Object} conf - The template configuration
-   * @return {void}
-   */
-  constructor(conf) {
-    /**
-     * Map each type (either native or user-defined) to an URL
-     * @type {Object}
-     */
-    this.typesTpl = {
-      /* String: MDN_URL,
-      Number: MDN_URL,
-      Boolean: MDN_URL,
-      Set: MDN_URL,
-      Map: MDN_URL,
-      Object: MDN_URL,
-      Array: MDN_URL, */
-    };
+<p>
+  <p>Create a new LinkHelper</p>
+</p>
+<!-- 
+  Class constructors share record with class declaration. Therefore ignore class constructors
+  examples to avoid duplication.
+-->
 
-    if (conf.builtins && conf.builtins.mdnLinks) {
-      // register built-ins with mdn URLs if enabled in configuration
-      NATIVE_TYPES.forEach(type => this.registerType(type, MDN_URL));
 
-      if (conf.builtins.allowUncapitalized) {
-        // register builtins with lower case version if this is enabled in configuration
-        NATIVE_TYPES
-          .map(type => type.toLowerCase())
-          .forEach(type => this.registerType(type, MDN_URL));          
-      }
-    }
-  }
-  /**
-   * Format return type data into HTML String.
-   * @param  {JSDocReturns} returnsData The `returns` property of a JSDocRecord
-   * @return {String}                   A formatted HTML string that represents types returned
-   */
-  formatReturns(returnsData) {
-    if (!returnsData) return 'void';
+  <h4>Params:</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Attribute</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr>
+          <td>conf</td>
+          <td></td>
+          <td></td>
+          <td><p>The template configuration</p></td>
+        </tr>
+      
+    </tbody>
+  </table>
 
-    return returnsData.map(typeData =>
-      this.type(typeData.type.names.join(', '))
-    ).join(', ');
-  }
-  registerType(type, url) {
-    this.typesTpl[type] = url;
-  }
-  source(record) {
-    const url = `source-${slugify(record.filepath)}.html#L${record.meta.lineno}`;
-    return `<a href="${url}">${record.filepath}, line ${record.meta.lineno}</a>`;
-  }
-  type(complexStrType) {
-    // this regex will parse complex types strings and extract type names
-    // "String"               => "String"
-    // "Array.<String>"       => "Array", ".<", "String", ">"
-    // "Map.<Number, String>" => "Map", ".<", "Number", ", ", "String", ">"
-    return complexStrType.split(/(\.<|>|\.\[|\]|,\s?)/)
-      .map(token => (identifier.test(token) ? this.singleType(token) : escapeHtml(token)))
-      .join('');
-  }
-  singleType(strType) {
-    const typeLinkTpl = this.typesTpl[strType];
-    let href = '';
-    let target = '';
-    let content = strType;
 
-    if (typeLinkTpl) {
-      href = `href="${typeLinkTpl.replace('%symbol%', strType)}"`;
+<h4>Returns:</h4>
+<p class="doc-no-margin-before">
+  void
+</p>
 
-      if (NATIVE_TYPES.indexOf(strType) !== -1) {
-        target = 'target="_blank"';
-      }
-    }
+    <br/>
+  
+    <h3 id="LinkHelperformatReturns">
+  
+    <a href="srchelperslink-LinkHelper.html#LinkHelperformatReturns" title="permalink" class="doc-permalink">
+      <i class="fa fa-link"></i>
+    </a>
+  
+  
 
-    return `<a ${href} ${target}>${content}</a>`;
-  }
-};
+  <span>formatReturns</span>(returnsData: <a href="srctypedefjsdoc-JSDocTypedefs.html#JSDocReturns" >JSDocReturns</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a>
 
-module.exports = LinkHelper;
-</code>
-  </pre>
-</div>
+</h3>
+
+  <div class="doc-sourcepath">
+    <a href="source-srchelperslink.js.html#L57">src\helpers\link.js, line 57</a>
+  </div>
+
+<p>
+  <p>Format return type data into HTML String.</p>
+</p>
+<!-- 
+  Class constructors share record with class declaration. Therefore ignore class constructors
+  examples to avoid duplication.
+-->
+
+
+  <h4>Params:</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Attribute</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr>
+          <td>returnsData</td>
+          <td></td>
+          <td></td>
+          <td><p>The <code>returns</code> property of a JSDocRecord</p></td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+<h4>Returns:</h4>
+<p class="doc-no-margin-before">
+  <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a>
+</p>
+
+    <br/>
+  
+
+
+
 
         </div>
       </div>

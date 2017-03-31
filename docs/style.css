@@ -177,8 +177,13 @@ td > p {
 }
 
 .letter-icon.letter-icon-typedef {
-  color: #db001e;
-  background-color: #edbec3;
+  color: #eb6420;
+  background-color: #fad8c7;
+}
+
+.letter-icon.letter-icon-module {
+  color: #42a5de;
+  background-color: #c6def7;
 }
 
 .show-mobile {
@@ -264,4 +269,9 @@ pre {
 
 .hljs {
   padding: 0;
+}
+
+a.doc-repository-link {
+  font-size: 32px;
+  color: #666;
 }

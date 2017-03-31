@@ -21,6 +21,13 @@
           <i class="fa fa-bars"></i>
         </button>
         <a href="index.html">Home</a>
+
+        <% if (tplConf.repository) { %>
+          <div class="flex"></div>
+          <a href="<%= tplConf.repository.url %>" class="doc-repository-link" target="_blank" title="Open repository">
+            <i class="fa fa-<%= tplConf.repository.icon || 'github' %>"></i>
+          </a>
+        <% } %>
       </header>
       <div class="row flex">
         <div class="nav-menu" id="menu">

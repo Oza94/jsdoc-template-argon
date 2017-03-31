@@ -9,7 +9,8 @@
     "example:pixi": "jsdoc examples/pixi.js/pixi.js-repo/src -t ./../../ -d docs/example/pixi.js -R examples/pixi.js/README.md -c examples/pixi.js/.jsdoc.json",
     "examples": "npm run example:lodash && npm run example:pixi",
     "docssite": "jsdoc . -t . -d docs -R docs-static/README.md -r -c .jsdoc.json",
-    "docs": "npm run docssite && npm run examples"
+    "docs": "npm run docssite && npm run examples",
+    "watch:docssite": "node scripts/watch --script docssite"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,10 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^3.18.0"
+    "eslint": "^3.18.0",
+    "http-server": "^0.9.0",
+    "jsdoc-export-default-interop": "^0.3.1",
+    "optimist": "^0.6.1",
+    "watch": "^1.0.2"
   }
 }

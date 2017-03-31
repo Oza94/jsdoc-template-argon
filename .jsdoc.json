@@ -17,8 +17,20 @@
         "excludePattern": "(^|\\/|\\\\)_"
     },
     "plugins": [
-        "plugins/markdown"
+        "plugins/markdown",
+        "node_modules/jsdoc-export-default-interop"
     ],
+    "template": {
+      "debug": false,
+      "repository": {
+        "url": "https://github.com/Oza94/jsdoc-template-argon",
+        "icon": "github"
+      },
+      "builtins": {
+        "mdnLinks": true,
+        "allowUncapitalized": true
+      }
+    },
     "templates": {
         "cleverLinks"   : false,
         "monospaceLinks": false,

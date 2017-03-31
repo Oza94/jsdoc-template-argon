@@ -19,6 +19,13 @@
           <i class="fa fa-bars"></i>
         </button>
         <a href="index.html">Home</a>
+
+        
+          <div class="flex"></div>
+          <a href="https://github.com/Oza94/jsdoc-template-argon" class="doc-repository-link" target="_blank" title="Open repository">
+            <i class="fa fa-github"></i>
+          </a>
+        
       </header>
       <div class="row flex">
         <div class="nav-menu" id="menu">
@@ -49,7 +56,7 @@
             C
           </span>
           &nbsp;
-          <a href="srchelperslink-exports.html">exports</a>
+          <a href="srchelperslink-LinkHelper.html">LinkHelper</a>
         </li>
       
     </ul>
@@ -74,7 +81,7 @@
   // define a global JS client containing menu data object for search
   
   // global containing menu data
-  window.__MENUDATA = {"_publish":[{"name":"publish","kind":"module","recordUrl":"publish-publish.html"}],"_src\\helpers\\link":[{"name":"exports","scope":"static","kind":"class","recordUrl":"srchelperslink-exports.html"}],"_src\\typedef\\jsdoc":[{"name":"JSDocTypedefs","kind":"module","recordUrl":"srctypedefjsdoc-JSDocTypedefs.html"}]};
+  window.__MENUDATA = {"_publish":[{"name":"publish","kind":"module","recordUrl":"publish-publish.html"}],"_src\\helpers\\link":[{"name":"LinkHelper","scope":"global","kind":"class","recordUrl":"srchelperslink-LinkHelper.html"}],"_src\\typedef\\jsdoc":[{"name":"JSDocTypedefs","kind":"module","recordUrl":"srctypedefjsdoc-JSDocTypedefs.html"}]};
 </script>
 
         </div>
@@ -94,128 +101,220 @@
   
 
   
+    <h2>Typedefs</h2>
+    <hr />
+    
+      <h3 id="JSDocRecord">
+  JSDocRecord: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank">Object</a>
+</h3>
+
+ 
+  <p><p>A JSDoc doclet record.</p></p>
+
+
+
+  <h4>Properties</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Attribute</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr>
+          <td class="doc-code-identifier">comment</td>
+          <td><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a></td>
+          <td class="doc-code-literal">optional</td>
+          <td><p>The raw documentation comment of the record if any</p></td>
+        </tr>
+      
+        <tr>
+          <td class="doc-code-identifier">meta</td>
+          <td><a  >JSDocMeta</a></td>
+          <td class="doc-code-literal"></td>
+          <td><p>Metadata about how this record relates to the source code</p></td>
+        </tr>
+      
+        <tr>
+          <td class="doc-code-identifier">description</td>
+          <td><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a></td>
+          <td class="doc-code-literal">optional</td>
+          <td><p>The <code>@description</code> value of the record if any. If using<br>                                   <code>plugins/markdown</code> this string will be compiled in HTML</p></td>
+        </tr>
+      
+        <tr>
+          <td class="doc-code-identifier">returns</td>
+          <td><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array</a>.&lt;<a href="srctypedefjsdoc-JSDocTypedefs.html#JSDocReturns" >JSDocReturns</a>&gt;</td>
+          <td class="doc-code-literal">optional</td>
+          <td><p>What is returned by documented symbol</p></td>
+        </tr>
+      
+        <tr>
+          <td class="doc-code-identifier">name</td>
+          <td><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a></td>
+          <td class="doc-code-literal"></td>
+          <td><p>Shortname of the record parsed by JSDoc or overridden using <code>@name</code></p></td>
+        </tr>
+      
+        <tr>
+          <td class="doc-code-identifier">longname</td>
+          <td><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a></td>
+          <td class="doc-code-literal"></td>
+          <td><p>Longname of the record (name including <code>memberof</code> info)</p></td>
+        </tr>
+      
+        <tr>
+          <td class="doc-code-identifier">kind</td>
+          <td><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a></td>
+          <td class="doc-code-literal"></td>
+          <td><p>Kind of record deduced by JSDoc or overridden using <code>@kind</code></p></td>
+        </tr>
+      
+        <tr>
+          <td class="doc-code-identifier">memberof</td>
+          <td><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a></td>
+          <td class="doc-code-literal">optional</td>
+          <td><p>Longname of the parent symbol. Can be overridden using <code>@memberof</code></p></td>
+        </tr>
+      
+        <tr>
+          <td class="doc-code-identifier">params</td>
+          <td><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array</a>.&lt;<a href="srctypedefjsdoc-JSDocTypedefs.html#JSDocParam" >JSDocParam</a>&gt;</td>
+          <td class="doc-code-literal"></td>
+          <td><p>A collection of parameters information</p></td>
+        </tr>
+      
+        <tr>
+          <td class="doc-code-identifier">properties</td>
+          <td><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array</a>.&lt;<a href="srctypedefjsdoc-JSDocTypedefs.html#JSDocProperty" >JSDocProperty</a>&gt;</td>
+          <td class="doc-code-literal"></td>
+          <td><p>A collection of properties information</p></td>
+        </tr>
+      
+        <tr>
+          <td class="doc-code-identifier">filepath</td>
+          <td><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a></td>
+          <td class="doc-code-literal"></td>
+          <td><p>Path of thte source file for this record</p></td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+      <br/>
+    
+      <h3 id="JSDocReturns">
+  JSDocReturns: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank">Object</a>
+</h3>
+
+ 
+  <p><p>A JSDoc returns data structure</p></p>
+
+
+
+  <h4>Properties</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Attribute</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr>
+          <td class="doc-code-identifier">type</td>
+          <td><a href="srctypedefjsdoc-JSDocTypedefs.html#JSDocTypeInfo" >JSDocTypeInfo</a></td>
+          <td class="doc-code-literal"></td>
+          <td><p>Return type information</p></td>
+        </tr>
+      
+        <tr>
+          <td class="doc-code-identifier">description</td>
+          <td><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a></td>
+          <td class="doc-code-literal">optional</td>
+          <td><p>An optional return description</p></td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+      <br/>
+    
+      <h3 id="JSDocTypeInfo">
+  JSDocTypeInfo: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank">Object</a>
+</h3>
+
+ 
+  <p><p>A JSDoc Type information structure</p></p>
+
+
+
+  <h4>Properties</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Attribute</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr>
+          <td class="doc-code-identifier">names</td>
+          <td><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array</a>.&lt;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a>&gt;</td>
+          <td class="doc-code-literal"></td>
+          <td><p>An array containing type names (short version).</p></td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+      <br/>
+    
+      <h3 id="JSDocParam">
+  JSDocParam: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank">Object</a>
+</h3>
+
+ 
+  <p><p>A JSDoc parameter data structure</p></p>
 
 
 
 
-<button data-spoiler-button="T000002R000140">DEBUG BUTTON NOT FOR PRODUCTION : toggle JSDoc record visibility</button>
-<pre data-spoiler="T000002R000140" style="display: none;">
-  {
-    "comment": "/**\n * @module JSDocTypedefs\n */",
-    "meta": {
-        "range": [
-            0,
-            32
-        ],
-        "filename": "jsdoc.js",
-        "lineno": 1,
-        "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\src\\typedef",
-        "code": {}
-    },
-    "kind": "module",
-    "name": "JSDocTypedefs",
-    "longname": "module:JSDocTypedefs",
-    "___id": "T000002R000140",
-    "___s": true,
-    "$functions": [],
-    "$typedefs": [
-        {
-            "comment": "/**\n * A JSDoc doclet record.\n * @typedef {Object} JSDocRecord\n * @property {Array<JSDoc~Returns>} [returns] - What is returned by documented symbol\n */",
-            "meta": {
-                "range": [
-                    34,
-                    186
-                ],
-                "filename": "jsdoc.js",
-                "lineno": 5,
-                "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\src\\typedef",
-                "code": {}
-            },
-            "description": "<p>A JSDoc doclet record.</p>",
-            "kind": "typedef",
-            "name": "JSDocRecord",
-            "type": {
-                "names": [
-                    "Object"
-                ]
-            },
-            "properties": [
-                {
-                    "type": {
-                        "names": [
-                            "Array.<JSDoc~Returns>"
-                        ]
-                    },
-                    "optional": true,
-                    "description": "<p>What is returned by documented symbol</p>",
-                    "name": "returns"
-                }
-            ],
-            "longname": "module:JSDocTypedefs~JSDocRecord",
-            "scope": "inner",
-            "memberof": "module:JSDocTypedefs",
-            "___id": "T000002R000141",
-            "___s": true,
-            "skip": true,
-            "filepath": "src\\typedef\\jsdoc.js"
-        },
-        {
-            "comment": "/**\n * A JSDoc returns data structure\n * @typedef {Object} JSDocReturns\n * @property {JSDoc~TypeInfo} type - Type information\n * @property {String}         [description] - an optional return description\n */",
-            "meta": {
-                "range": [
-                    188,
-                    394
-                ],
-                "filename": "jsdoc.js",
-                "lineno": 11,
-                "path": "C:\\Users\\beaujeup\\projects\\jsdoc-template\\src\\typedef",
-                "code": {}
-            },
-            "description": "<p>A JSDoc returns data structure</p>",
-            "kind": "typedef",
-            "name": "JSDocReturns",
-            "type": {
-                "names": [
-                    "Object"
-                ]
-            },
-            "properties": [
-                {
-                    "type": {
-                        "names": [
-                            "JSDoc~TypeInfo"
-                        ]
-                    },
-                    "description": "<p>Type information</p>",
-                    "name": "type"
-                },
-                {
-                    "type": {
-                        "names": [
-                            "String"
-                        ]
-                    },
-                    "optional": true,
-                    "description": "<p>an optional return description</p>",
-                    "name": "description"
-                }
-            ],
-            "longname": "module:JSDocTypedefs~JSDocReturns",
-            "scope": "inner",
-            "memberof": "module:JSDocTypedefs",
-            "___id": "T000002R000142",
-            "___s": true,
-            "skip": true,
-            "filepath": "src\\typedef\\jsdoc.js"
-        }
-    ],
-    "$constants": [],
-    "$classes": [],
-    "$other": [],
-    "filepath": "src\\typedef\\jsdoc.js"
-}
-</pre>
-</div>
+      <br/>
+    
+      <h3 id="JSDocProperty">
+  JSDocProperty: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank">Object</a>
+</h3>
+
+ 
+  <p><p>A JSDoc property data structure</p></p>
+
+
+
+
+      <br/>
+    
+  
+
+  
+
+
+
+
+
 
         </div>
       </div>
