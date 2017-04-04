@@ -1,8 +1,9 @@
 {
   "name": "jsdoc-template-argon",
-  "description": "A JSDoc template.",
-  "version": "0.1.0",
+  "description": "A JSDoc template. Currently Work In Progress.",
+  "version": "0.1.0-dev",
   "main": "publish.js",
+  "author": "Pierre Beaujeu <pierre.beaujeu@gmail.com>",
   "scripts": {
     "lint": "eslint publish.js src/",
     "example:lodash": "jsdoc examples/lodash/lodash-repo -t . -d docs/example/lodash -R examples/lodash/README.md",

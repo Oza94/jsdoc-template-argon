@@ -1,0 +1,12 @@
+.gitignore
+.gitmodules
+.editorconfig
+.eslintrc.yaml
+.jsdoc.json
+
+node_modules
+docs
+docs-static
+examples
+scripts
+tutorials
