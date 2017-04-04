@@ -109,6 +109,10 @@ td > p {
   font-family: 'monospace';
 }
 
+.doc-monospace {
+  font-family: 'Source Code Pro';
+}
+
 .doc-sourcepath {
   font-size: 12px;
   text-align: right;

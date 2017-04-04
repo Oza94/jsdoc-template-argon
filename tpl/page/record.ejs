@@ -1,5 +1,5 @@
 <div class="doc-gutter">
-<h1><%= record.kind %>: <%= record.name %></h1>
+<h1><%= record.isEnum ? 'enum' : record.kind %>: <%= record.name %></h1>
 <hr />
 
 <% if (record.classdesc) { %>
@@ -42,7 +42,22 @@
   </table>
 <% } %>
 
+<% if (record.kind === 'constant') { %> 
+  <%-
+    include('../components/constant', {
+      constant: record,
+      helpers: helpers,
+      includeHeader: false,
+    });
+  %>
+<% } %>
+
 <% if (record.kind === 'module') { %>
+  <% if (record.description) { %> 
+    <p>
+      <%- record.description %>
+    </p>
+  <% } %>
   <% if (record.$functions && record.$functions.length) { %>
     <h2>Functions summary</h2>
     <hr />
@@ -85,7 +100,7 @@
   <% } %>
 <% } %>
 
-<% if (record.kind === 'class') { %>
+<% if (record.kind === 'class' || record.kind === 'interface') { %>
   <% if (record.$augments && record.$augments.length) { %>
     <h4>Extends:</h4>
     <% 

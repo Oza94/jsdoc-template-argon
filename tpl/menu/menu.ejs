@@ -8,7 +8,7 @@
       const symbols = menuData[modulePath];
       if (!symbols.length) return;
     %>
-    <div class="doc-menupath"><%= modulePath.slice(1, modulePath.length) %></div>
+    <div class="doc-menupath"><%= modulePath.slice(1, modulePath.length) || '(root)' %></div>
     <ul class="doc-menu">
       <%
         symbols.forEach(function (symbol) {

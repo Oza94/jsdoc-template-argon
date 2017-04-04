@@ -37,7 +37,7 @@ JSDoc3 has numerous [tags](http://usejsdoc.org/index.html). This template does n
 | @inheritdoc | need verify |
 | @inner | not concerned* |
 | @instance | not concerned* |
-| @interface | no |
+| @interface | yes |
 | @kind | not concerned* |
 | @lends | need verify |
 | @license | no |
@@ -67,6 +67,6 @@ JSDoc3 has numerous [tags](http://usejsdoc.org/index.html). This template does n
 | @todo | no |
 | @tutorial | no |
 | @type | yes |
-| @typedef | no |
+| @typedef | yes |
 | @variation | no |
 | @version | no |

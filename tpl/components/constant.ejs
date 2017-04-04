@@ -1,0 +1,31 @@
+<%
+  const showHeaders = typeof includeHeader !== 'undefined' && !!includeHeader;
+  const descriptionClassName = showHeaders ? '' : 'doc-no-margin-before';
+%>
+<% if (showHeaders) { %>
+  <h3 class="doc-monospace">
+    <%= constant.name %>: <%- helpers.link.type(constant.type.names.join(', ')) %>
+  </h3>
+<% } %>
+<% if (constant.description) { %> 
+  <% if (showHeaders) { %>
+    <h4>Description:</h4>
+  <% } %>
+  <p class="<%= descriptionClassName %>">
+    <%- constant.description %>
+  </p>
+<% } %>
+
+<% if (constant.type) { %> 
+  <h4>Type(s):</h4>
+  <p class="doc-no-margin-before">
+    <%- helpers.link.type(constant.type.names.join(', ')) %>
+  </p>
+<% } %>
+
+<% if (typeof constant.defaultvalue !== 'undefined') { %> 
+  <h4>Default:</h4>
+  <p class="doc-no-margin-before doc-monospace">
+    <%- constant.defaultvalue %>
+  </p>
+<% } %>

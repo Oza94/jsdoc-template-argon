@@ -112,7 +112,7 @@ exports.publish = function(data, opts) {
   });
 
     // defines members arrays
-  data({ kind: 'class' }).each((record) => {
+  data({ kind: ['class', 'interface'] }).each((record) => {
     record.$methods = [];
     record.$attributes = [];
     record.$staticmethods = [];
@@ -122,7 +122,7 @@ exports.publish = function(data, opts) {
   });
 
   // associate classes with members
-  data({ kind: 'class' }).each((record) => {
+  data({ kind: ['class', 'interface'] }).each((record) => {
     if (record.description) {
       const copy = JSON.parse(JSON.stringify(record));
       copy.name = 'constructor';
@@ -142,7 +142,8 @@ exports.publish = function(data, opts) {
       memberRecord.skip = true;
       memberRecord.slug = slugify(memberRecord.longname);
 
-      if (memberRecord.meta.code.type === 'MethodDefinition') {
+      if (memberRecord.meta.code.type === 'MethodDefinition' ||
+        (memberRecord.kind === 'function' && memberRecord.scope === 'instance')) {
         record.$methods.push(memberRecord);
       } else {
         record.$attributes.push(memberRecord);
